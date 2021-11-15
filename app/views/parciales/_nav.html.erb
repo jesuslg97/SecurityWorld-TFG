@@ -1,28 +1,23 @@
-<header class="offset-md-1 col-md-10 col-xs-12">
+<header class="col-md-10 col-xs-12">
 
-  <div class="d-flex flex-wrap align-items-center">
-    <a class="mx-3" href="#">
-      <h1 id="Titulo" class="text-dark">
-        SecurityWorld
-      </h1>
+  <div>
+    <a href="http://127.0.0.1:3000/">
+      <h1 class="text-dark">SecurityWorld</h1>
     </a>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mt-2">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar-expand mt-2" style="background-color: #202CD1">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "Empresa", root_path, class: "nav-link" %>
+    <div class="collapse navbar-collapse">
+      <ul class="col-md-12 navbar-nav mr-auto text-center">
+        <li class="col-md-4 nav-item">
+          <%= link_to "Empresa", root_path, class: "nav-link text-white" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Hogar", root_path, class: "nav-link" %>
+        <li class="col-md-4 nav-item">
+          <%= link_to "Hogar", root_path, class: "nav-link text-white" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Móvil", root_path, class: "nav-link" %>
+        <li class="col-md-4 nav-item">
+          <%= link_to "Móvil", root_path, class: "nav-link text-white" %>
         </li>
       </ul>
 
