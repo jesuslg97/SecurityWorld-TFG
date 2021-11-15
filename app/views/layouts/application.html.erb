@@ -14,7 +14,10 @@
   <body>
     <div class="container-fluid">
       <%= render 'parciales/nav' %>
-      <%= yield %>
+      <div class="row offset-md-0 col-md-12">
+        <%= yield %>
+        <%= render 'parciales/information' %>
+      </div>
     </div>
     <%= render 'parciales/footer' %>
   </body>
