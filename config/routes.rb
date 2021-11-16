@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get 'home/index'
 
-  #get 'categories/index/:id', to: 'categories#index'
-  #get 'categories/show', to: 'categories#show'
+  get 'categories', to: 'categories#index'
+  get 'categories/:id', to: 'categories#show', as: :show_category
 
-  resources :categories
+  #resources :categories
 
 end

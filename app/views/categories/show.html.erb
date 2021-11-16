@@ -1,9 +1,39 @@
-<div class="col-md-10 text-center mt-5">
-  <h1>Categories#show</h1>
+<% if @categories.id == 1 %>
+  <h2><%= @categories.nombre %></h2>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <h4><%= @categories.descripcion %></h4>
+<% end %>
 
-  <% @categories.each do |category| %>
-    <h4><%= category.nombre %></h4>
-  <% end %>
+<% if @categories.id == 2 %>
+  <h2><%= @categories.nombre %></h2>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <h4><%= @categories.descripcion %></h4>
+<% end %>
 
-  <p>Find me in app/views/categories/show.html.erb</p>
+<% if @categories.id == 3 %>
+  <h2><%= @categories.nombre %></h2>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <h4><%= @categories.descripcion %></h4>
+<% end %>
+
+<div class="row offset-1">
+
+  <div class="col-md-3 text-center myInformation">
+
+    <h4 class="mb-3">Medidas generales</h4>
+    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+
+  </div>
+
+  <div class="offset-1 col-md-3 text-center myInformation">
+    <h4 class="mb-3">Preguntas frecuentes</h4>
+    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+
+  </div>
+
+  <div class="offset-1 col-md-3 text-center myInformation">
+    <h4 class="mb-3">Ataques específicos</h4>
+    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+
+  </div>
 </div>
