@@ -26,20 +26,28 @@
 
   <div class="col-md-3 text-center myInformation">
 
-    <h4 class="mb-3">Medidas generales</h4>
-    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+      <% if @articles.id == 1 %>
+        <h4 class="mb-3"><%= @articles.nombre %></h4>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+      <% end %>
 
   </div>
 
   <div class="offset-1 col-md-3 text-center myInformation">
-    <h4 class="mb-3">Preguntas frecuentes</h4>
-    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+
+    <% if @articles.id == 2 %>
+      <h4 class="mb-3"><%= @articles.nombre %></h4>
+      <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+    <% end %>
 
   </div>
 
   <div class="offset-1 col-md-3 text-center myInformation">
-    <h4 class="mb-3">Ataques específicos</h4>
-    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+
+    <% if @articles.id == 3 %>
+      <h4 class="mb-3"><%= @articles.nombre %></h4>
+      <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+    <% end %>
 
   </div>
 </div>
