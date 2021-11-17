@@ -10,17 +10,15 @@
 
     <div class="collapse navbar-collapse">
       <ul class="col-md-12 navbar-nav mr-auto text-center">
-        <%# @categories.each do |category| %>
-          <li class="col-md-4 nav-item">
-            <%= link_to "Empresa", categories_path, class: "nav-link text-white" %>
-          </li>
-          <li class="col-md-4 nav-item">
-            <%= link_to "Hogar", categories_path, class: "nav-link text-white" %>
-          </li>
-          <li class="col-md-4 nav-item">
-            <%= link_to "Móvil", categories_path, class: "nav-link text-white" %>
-          </li>
-        <%# end %>
+        <li class="col-md-4 nav-item">
+          <%= link_to "Empresa", category_path(:id => 1), class: "nav-link text-white" %>
+        </li>
+        <li class="col-md-4 nav-item">
+          <%= link_to "Hogar", category_path(:id => 2), class: "nav-link text-white" %>
+        </li>
+        <li class="col-md-4 nav-item">
+          <%= link_to "Móvil", category_path(:id => 3), class: "nav-link text-white" %>
+        </li>
       </ul>
 
     </div>
