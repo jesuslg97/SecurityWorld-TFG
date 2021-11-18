@@ -6,5 +6,6 @@ class ArticlesController < ApplicationController
 
   def show
     @articles = Article.find(params[:id])
+    @attacks = Attack.all
   end
 end

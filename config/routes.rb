@@ -15,5 +15,10 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  #get 'attacks/index'
+  #get 'attacks/show'
+
+  resources :attacks
+
 
 end

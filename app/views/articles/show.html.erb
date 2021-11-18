@@ -20,6 +20,20 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
+
+  <div class="row col-md-12">
+
+    <% @attacks.each do |attack| %>
+
+      <div class="col-md-2 text-center myInformation m-3">
+        <h4 class="mb-3"><%= attack.nombre %></h4>
+        <span><%= link_to 'Detalles', attack_path %></span>
+      </div>
+
+    <% end %>
+
+  </div>
+
 <% end %>
 <!-- Ataques específicos -->
 <!-- Empresa -->
@@ -46,6 +60,20 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
+
+  <div class="row col-md-12">
+
+    <% @attacks.each do |attack| %>
+
+      <div class="col-md-2 text-center myInformation m-3">
+        <h4 class="mb-3"><%= attack.nombre %></h4>
+        <span><%= link_to 'Detalles', attack_path %></span>
+      </div>
+
+    <% end %>
+
+  </div>
+
 <% end %>
 <!-- Ataques específicos -->
 <!-- Hogar -->
@@ -72,34 +100,18 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
-  <div class="row offset-1">
-    <div class="col-md-3 text-center myInformation">
-      <h4 class="mb-3">Ataque 1</h4>
-      <span>Mas info</span>
-    </div>
-    <div class="offset-1 col-md-3 text-center myInformation">
-      <h4 class="mb-3">Ataque 2</h4>
-      <span>Mas info</span>
-    </div>
-    <div class="offset-1 col-md-3 text-center myInformation">
-      <h4 class="mb-3">Ataque 3</h4>
-      <span>Mas info</span>
-    </div>
-  </div>
 
-  <div class="row offset-1 mt-3">
-    <div class="col-md-3 text-center myInformation">
-      <h4 class="mb-3">Ataque 4</h4>
-      <span>Mas info</span>
-    </div>
-    <div class="offset-1 col-md-3 text-center myInformation">
-      <h4 class="mb-3">Ataque 5</h4>
-      <span>Mas info</span>
-    </div>
-    <div class="offset-1 col-md-3 text-center myInformation">
-      <h4 class="mb-3">Ataque 6</h4>
-      <span>Mas info</span>
-    </div>
+  <div class="row col-md-12">
+
+    <% @attacks.each do |attack| %>
+
+      <div class="col-md-2 text-center myInformation m-3">
+        <h4 class="mb-3"><%= attack.nombre %></h4>
+        <span><%= link_to 'Detalles', attack_path %></span>
+      </div>
+
+    <% end %>
+
   </div>
 <% end %>
 <!-- Ataques específicos -->
