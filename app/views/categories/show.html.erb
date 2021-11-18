@@ -24,30 +24,89 @@
 
 <div class="row offset-1">
 
-  <div class="col-md-3 text-center myInformation">
+  <% @articles.each do |article| %>
 
-      <% if @articles.id == 1 %>
-        <h4 class="mb-3"><%= @articles.nombre %></h4>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+    <!-- Medidas generales -->
+    <% if @categories.id == 1 %>
+
+        <% if article.id == 1 %>
+          <div class="col-md-3 text-center myInformation">
+            <h4 class="mb-3"><%= article.nombre %></h4>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+          </div>
+        <% end %>
+
+      <% if article.id == 2 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
       <% end %>
 
-  </div>
+      <% if article.id == 3 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
+      <% end %>
 
-  <div class="offset-1 col-md-3 text-center myInformation">
-
-    <% if @articles.id == 2 %>
-      <h4 class="mb-3"><%= @articles.nombre %></h4>
-      <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
     <% end %>
+    <!-- Medidas generales -->
 
-  </div>
+    <!-- Preguntas frecuentes -->
+    <% if @categories.id == 2 %>
 
-  <div class="offset-1 col-md-3 text-center myInformation">
+      <% if article.id == 4 %>
+        <div class="col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
+      <% end %>
 
-    <% if @articles.id == 3 %>
-      <h4 class="mb-3"><%= @articles.nombre %></h4>
-      <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+      <% if article.id == 5 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
+      <% end %>
+
+      <% if article.id == 6 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
+      <% end %>
+
     <% end %>
+    <!-- Preguntas frecuentes -->
 
-  </div>
+    <!-- Ataques específicos -->
+    <% if @categories.id == 3 %>
+
+      <% if article.id == 7 %>
+        <div class="col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
+      <% end %>
+
+      <% if article.id == 8 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
+      <% end %>
+
+      <% if article.id == 9 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= article.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+        </div>
+      <% end %>
+
+    <% end %>
+    <!-- Ataques específicos -->
+
+  <% end %>
+
 </div>
