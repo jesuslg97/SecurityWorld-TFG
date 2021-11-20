@@ -1,15 +1,22 @@
-<div class="offset-0 col-md-2 myInformation">
+<div class="offset-0 col-md-2 myInformation text-center">
 
-  <ul class="col-sm-12">
-    <li>Últimas noticias
-      <ul>
+  <ul class="col-sm-12 navbar-nav" style="list-style: none">
+
+    <li class="nav-item">
+      <strong>
+        <%= link_to "Últimas noticias", extra_path(:id => 1), class: "nav-link text-dark" %>
+      </strong>
+      <ul style="list-style: none">
         <li>Noticia 1</li>
         <li>Noticia 2</li>
         <li>Más información</li>
       </ul>
     </li>
 
-    <li>Conceptos sobre seguridad que deberíamos destacar
+    <li class="nav-item">
+      <strong>
+        <%= link_to "Conceptos sobre seguridad", extra_path(:id => 2), class: "nav-link text-dark" %>
+      </strong>
       <ul>
         <li>Malware</li>
         <li>Phishing</li>
@@ -17,13 +24,28 @@
       </ul>
     </li>
 
-    <li>Leyes y organismos sobre seguridad
+    <li class="nav-item">
+      <strong>
+        <%= link_to "Organismos sobre seguridad", extra_path(:id => 3), class: "nav-link text-dark" %>
+      </strong>
       <ul>
-        <li>LSSI</li>
+        <li>AEPD</li>
         <li>ENS</li>
         <li>Más información</li>
       </ul>
     </li>
+
+    <li class="nav-item">
+      <strong>
+        <%= link_to "Leyes sobre seguridad", extra_path(:id => 4), class: "nav-link text-dark" %>
+      </strong>
+      <ul>
+        <li>LSSI</li>
+        <li>LOPDGDD</li>
+        <li>Más información</li>
+      </ul>
+    </li>
+
   </ul>
 
 </div>

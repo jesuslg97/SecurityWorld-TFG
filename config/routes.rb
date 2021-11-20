@@ -20,5 +20,9 @@ Rails.application.routes.draw do
 
   resources :attacks
 
+  #get 'extras/index'
+  #get 'extras/show'
+
+  resources :extras
 
 end
