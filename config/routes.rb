@@ -25,4 +25,9 @@ Rails.application.routes.draw do
 
   resources :extras
 
+  #get 'extra_infos/index'
+  #get 'extra_infos/show'
+
+  resources :extra_infos
+
 end

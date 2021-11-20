@@ -7,3 +7,44 @@
     </div>
   <% end %>
 </div>
+
+<div class="row offset-1 mt-4">
+
+  <% @extra_infos.each do |extra| %>
+
+    <!-- Últimas Noticias -->
+    <% if @extras.id == 1 %>
+
+      <% if extra.id == 1 %>
+        <div class="col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= extra.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+          <p><%= extra.descripcion %></p>
+          <span><%= link_to 'Leer información', extra_info_path(:id => 1) %></span>
+        </div>
+      <% end %>
+
+      <% if extra.id == 2 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= extra.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+          <p><%= extra.descripcion %></p>
+          <span><%= link_to 'Leer información', extra_info_path(:id => 2) %></span>
+        </div>
+      <% end %>
+
+      <% if extra.id == 3 %>
+        <div class="offset-1 col-md-3 text-center myInformation">
+          <h4 class="mb-3"><%= extra.nombre %></h4>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+          <p><%= extra.descripcion %></p>
+          <span><%= link_to 'Leer información', extra_info_path(:id => 3) %></span>
+        </div>
+      <% end %>
+
+    <% end %>
+    <!-- Últimas Noticias -->
+
+  <% end %>
+
+</div>
