@@ -1,28 +1,14 @@
-<% if @categories.id == 1 %>
-  <h2><%= @categories.nombre %></h2>
-  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="col-md-8 offset-2">
-    <p><%= @categories.descripcion %></p>
-  </div>
-<% end %>
+<div class="mb-5">
+  <% if @categories.id == 1 || @categories.id == 2 || @categories.id == 3 %>
+    <h2><%= @categories.nombre %></h2>
+    <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+    <div class="col-md-10 offset-1">
+      <p><%= @categories.descripcion %></p>
+    </div>
+  <% end %>
+</div>
 
-<% if @categories.id == 2 %>
-  <h2><%= @categories.nombre %></h2>
-  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="col-md-8 offset-2">
-    <p><%= @categories.descripcion %></p>
-  </div>
-<% end %>
-
-<% if @categories.id == 3 %>
-  <h2><%= @categories.nombre %></h2>
-  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="col-md-8 offset-2">
-    <p><%= @categories.descripcion %></p>
-  </div>
-<% end %>
-
-<div class="row offset-1">
+<div class="row offset-1 mt-4">
 
   <% @articles.each do |article| %>
 

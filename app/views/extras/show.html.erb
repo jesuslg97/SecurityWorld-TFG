@@ -1,7 +1,9 @@
-<% if @extras.id == 1 || @extras.id == 2 || @extras.id == 3 || @extras.id == 4 %>
-  <h2><%= @extras.nombre %></h2>
-  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="col-md-8 offset-2">
-    <p><%= @extras.descripcion %></p>
-  </div>
-<% end %>
+<div class="mb-5">
+  <% if @extras.id == 1 || @extras.id == 2 || @extras.id == 3 || @extras.id == 4 %>
+    <h2><%= @extras.nombre %></h2>
+    <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+    <div class="col-md-10 offset-1">
+      <p><%= @extras.descripcion %></p>
+    </div>
+  <% end %>
+</div>
