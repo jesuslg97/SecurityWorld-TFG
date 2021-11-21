@@ -1,9 +1,26 @@
 <!-- Noticias -->
 <% if @extra_infos.id == 1 || @extra_infos.id == 2 || @extra_infos.id == 3 %>
   <h2><%= @extra_infos.nombre %></h2>
-  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="col-md-10 offset-1">
+  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 300px;">
+  <div class="row col-md-11 mb-4" style="text-align: left; margin-left: 20px">
     <p><%= @extra_infos.descripcion %></p>
+    <p><%= @extra_infos.texto %></p>
+
+    <% if @extra_infos.id == 1 %>
+      <a class="nav-link" href="https://www.lavanguardia.com/tecnologia/20211108/7847465/ciberataque-mediamarkt.html">
+        Noticia oficial</a>
+    <% end %>
+
+    <% if @extra_infos.id == 2 %>
+      <a class="nav-link" href="https://www.abc.es/tecnologia/redes/abci-alertan-sobre-regreso-emotet-peligroso-virus-roba-dinero-desmantelado-europol-202111180136_noticia.html">
+        Noticia oficial</a>
+    <% end %>
+
+    <% if @extra_infos.id == 3 %>
+      <a class="nav-link" href="https://www.elmundo.es/tecnologia/2019/11/19/5dd2e43221efa0e07d8b47ae.html">
+        Noticia oficial</a>
+    <% end %>
   </div>
+
 <% end %>
 <!-- Noticias -->

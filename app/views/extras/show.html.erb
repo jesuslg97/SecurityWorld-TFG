@@ -19,7 +19,7 @@
         <div class="col-md-3 text-center myInformation" style="margin-left: 40px">
           <h5 class="mb-3"><strong><%= extra.nombre %></strong></h5>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-          <p><%= extra.descripcion %></p>
+          imagen
           <span><%= link_to 'Leer información', extra_info_path(:id => 1) %></span>
         </div>
       <% end %>
@@ -28,7 +28,7 @@
         <div class="offset-1 col-md-3 text-center myInformation">
           <h5 class="mb-3"><strong><%= extra.nombre %></strong></h5>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-          <p><%= extra.descripcion %></p>
+          imagen
           <span><%= link_to 'Leer información', extra_info_path(:id => 2) %></span>
         </div>
       <% end %>
@@ -37,7 +37,7 @@
         <div class="offset-1 col-md-3 text-center myInformation">
           <h5 class="mb-3"><strong><%= extra.nombre %></strong></h5>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-          <p><%= extra.descripcion %></p>
+          imagen
           <span><%= link_to 'Leer información', extra_info_path(:id => 3) %></span>
         </div>
       <% end %>
@@ -48,9 +48,14 @@
     <!-- Conceptos -->
     <% if @extras.id == 2 %>
       <% if extra.extra_id == 2 %>
-        <div class="row col-md-11 mb-5" style="text-align: left; margin-left: 20px">
-          <h5><strong><%= extra.nombre %></strong></h5>
+        <div class="row col-md-11 mb-4" style="text-align: left; margin-left: 20px">
+          <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
           <p><%= extra.descripcion %></p>
+
+          <% if extra.nombre == "Man in The Middle" %>
+            <p><%= extra.texto %></p>
+          <% end %>
+
         </div>
       <% end %>
     <% end %>
@@ -59,10 +64,56 @@
     <!-- Organismos -->
     <% if @extras.id == 3 %>
       <% if extra.extra_id == 3 %>
-        <div class="row col-md-11 mb-5" style="text-align: left; margin-left: 20px">
-          <h5><strong><%= extra.nombre %></strong></h5>
+        <div class="row col-md-11 mb-4" style="text-align: left; margin-left: 20px">
+          <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
           <p><%= extra.descripcion %></p>
+
+          <% if extra.nombre == "ENS" %>
+            <a class="nav-link" href="https://boe.es/boe/dias/2010/01/29/pdfs/BOE-A-2010-1330.pdf">
+              Información oficial</a>
+          <% end %>
+
+          <% if extra.nombre == "INCIBE" %>
+            <a class="nav-link" href="https://www.incibe.es/que-es-incibe">
+              Página oficial</a>
+          <% end %>
+
+          <% if extra.nombre == "AEPD" %>
+            <a class="nav-link" href="https://www.aepd.es/es">
+              Página oficial</a>
+          <% end %>
+
+          <% if extra.nombre == "CCN" %>
+            <a class="nav-link" href="https://www.ccn-cert.cni.es/">
+              Página oficial</a>
+          <% end %>
+
+          <% if extra.nombre == "CNPIC" %>
+            <a class="nav-link" href="http://www.cnpic.es/">
+              Página oficial</a>
+          <% end %>
+
+          <% if extra.nombre == "DNS" %>
+            <a class="nav-link" href="https://www.boe.es/boe/dias/2015/09/29/pdfs/BOE-A-2015-10389.pdf">
+              Información oficial</a>
+          <% end %>
+
+          <% if extra.nombre == "OCC" %>
+            <p><strong>Funciones:</strong></p>
+            <p><%= extra.texto %></p>
+          <% end %>
+
+          <% if extra.nombre == "ENISA" %>
+            <a class="nav-link" href="https://www.enisa.europa.eu/about-enisa/about/es">
+              Página oficial</a>
+          <% end %>
+
+          <% if extra.nombre == "CCDCOE" %>
+            <a class="nav-link" href="https://ccdcoe.org/">
+              Página oficial</a>
+          <% end %>
         </div>
+
       <% end %>
     <% end %>
     <!-- Organismos -->
@@ -71,8 +122,16 @@
     <% if @extras.id == 4 %>
       <% if extra.extra_id == 4 %>
         <div class="row col-md-11 mb-5" style="text-align: left; margin-left: 20px">
-          <h5><strong><%= extra.nombre %></strong></h5>
+          <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
           <p><%= extra.descripcion %></p>
+          <% if extra.nombre == "LOPDGDD" %>
+            <a class="nav-link" href="https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16673-consolidado.pdf">
+              Información oficial</a>
+          <% end %>
+          <% if extra.nombre == "LSSI" %>
+            <a class="nav-link" href="https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758">
+              Información oficial</a>
+          <% end %>
         </div>
       <% end %>
     <% end %>
