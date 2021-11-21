@@ -1,49 +1,9 @@
-<h1>ExtraInfos#show</h1>
-<p>Find me in app/views/extra_infos/show.html.erb</p>
-
 <!-- Noticias -->
-<!-- Noticia 1 -->
-<% if @extra_infos.id == 1 %>
-  <%= @extra_infos.texto %>
+<% if @extra_infos.id == 1 || @extra_infos.id == 2 || @extra_infos.id == 3 %>
+  <h2><%= @extra_infos.nombre %></h2>
+  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <div class="col-md-10 offset-1">
+    <p><%= @extra_infos.descripcion %></p>
+  </div>
 <% end %>
-<!-- Noticia 1 -->
-
-<!-- Noticia 2 -->
-<% if @extra_infos.id == 2 %>
-  <%= @extra_infos.texto %>
-<% end %>
-<!-- Noticia 2 -->
-
-<!-- Noticia 3 -->
-<% if @extra_infos.id == 3 %>
-  <%= @extra_infos.texto %>
-<% end %>
-<!-- Noticia 3 -->
 <!-- Noticias -->
-
-
-
-<!-- Conceptos -->
-<% if @extra_infos.id == 2 %>
-
-  <% @extras.each do |extra| %>
-    <h5><%= extra.nombre %></h5>
-    <p><%= extra.descripcion %></p>
-  <% end %>
-
-<% end %>
-<!-- Conceptos -->
-
-<!-- Organismos -->
-<% if @extra_infos.extra_id == 3 %>
-  <h5><%= @extra_infos.nombre %></h5>
-  <p><%= @extra_infos.descripcion %></p>
-<% end %>
-<!-- Organismos -->
-
-<!-- Leyes -->
-<% if @extra_infos.extra_id == 4 %>
-  <h5><%= @extra_infos.nombre %></h5>
-  <p><%= @extra_infos.descripcion %></p>
-<% end %>
-<!-- Leyes -->
