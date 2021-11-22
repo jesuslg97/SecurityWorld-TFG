@@ -19,6 +19,62 @@
         <% end %>
       <% end %>
 
+      <% if @attacks.nombre == "Ransomware" %>
+        <% if content.attack_id == 3 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Gusano" %>
+        <% if content.attack_id == 4 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Virus" %>
+        <% if content.attack_id == 5 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Troyano" %>
+        <% if content.attack_id == 6 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Denegación de Servicio" %>
+        <% if content.attack_id == 7 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Rootkit" %>
+        <% if content.attack_id == 8 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Spyware" %>
+        <% if content.attack_id == 9 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Adware" %>
+        <% if content.attack_id == 10 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
     <% end %>
   </div>
 <% end %>
