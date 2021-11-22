@@ -1,157 +1,45 @@
 <!-- Ataques Empresa -->
-<% if @attacks.id == 1 %>
-  <%= @attacks.informacion %>
-<% end %>
+<% if @attacks.article_id == 3 %>
+  <h2><%= @attacks.nombre %></h2>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <div class="row col-md-11" style="text-align: left; margin-left: 20px">
+    <% @contents.each do |content| %>
 
-<% if @attacks.id == 2 %>
-  <%= @attacks.informacion %>
-<% end %>
+      <% if @attacks.nombre == "Malware" %>
+        <% if content.attack_id == 1 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
 
-<% if @attacks.id == 3 %>
-  <%= @attacks.informacion %>
-<% end %>
+      <% if @attacks.nombre == "Phishing" %>
+        <% if content.attack_id == 2 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
 
-<% if @attacks.id == 4 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 5 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 6 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 7 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 8 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 9 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 10 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 11 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 12 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 13 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 14 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 15 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 16 %>
-  <%= @attacks.informacion %>
+    <% end %>
+  </div>
 <% end %>
 <!-- Ataques Empresa -->
 
 <!-- Ataques Hogar -->
-<% if @attacks.id == 17 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 18 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 19 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 20 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 21 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 22 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 23 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 24 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 25 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 26 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 27 %>
-  <%= @attacks.informacion %>
+<% if @attacks.article_id == 6 %>
+  <h2><%= @attacks.nombre %></h2>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <div class="row col-md-11" style="text-align: left; margin-left: 20px">
+    <%= @attacks.informacion %>
+  </div>
 <% end %>
 <!-- Ataques Hogar -->
 
 <!-- Ataques Movil -->
-<% if @attacks.id == 28 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 29 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 30 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 31 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 32 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 33 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 34 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 35 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 36 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 37 %>
-  <%= @attacks.informacion %>
-<% end %>
-
-<% if @attacks.id == 38 %>
-  <%= @attacks.informacion %>
+<% if @attacks.article_id == 9 %>
+  <h2><%= @attacks.nombre %></h2>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <div class="row col-md-11" style="text-align: left; margin-left: 20px">
+    <%= @attacks.informacion %>
+  </div>
 <% end %>
 <!-- Ataques Movil -->

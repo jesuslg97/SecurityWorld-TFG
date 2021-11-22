@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_20_182511) do
+ActiveRecord::Schema.define(version: 2021_11_22_115748) do
 
   create_table "articles", force: :cascade do |t|
     t.string "nombre"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 2021_11_20_182511) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "contents", force: :cascade do |t|
+    t.string "titulo"
+    t.string "informacion"
+    t.integer "attack_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["attack_id"], name: "index_contents_on_attack_id"
+  end
+
   create_table "extra_infos", force: :cascade do |t|
     t.string "nombre"
     t.string "descripcion"
@@ -55,19 +64,8 @@ ActiveRecord::Schema.define(version: 2021_11_20_182511) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "information", force: :cascade do |t|
-    t.string "tipo"
-    t.string "nombre"
-    t.string "introduccion"
-    t.string "informacion"
-    t.integer "attack_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["attack_id"], name: "index_information_on_attack_id"
-  end
-
   add_foreign_key "articles", "categories"
   add_foreign_key "attacks", "articles"
+  add_foreign_key "contents", "attacks"
   add_foreign_key "extra_infos", "extras"
-  add_foreign_key "information", "attacks"
 end

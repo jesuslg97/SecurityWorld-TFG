@@ -6,6 +6,7 @@ class AttacksController < ApplicationController
 
   def show
     @attacks = Attack.find(params[:id])
+    @contents = Content.all
   end
 
 end
