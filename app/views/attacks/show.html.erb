@@ -192,13 +192,6 @@
         <% end %>
       <% end %>
 
-      <% if @attacks.nombre == "Whaling" %>
-        <% if content.attack_id == 27 %>
-          <h5><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
-        <% end %>
-      <% end %>
-
     <% end %>
 
   </div>
@@ -210,7 +203,72 @@
   <h2><%= @attacks.nombre %></h2>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
   <div class="row col-md-11" style="text-align: left; margin-left: 20px">
-    <%= @attacks.informacion %>
+    <% @contents.each do |content| %>
+
+      <% if @attacks.nombre == "Malware" %>
+        <% if content.attack_id == 28 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Ransomware" %>
+        <% if content.attack_id == 29 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Phishing" %>
+        <% if content.attack_id == 30 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Gusano" %>
+        <% if content.attack_id == 31 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Virus" %>
+        <% if content.attack_id == 32 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Troyano" %>
+        <% if content.attack_id == 33 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Spyware" %>
+        <% if content.attack_id == 34 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Adware" %>
+        <% if content.attack_id == 35 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Man in The Middle" %>
+        <% if content.attack_id == 36 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+    <% end %>
   </div>
 <% end %>
 <!-- Ataques Movil -->
