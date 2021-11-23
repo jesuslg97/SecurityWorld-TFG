@@ -75,6 +75,48 @@
         <% end %>
       <% end %>
 
+      <% if @attacks.nombre == "Ataques de inyección SQL" %>
+        <% if content.attack_id == 11 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Cross-Site Scripting (XSS)" %>
+        <% if content.attack_id == 12 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Man in The Middle" %>
+        <% if content.attack_id == 13 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Tunelización de DNS" %>
+        <% if content.attack_id == 14 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Spear phishing" %>
+        <% if content.attack_id == 15 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Whaling" %>
+        <% if content.attack_id == 16 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
     <% end %>
   </div>
 <% end %>
@@ -85,7 +127,80 @@
   <h2><%= @attacks.nombre %></h2>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
   <div class="row col-md-11" style="text-align: left; margin-left: 20px">
-    <%= @attacks.informacion %>
+    <% @contents.each do |content| %>
+
+      <% if @attacks.nombre == "Malware" %>
+        <% if content.attack_id == 17 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Phishing" %>
+        <% if content.attack_id == 18 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Virus" %>
+        <% if content.attack_id == 19 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Troyano" %>
+        <% if content.attack_id == 20 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Spyware" %>
+        <% if content.attack_id == 21 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Adware" %>
+        <% if content.attack_id == 22 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Cross-Site Scripting (XSS)" %>
+        <% if content.attack_id == 24 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Man in The Middle" %>
+        <% if content.attack_id == 25 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Spear phishing" %>
+        <% if content.attack_id == 26 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+      <% if @attacks.nombre == "Whaling" %>
+        <% if content.attack_id == 27 %>
+          <h5><strong><%= content.titulo %></strong></h5>
+          <p class="mb-5"><%= content.informacion %></p>
+        <% end %>
+      <% end %>
+
+    <% end %>
+
   </div>
 <% end %>
 <!-- Ataques Hogar -->
