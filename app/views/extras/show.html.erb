@@ -50,12 +50,7 @@
       <% if extra.extra_id == 2 %>
         <div class="row col-md-11 mb-4" style="text-align: left; margin-left: 20px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
-          <p><%= extra.descripcion %></p>
-
-          <% if extra.nombre == "Man in The Middle" %>
-            <p><%= extra.texto %></p>
-          <% end %>
-
+          <p><%= simple_format(extra.descripcion) %></p>
         </div>
       <% end %>
     <% end %>
@@ -66,7 +61,7 @@
       <% if extra.extra_id == 3 %>
         <div class="row col-md-11 mb-4" style="text-align: left; margin-left: 20px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
-          <p><%= extra.descripcion %></p>
+          <p><%= simple_format(extra.descripcion) %></p>
 
           <% if extra.nombre == "ENS" %>
             <a class="nav-link" href="https://boe.es/boe/dias/2010/01/29/pdfs/BOE-A-2010-1330.pdf">
@@ -98,11 +93,6 @@
               Información oficial</a>
           <% end %>
 
-          <% if extra.nombre == "OCC" %>
-            <p><strong>Funciones:</strong></p>
-            <p><%= extra.texto %></p>
-          <% end %>
-
           <% if extra.nombre == "ENISA" %>
             <a class="nav-link" href="https://www.enisa.europa.eu/about-enisa/about/es">
               Página oficial</a>
@@ -123,15 +113,18 @@
       <% if extra.extra_id == 4 %>
         <div class="row col-md-11 mb-5" style="text-align: left; margin-left: 20px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
-          <p><%= extra.descripcion %></p>
+          <p><%= simple_format(extra.descripcion)  %></p>
+
           <% if extra.nombre == "LOPDGDD" %>
             <a class="nav-link" href="https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16673-consolidado.pdf">
               Información oficial</a>
           <% end %>
+
           <% if extra.nombre == "LSSI" %>
             <a class="nav-link" href="https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758">
               Información oficial</a>
           <% end %>
+
         </div>
       <% end %>
     <% end %>
