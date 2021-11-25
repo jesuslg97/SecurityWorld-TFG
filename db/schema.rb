@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_115748) do
+ActiveRecord::Schema.define(version: 2021_11_25_221040) do
 
   create_table "articles", force: :cascade do |t|
     t.string "nombre"
@@ -64,8 +64,18 @@ ActiveRecord::Schema.define(version: 2021_11_22_115748) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "pregunta"
+    t.string "respuesta"
+    t.integer "article_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_questions_on_article_id"
+  end
+
   add_foreign_key "articles", "categories"
   add_foreign_key "attacks", "articles"
   add_foreign_key "contents", "attacks"
   add_foreign_key "extra_infos", "extras"
+  add_foreign_key "questions", "articles"
 end
