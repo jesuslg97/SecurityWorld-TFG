@@ -13,10 +13,12 @@
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
 
-  <div class="row col-md-11" style="text-align: left; margin-left: 20px">
+  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 20px">
     <% @questions.each do |question| %>
-      <h5><strong><%= question.pregunta %></strong></h5>
-      <p class="mb-5"><%= question.respuesta %></p>
+      <% if question.article_id == 2 %>
+        <h5><strong><%= question.pregunta %></strong></h5>
+        <p class="mb-5"><%= simple_format(question.respuesta) %></p>
+      <% end %>
     <% end %>
   </div>
 
@@ -113,6 +115,16 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
+
+  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 20px">
+    <% @questions.each do |question| %>
+      <% if question.article_id == 5 %>
+        <h5><strong><%= question.pregunta %></strong></h5>
+        <p class="mb-5"><%= simple_format(question.respuesta) %></p>
+      <% end %>
+    <% end %>
+  </div>
+
 <% end %>
 <!-- Preguntas frecuentes -->
 
@@ -185,6 +197,16 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
+
+  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 20px">
+    <% @questions.each do |question| %>
+      <% if question.article_id == 8 %>
+        <h5><strong><%= question.pregunta %></strong></h5>
+        <p class="mb-5"><%= simple_format(question.respuesta) %></p>
+      <% end %>
+    <% end %>
+  </div>
+
 <% end %>
 <!-- Preguntas frecuentes -->
 
