@@ -8,5 +8,6 @@ class ArticlesController < ApplicationController
     @articles = Article.find(params[:id])
     @attacks = Attack.all
     @questions = Question.all
+    @generals = General.all
   end
 end

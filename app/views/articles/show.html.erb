@@ -4,6 +4,16 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
+
+  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 20px">
+    <% @generals.each do |general| %>
+      <% if general.article_id == 1 %>
+        <h5><strong><%= general.titulo %></strong></h5>
+        <p class="mb-5"><%= simple_format(general.informacion) %></p>
+      <% end %>
+    <% end %>
+  </div>
+
 <% end %>
 <!-- Medidas generales -->
 
@@ -107,6 +117,16 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
+
+  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 20px">
+    <% @generals.each do |general| %>
+      <% if general.article_id == 4 %>
+        <h5><strong><%= general.titulo %></strong></h5>
+        <p class="mb-5"><%= simple_format(general.informacion) %></p>
+      <% end %>
+    <% end %>
+  </div>
+
 <% end %>
 <!-- Medidas generales -->
 
@@ -189,6 +209,16 @@
   <h3><%= @articles.nombre %></h3>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
   <h6><%= @articles.texto %></h6>
+
+  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 20px">
+    <% @generals.each do |general| %>
+      <% if general.article_id == 7 %>
+        <h5><strong><%= general.titulo %></strong></h5>
+        <p class="mb-5"><%= simple_format(general.informacion) %></p>
+      <% end %>
+    <% end %>
+  </div>
+
 <% end %>
 <!-- Medidas generales -->
 
