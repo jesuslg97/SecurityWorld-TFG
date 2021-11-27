@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+/*@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");*/
 
 .myFooter{
     bottom: 0;
@@ -10,4 +10,8 @@
     background: #FFFFFF;
     border: 4px solid #202CD1;
     box-sizing: border-box;
+}
+
+.titulo {
+    font-family: Algerian;
 }

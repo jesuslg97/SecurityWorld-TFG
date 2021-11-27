@@ -1,9 +1,9 @@
 <header class="col-md-10 col-xs-12">
 
-  <div>
-    <a href="http://127.0.0.1:3000/">
-      <h1 class="text-dark">SecurityWorld</h1>
-    </a>
+  <div class="col-4 titulo text-center">
+    <h1 class="m-0"><%= link_to "SecurityWorld", root_path, class: "text-dark",
+                                style: "text-decoration: none" %></h1>
+    <p class="text-dark m-0">La seguridad es lo primero</p>
   </div>
 
   <nav class="navbar-expand mt-2" style="background-color: #202CD1">
@@ -11,13 +11,13 @@
     <div class="collapse navbar-collapse">
       <ul class="col-md-12 navbar-nav mr-auto text-center">
         <li class="col-md-4 nav-item">
-          <%= link_to "Empresa", category_path(:id => 1), class: "nav-link text-white" %>
+          <%= link_to " Empresa", category_path(:id => 1), class: "nav-link text-white bi bi-building" %>
         </li>
         <li class="col-md-4 nav-item">
-          <%= link_to "Hogar", category_path(:id => 2), class: "nav-link text-white" %>
+          <%= link_to " Hogar", category_path(:id => 2), class: "nav-link text-white bi bi-house-door" %>
         </li>
         <li class="col-md-4 nav-item">
-          <%= link_to "Móvil", category_path(:id => 3), class: "nav-link text-white" %>
+          <%= link_to " Móvil", category_path(:id => 3), class: "nav-link text-white bi bi-phone" %>
         </li>
       </ul>
 
