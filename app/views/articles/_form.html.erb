@@ -1,0 +1,60 @@
+<%= form_with(model: @article) do |form| %>
+
+  <div class="row">
+
+    <% if @article.errors.any? %>
+      <div class="alert-danger">
+        <span>
+          Se han encontrado
+          <%= pluralize(@article.errors.count, "error") %>:
+        </span>
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li> <%= msg %> </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <strong><%= form.label :nombre %></strong>
+        <%= form.text_field :nombre, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <strong><%= form.label :descripcion %></strong>
+        <%= form.text_field :descripcion, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <strong><%= form.label :texto %></strong>
+        <%= form.text_field :texto, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="category_id"><strong>Categoría</strong></label>
+        <select name="article[category_id]" class="form-control">
+          <option value="null">Seleccione categoría</option>
+          <% Category.all.each do |c| %>
+            <option value="<%= c.id %>" <%= @article.category_id == c.id ? "selected" : "" %>>
+              <%= c.nombre %>
+            </option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-center mt-4">
+    <%= form.submit "Guardar", class: "btn btn-primary", style: "margin-right: 10px" %>
+    <%= link_to 'Cancelar', categories_path, class: "btn btn-warning text-white" %>
+  </div>
+<% end %>

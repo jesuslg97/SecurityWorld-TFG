@@ -1,2 +1,45 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<div class="text-center">
+  <h2>Artículos</h2>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+</div>
+
+<table class="table col-md-10">
+  <thead>
+  <tr>
+    <th class="text-center">Nombre</th>
+    <th class="text-center">Categoría</th>
+    <th class="text-center">Descripción</th>
+    <th class="text-center">Texto</th>
+    <th colspan="2" class="text-center">Acciones</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @articles.each do |article| %>
+    <tr class="text-center">
+      <td class="align-middle"><%= article.nombre %></td>
+      <% if article.category_id == 1 %>
+        <td class="align-middle">Empresa</td>
+      <% end %>
+      <% if article.category_id == 2 %>
+        <td class="align-middle">Hogar</td>
+      <% end %>
+      <% if article.category_id == 3 %>
+        <td class="align-middle">Móvil</td>
+      <% end %>
+      <td class="align-middle"><%= article.descripcion %></td>
+      <td class="align-middle"><%= article.texto %></td>
+      <td class="align-middle">
+        <%#= link_to 'Ver', article, class: "btn btn-info text-white" %>
+        <%= link_to 'Editar', edit_article_path(article), class: "btn btn-info text-white mb-2" %>
+        <%= link_to 'Eliminar', article, class: "btn btn-danger text-white", method: :delete,
+                    data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= link_to 'Nuevo Artículo', new_article_path, class:"btn btn-primary text-white" %>
+</div>
