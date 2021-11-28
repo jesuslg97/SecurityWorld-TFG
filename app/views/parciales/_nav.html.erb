@@ -17,15 +17,31 @@
 
     <div class="collapse navbar-collapse">
       <ul class="col-md-12 navbar-nav mr-auto text-center">
-        <li class="col-md-4 nav-item">
-          <%= link_to " Empresa", category_path(:id => 1), class: "nav-link text-white bi bi-building" %>
-        </li>
-        <li class="col-md-4 nav-item">
-          <%= link_to " Hogar", category_path(:id => 2), class: "nav-link text-white bi bi-house-door" %>
-        </li>
-        <li class="col-md-4 nav-item">
-          <%= link_to " Móvil", category_path(:id => 3), class: "nav-link text-white bi bi-phone" %>
-        </li>
+        <% if user_signed_in?  %>
+          <li class="col-md-3 nav-item">
+            <%= link_to " Categorías", categories_path, class: "nav-link text-white bi bi-card-list" %>
+          </li>
+          <li class="col-md-3 nav-item">
+            <%= link_to " Artículos", articles_path, class: "nav-link text-white bi bi-clipboard-check" %>
+          </li>
+          <li class="col-md-3 nav-item">
+            <%= link_to " Ataques", attacks_path, class: "nav-link text-white bi bi-cpu" %>
+          </li>
+          <li class="col-md-3 nav-item">
+            <%= link_to " Cerrar sesión", destroy_user_session_path, method: :delete,
+                        class:"nav-link text-white bi bi-x-circle"  %>
+          </li>
+        <% else %>
+          <li class="col-md-4 nav-item">
+            <%= link_to " Empresa", category_path(:id => 1), class: "nav-link text-white bi bi-building" %>
+          </li>
+          <li class="col-md-4 nav-item">
+            <%= link_to " Hogar", category_path(:id => 2), class: "nav-link text-white bi bi-house-door" %>
+          </li>
+          <li class="col-md-4 nav-item">
+            <%= link_to " Móvil", category_path(:id => 3), class: "nav-link text-white bi bi-phone" %>
+          </li>
+        <% end %>
       </ul>
 
     </div>
