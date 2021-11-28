@@ -1,29 +1,64 @@
-<h2>Sign up</h2>
+<h2>Crear cuenta</h2>
+<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 150px;">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="row col-md-12 mt-3">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="row">
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <strong><%= f.label :nombre, "Nombre =>" %></strong>
+          <%= f.text_field :nombre, autofocus: true,
+                           autocomplete: "nombre", placeholder: "pepe" %>
+        </div>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="col-md-4">
+        <div class="form-group">
+          <strong><%= f.label :apellidos, "Apellidos =>" %></strong>
+          <%= f.text_field :apellidos, autofocus: true,
+                           autocomplete: "apellidos", placeholder: "hernandez" %>
+        </div>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="col-md-4">
+        <div class="form-group">
+          <strong><%= f.label :email, "Correo =>" %></strong>
+          <%= f.email_field :email, autofocus: true,
+                            autocomplete: "email", placeholder: "example@example.com" %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="form-group">
+          <strong><%= f.label :password, "Contraseña" %></strong>
+          <% if @minimum_password_length %>
+            <strong><em>(mín <%= @minimum_password_length %> caracteres) =></em></strong>
+          <% end %>
+          <%= f.password_field :password,
+                               autocomplete: "new-password", placeholder: "......" %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <strong><%= f.label :password_confirmation, "Repetir contraseña =>" %></strong>
+          <%= f.password_field :password_confirmation,
+                               autocomplete: "new-password", placeholder: "......" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions mt-3">
+      <%= f.submit "Guardar", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
