@@ -29,8 +29,8 @@
       <td class="align-middle"><%= attack.informacion %></td>
       <td class="align-middle">
         <%#= link_to 'Ver', attack, class: "btn btn-info text-white" %>
-        <%= link_to 'Editar', edit_attack_path(attack), class: "btn btn-info text-white" %>
-        <%= link_to 'Eliminar', attack, class: "btn btn-danger text-white", method: :delete,
+        <%= link_to '', edit_attack_path(attack), class: "btn btn-info text-white bi bi-pencil" %>
+        <%= link_to '', attack, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                     data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
       </td>
     </tr>
@@ -39,5 +39,5 @@
 </table>
 
 <div class="text-center">
-  <%= link_to 'Nuevo Ataque', new_attack_path, class:"btn btn-primary text-white" %>
+  <%= link_to ' Nuevo Ataque', new_attack_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
 </div>

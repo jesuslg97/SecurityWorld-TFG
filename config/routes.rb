@@ -31,4 +31,9 @@ Rails.application.routes.draw do
 
   resources :extra_infos
 
+  #get 'generals/index'
+  #get 'generals/show'
+
+  resources :generals
+
 end

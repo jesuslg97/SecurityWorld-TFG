@@ -7,7 +7,7 @@
   <thead>
   <tr>
     <th class="text-center">Nombre</th>
-    <th class="text-center">Descripción</th>
+    <th class="col-md-7 text-center">Descripción</th>
     <th colspan="2" class="text-center">Acciones</th>
   </tr>
   </thead>
@@ -19,8 +19,8 @@
       <td class="align-middle"><%= category.descripcion %></td>
       <td class="align-middle">
         <%#= link_to 'Ver', category, class: "btn btn-info text-white" %>
-        <%= link_to 'Editar', edit_category_path(category), class: "btn btn-info text-white mb-2" %>
-        <%= link_to 'Eliminar', category, class: "btn btn-danger text-white", method: :delete,
+        <%= link_to '', edit_category_path(category), class: "btn btn-info text-white bi bi-pencil" %>
+        <%= link_to '', category, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                     data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
       </td>
     </tr>
@@ -29,5 +29,5 @@
 </table>
 
 <div class="text-center">
-  <%= link_to 'Nueva Categoría', new_category_path, class:"btn btn-primary text-white" %>
+  <%= link_to ' Nueva Categoría', new_category_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
 </div>
