@@ -9,6 +9,8 @@ class AttacksController < ApplicationController
   def show
     @attack = Attack.find(params[:id])
     @contents = Content.all
+    @article = Article.find(params[:id])
+    @attacks = Attack.all
   end
 
   def new
@@ -21,7 +23,7 @@ class AttacksController < ApplicationController
   def create
     @attack = Attack.new(strong_params_attack)
     if @attack.save
-      redirect_to attacks_path
+      redirect_to articles_path
     else
       render 'new'
     end
@@ -29,7 +31,7 @@ class AttacksController < ApplicationController
 
   def update
     if @attack.update(strong_params_attack)
-      redirect_to attacks_path
+      redirect_to articles_path
     else
       render 'edit'
     end
@@ -37,7 +39,7 @@ class AttacksController < ApplicationController
 
   def destroy
     @attack.destroy
-    redirect_to attacks_path
+    redirect_to articles_path
   end
 
   private
