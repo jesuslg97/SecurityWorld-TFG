@@ -43,4 +43,9 @@ Rails.application.routes.draw do
 
   resources :questions
 
+  #get 'contents/index'
+  #get 'contents/show'
+
+  resources :contents
+
 end

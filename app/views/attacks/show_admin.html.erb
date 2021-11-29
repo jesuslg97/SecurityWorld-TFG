@@ -17,7 +17,7 @@
     <th class="text-center">Nombre</th>
     <th class="text-center">Categoría</th>
     <th class="text-center">Información</th>
-    <th colspan="2" class="text-center">Acciones</th>
+    <th colspan="3" class="text-center">Acciones</th>
   </tr>
   </thead>
 
@@ -34,7 +34,9 @@
           <td class="align-middle">Empresa</td>
           <td class="align-middle"><%= attack.informacion %></td>
           <td class="align-middle">
-            <%#= link_to 'Ver', attack, class: "btn btn-success text-white mb-2" %>
+            <% if attack.article_id == 3 %>
+              <%= link_to 'Ver Contenido', content_path(attack), class: "btn btn-success text-white" %>
+            <% end %>
             <%= link_to '', edit_attack_path(attack), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', attack, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
@@ -57,7 +59,9 @@
           <td class="align-middle">Hogar</td>
           <td class="align-middle"><%= attack.informacion %></td>
           <td class="align-middle">
-            <%#= link_to 'Ver', attack, class: "btn btn-success text-white mb-2" %>
+            <% if attack.article_id == 6 %>
+              <%= link_to 'Ver Contenido', content_path(attack), class: "btn btn-success text-white" %>
+            <% end %>
             <%= link_to '', edit_attack_path(attack), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', attack, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
@@ -80,7 +84,9 @@
           <td class="align-middle">Móvil</td>
           <td class="align-middle"><%= attack.informacion %></td>
           <td class="align-middle">
-            <%#= link_to 'Ver', attack, class: "btn btn-success text-white mb-2" %>
+            <% if attack.article_id == 9 %>
+              <%= link_to 'Ver Contenido', content_path(attack), class: "btn btn-success text-white" %>
+            <% end %>
             <%= link_to '', edit_attack_path(attack), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', attack, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
