@@ -1,9 +1,9 @@
 <div class="mb-5">
-  <% if @categories.id == 1 || @categories.id == 2 || @categories.id == 3 %>
-    <h2><%= @categories.nombre %></h2>
+  <% if @category.id == 1 || @category.id == 2 || @category.id == 3 %>
+    <h2><%= @category.nombre %></h2>
     <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
     <div class="col-md-10 offset-1">
-      <p><%= @categories.descripcion %></p>
+      <p><%= @category.descripcion %></p>
     </div>
   <% end %>
 </div>
@@ -13,7 +13,7 @@
   <% @articles.each do |article| %>
 
     <!-- Medidas generales -->
-    <% if @categories.id == 1 %>
+    <% if @category.id == 1 %>
 
       <!-- Empresa -->
         <% if article.id == 1 %>
@@ -52,7 +52,7 @@
     <!-- Medidas generales -->
 
     <!-- Preguntas frecuentes -->
-    <% if @categories.id == 2 %>
+    <% if @category.id == 2 %>
 
       <!-- Empresa -->
       <% if article.id == 4 %>
@@ -91,7 +91,7 @@
     <!-- Preguntas frecuentes -->
 
     <!-- Ataques específicos -->
-    <% if @categories.id == 3 %>
+    <% if @category.id == 3 %>
 
       <!-- Empresa -->
       <% if article.id == 7 %>
