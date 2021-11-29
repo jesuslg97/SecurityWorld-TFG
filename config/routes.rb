@@ -36,4 +36,9 @@ Rails.application.routes.draw do
 
   resources :generals
 
+  #get 'questions/index'
+  #get 'questions/show'
+
+  resources :questions
+
 end

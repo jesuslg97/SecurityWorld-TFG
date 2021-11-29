@@ -1,0 +1,53 @@
+<%= form_with(model: @question) do |form| %>
+
+  <div class="row">
+
+    <% if @question.errors.any? %>
+      <div class="alert-danger">
+        <span>
+          Se han encontrado
+          <%= pluralize(@question.errors.count, "error") %>:
+        </span>
+        <ul>
+          <% @question.errors.full_messages.each do |msg| %>
+            <li> <%= msg %> </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="col-md-6 mb-3">
+      <div class="form-group">
+        <strong><%= form.label :pregunta %></strong>
+        <%= form.text_field :pregunta, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="article_id"><strong>Artículo</strong></label>
+        <select name="question[article_id]" class="form-control">
+          <option value="null">Seleccione Artículo</option>
+          <% Article.all.each do |c| %>
+            <option value="<%= c.id %>" <%= @question.article_id == c.id ? "selected" : "" %>>
+              <%= c.nombre %>
+            </option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <strong><%= form.label :respuesta %></strong>
+        <%= form.text_field :respuesta, class:"form-control" %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-center mt-4">
+    <%= form.submit "Guardar", class: "btn btn-primary", style: "margin-right: 10px" %>
+    <%= link_to 'Cancelar', articles_path, class: "btn btn-warning text-white" %>
+  </div>
+<% end %>

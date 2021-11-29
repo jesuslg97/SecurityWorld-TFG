@@ -1,0 +1,95 @@
+<div class="text-center">
+  <% if @article.id == 2 %>
+    <h2>Preguntas Empresa</h2>
+  <% end %>
+  <% if @article.id == 5 %>
+    <h2>Preguntas Hogar</h2>
+  <% end %>
+  <% if @article.id == 8 %>
+    <h2>Preguntas Móvil</h2>
+  <% end %>
+  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+</div>
+
+<table class="table col-md-10">
+  <thead>
+  <tr>
+    <th class="col-md-3 text-center">Pregunta</th>
+    <th class="col-md-3 text-center">Categoría</th>
+    <th colspan="2" class="col-md-3 text-center">Acciones</th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <!-- Preguntas Empresa -->
+  <% if @article.id == 2 %>
+
+    <% @questions.each do |question| %>
+
+      <tr class="text-center">
+        <% if question.article_id == 2 %>
+          <td class="align-middle"><%= question.pregunta %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%#= link_to 'Ver', question, class: "btn btn-success text-white mb-2" %>
+            <%= link_to '', edit_question_path(question), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', question, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+
+  <% end %>
+  <!-- Preguntas Empresa -->
+
+  <!-- Preguntas Hogar -->
+  <% if @article.id == 5 %>
+
+    <% @questions.each do |question| %>
+
+      <tr class="text-center">
+        <% if question.article_id == 5 %>
+          <td class="align-middle"><%= question.pregunta %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%#= link_to 'Ver', question, class: "btn btn-success text-white mb-2" %>
+            <%= link_to '', edit_question_path(question), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', question, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+
+  <% end %>
+  <!-- Preguntas Hogar -->
+
+  <!-- Preguntas Movil -->
+  <% if @article.id == 8 %>
+
+    <% @questions.each do |question| %>
+
+      <tr class="text-center">
+        <% if question.article_id == 8 %>
+          <td class="align-middle"><%= question.pregunta %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%#= link_to 'Ver', question, class: "btn btn-success text-white mb-2" %>
+            <%= link_to '', edit_question_path(question), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', question, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+
+  <% end %>
+  <!-- Preguntas Movil -->
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= link_to ' Nueva Medida', new_question_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+</div>
