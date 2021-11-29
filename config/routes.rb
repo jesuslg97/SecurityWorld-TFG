@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   resources :attacks
 
+  get 'attacks_admin/:id', to: 'attacks#show_admin', as: :show_admin
+
   #get 'extras/index'
   #get 'extras/show'
 

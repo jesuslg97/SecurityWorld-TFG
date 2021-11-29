@@ -9,6 +9,9 @@ class AttacksController < ApplicationController
   def show
     @attack = Attack.find(params[:id])
     @contents = Content.all
+  end
+
+  def show_admin
     @article = Article.find(params[:id])
     @attacks = Attack.all
   end
