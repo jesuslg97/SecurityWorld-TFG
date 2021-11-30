@@ -3,7 +3,8 @@
     <h2><%= @category.nombre %></h2>
     <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
     <div class="col-md-10 offset-1">
-      <p><%= @category.descripcion %></p>
+      <p><%= simple_format(@category.descripcion) %></p>
+      <span><%= image_tag @category.image, style: "width:450px", class: "rounded"%></span>
     </div>
   <% end %>
 </div>
