@@ -16,28 +16,14 @@
       </div>
     <% end %>
 
-    <div class="col-md-6 mb-3">
+    <div class="col-md-4 mb-3">
       <div class="form-group">
         <strong><%= form.label :nombre %></strong>
         <%= form.text_field :nombre, class:"form-control" %>
       </div>
     </div>
 
-    <div class="col-md-6">
-      <div class="form-group">
-        <strong><%= form.label :descripcion %></strong>
-        <%= form.text_field :descripcion, class:"form-control" %>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="form-group">
-        <strong><%= form.label :texto %></strong>
-        <%= form.text_field :texto, class:"form-control" %>
-      </div>
-    </div>
-
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="form-group">
         <label for="category_id"><strong>Categoría</strong></label>
         <select name="article[category_id]" class="form-control">
@@ -48,6 +34,27 @@
             </option>
           <% end %>
         </select>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <strong><%= form.label :image, "Imagen" %></strong>
+        <%= form.file_field :image, class:"form-control-file" %>
+      </div>
+    </div>
+
+    <div class="col-md-12 mb-2">
+      <div class="form-group">
+        <strong><%= form.label :descripcion, "Descripción" %></strong>
+        <%= form.text_field :descripcion, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <strong><%= form.label :texto %></strong>
+        <%= form.text_field :texto, class:"form-control" %>
       </div>
     </div>
 

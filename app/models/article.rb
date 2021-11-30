@@ -5,9 +5,11 @@ class Article < ApplicationRecord
   has_many :questions
   has_many :generals
 
+  has_one_attached :image
   validates :nombre, presence: true
   validates :descripcion, presence: true, length: { maximum: 1000 }
   validates :texto, presence: true, length: { maximum: 1000 }
   validates :category_id, presence: true
+  #validates :image
 
 end

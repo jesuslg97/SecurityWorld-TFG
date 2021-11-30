@@ -25,14 +25,14 @@
 
     <div class="col-md-6">
       <div class="form-group">
-        <%= form.label :image %>
+        <strong><%= form.label :image, "Imagen" %></strong>
         <%= form.file_field :image, class:"form-control-file" %>
       </div>
     </div>
 
     <div class="col-md-12">
       <div class="form-group">
-        <strong><%= form.label :descripcion %></strong>
+        <strong><%= form.label :descripcion, "Descripción" %></strong>
         <%= form.text_field :descripcion, class:"form-control" %>
       </div>
     </div>
