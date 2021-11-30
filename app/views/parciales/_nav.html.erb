@@ -24,8 +24,25 @@
           <li class="col-md-3 nav-item">
             <%= link_to " Artículos", articles_path, class: "nav-link text-white bi bi-clipboard-check" %>
           </li>
-          <li class="col-md-3 nav-item">
-            <%= link_to " Ataques", attacks_path, class: "nav-link text-white bi bi-cpu" %>
+          <li class="col-md-3 nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white bi bi-info-circle" role="button"
+               id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Información
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li>
+                <%= link_to "Noticias", extra_path(:id => 1), class: "dropdown-item" %>
+              </li>
+              <li>
+                <%= link_to "Conceptos", extra_path(:id => 2), class: "dropdown-item" %>
+              </li>
+              <li>
+                <%= link_to "Organismos", extra_path(:id => 3), class: "dropdown-item" %>
+              </li>
+              <li>
+                <%= link_to "Leyes", extra_path(:id => 4), class: "dropdown-item" %>
+              </li>
+            </ul>
           </li>
           <li class="col-md-3 nav-item">
             <%= link_to " Cerrar sesión", destroy_user_session_path, method: :delete,
