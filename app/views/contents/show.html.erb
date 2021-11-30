@@ -14,10 +14,10 @@
   <% if @attack.id == 21 || @attack.id == 22 || @attack.id == 24 || @attack.id == 25 || @attack.id == 26 %>
     <h2>Contenido <%= @attack.nombre %></h2>
   <% end %>
-  <% if @attack.id == 28 || @attack.id == 29 || @attack.id == 30 || @attack.id == 31 || @attack.id == 33 %>
+  <% if @attack.id == 28 || @attack.id == 29 || @attack.id == 30 || @attack.id == 31 || @attack.id == 32 %>
     <h2>Contenido <%= @attack.nombre %></h2>
   <% end %>
-  <% if @attack.id == 34 || @attack.id == 35 || @attack.id == 36 %>
+  <% if @attack.id == 33 || @attack.id == 34 || @attack.id == 35 || @attack.id == 36 %>
     <h2>Contenido <%= @attack.nombre %></h2>
   <% end %>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
@@ -36,15 +36,12 @@
 
   <!-- Ataques Empresa -->
   <% if @attack.nombre == "Malware" && @attack.id == 1 %>
-
     <% @contents.each do |content| %>
-
       <tr class="text-center">
         <% if content.attack_id == 1 %>
           <td class="align-middle"><%= content.titulo %></td>
           <td class="align-middle">Empresa</td>
           <td class="align-middle">
-            <%#= link_to 'Ver', content, class: "btn btn-success text-white mb-2" %>
             <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
@@ -52,19 +49,15 @@
         <% end %>
       </tr>
     <% end %>
-
   <% end %>
 
   <% if @attack.nombre == "Phishing" && @attack.id == 2 %>
-
     <% @contents.each do |content| %>
-
       <tr class="text-center">
         <% if content.attack_id == 2 %>
           <td class="align-middle"><%= content.titulo %></td>
           <td class="align-middle">Empresa</td>
           <td class="align-middle">
-            <%#= link_to 'Ver', content, class: "btn btn-success text-white mb-2" %>
             <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
@@ -72,21 +65,241 @@
         <% end %>
       </tr>
     <% end %>
+  <% end %>
 
+  <% if @attack.nombre == "Ransomware" && @attack.id == 3 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 3 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Gusano" && @attack.id == 4 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 4 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Virus" && @attack.id == 5 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 5 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Troyano" && @attack.id == 6 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 6 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Denegación de Servicio" && @attack.id == 7 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 7 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Rootkit" && @attack.id == 8 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 8 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Spyware" && @attack.id == 9 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 9 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Adware" && @attack.id == 10 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 10 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Ataques de inyección SQL" && @attack.id == 11 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 11 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Cross-Site Scripting (XSS)" && @attack.id == 12 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 12 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Man in The Middle" && @attack.id == 13 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 13 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Tunelización de DNS" && @attack.id == 14 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 14 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Spear phishing" && @attack.id == 15 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 15 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Whaling" && @attack.id == 16 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 16 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Empresa</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
   <% end %>
   <!-- Ataques Empresa -->
 
   <!-- Ataques Hogar -->
   <% if @attack.nombre == "Malware" && @attack.id == 17 %>
-
     <% @contents.each do |content| %>
-
       <tr class="text-center">
         <% if content.attack_id == 17 %>
           <td class="align-middle"><%= content.titulo %></td>
           <td class="align-middle">Hogar</td>
           <td class="align-middle">
-            <%#= link_to 'Ver', content, class: "btn btn-success text-white mb-2" %>
             <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
@@ -94,21 +307,145 @@
         <% end %>
       </tr>
     <% end %>
+  <% end %>
 
+  <% if @attack.nombre == "Phishing" && @attack.id == 18 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 18 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Virus" && @attack.id == 19 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 19 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Troyano" && @attack.id == 20 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 20 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Spyware" && @attack.id == 21 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 21 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Adware" && @attack.id == 22 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 22 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Cross-Site Scripting (XSS)" && @attack.id == 24 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 24 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Man in The Middle" && @attack.id == 25 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 25 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Spear phishing" && @attack.id == 26 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 26 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Hogar</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
   <% end %>
   <!-- Ataques Hogar -->
 
   <!-- Ataques Movil -->
   <% if @attack.nombre == "Malware" && @attack.id == 28 %>
-
     <% @contents.each do |content| %>
-
       <tr class="text-center">
         <% if content.attack_id == 28 %>
           <td class="align-middle"><%= content.titulo %></td>
           <td class="align-middle">Móvil</td>
           <td class="align-middle">
-            <%#= link_to 'Ver', content, class: "btn btn-success text-white mb-2" %>
             <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
@@ -116,7 +453,134 @@
         <% end %>
       </tr>
     <% end %>
+  <% end %>
 
+  <% if @attack.nombre == "Ransomware" && @attack.id == 29 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 29 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Phishing" && @attack.id == 30 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 30 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Gusano" && @attack.id == 31 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 31 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Virus" && @attack.id == 32 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 32 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Troyano" && @attack.id == 33 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 33 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Spyware" && @attack.id == 34 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 34 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Adware" && @attack.id == 35 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 10 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <% if @attack.nombre == "Man in The Middle" && @attack.id == 36 %>
+    <% @contents.each do |content| %>
+      <tr class="text-center">
+        <% if content.attack_id == 36 %>
+          <td class="align-middle"><%= content.titulo %></td>
+          <td class="align-middle">Móvil</td>
+          <td class="align-middle">
+            <%= link_to '', edit_content_path(content), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', content, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
   <% end %>
   <!-- Ataques Movil -->
   </tbody>
