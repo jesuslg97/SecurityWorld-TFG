@@ -48,4 +48,6 @@ Rails.application.routes.draw do
 
   resources :contents
 
+  resources :home
+
 end
