@@ -1,9 +1,9 @@
 <div class="mb-5">
-  <% if @extras.id == 1 || @extras.id == 2 || @extras.id == 3 || @extras.id == 4 %>
-    <h2><%= @extras.nombre %></h2>
+  <% if @extra.id == 1 || @extra.id == 2 || @extra.id == 3 || @extra.id == 4 %>
+    <h2><%= @extra.nombre %></h2>
     <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
     <div class="col-md-10 offset-1">
-      <p><%= @extras.descripcion %></p>
+      <p><%= @extra.descripcion %></p>
     </div>
   <% end %>
 </div>
@@ -13,7 +13,7 @@
   <% @extra_infos.each do |extra| %>
 
     <!-- Últimas Noticias -->
-    <% if @extras.id == 1 %>
+    <% if @extra.id == 1 %>
 
       <% if extra.id == 1 %>
         <div class="col-md-3 text-center myInformation" style="margin-left: 40px">
@@ -46,7 +46,7 @@
     <!-- Últimas Noticias -->
 
     <!-- Conceptos -->
-    <% if @extras.id == 2 %>
+    <% if @extra.id == 2 %>
       <% if extra.extra_id == 2 %>
         <div class="row col-md-11 mb-4" style="text-align: left; margin-left: 20px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
@@ -57,7 +57,7 @@
     <!-- Conceptos -->
 
     <!-- Organismos -->
-    <% if @extras.id == 3 %>
+    <% if @extra.id == 3 %>
       <% if extra.extra_id == 3 %>
         <div class="row col-md-11 mb-4" style="text-align: left; margin-left: 20px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
@@ -109,7 +109,7 @@
     <!-- Organismos -->
 
     <!-- Leyes -->
-    <% if @extras.id == 4 %>
+    <% if @extra.id == 4 %>
       <% if extra.extra_id == 4 %>
         <div class="row col-md-11 mb-5" style="text-align: left; margin-left: 20px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>

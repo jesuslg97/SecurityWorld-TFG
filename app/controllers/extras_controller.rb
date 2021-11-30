@@ -1,11 +1,11 @@
 class ExtrasController < ApplicationController
 
   def index
-    @extras = Extra.all
+    @extra = Extra.find(params[:id])
   end
 
   def show
-    @extras = Extra.find(params[:id])
+    @extra = Extra.find(params[:id])
     @extra_infos = ExtraInfo.all
   end
 
