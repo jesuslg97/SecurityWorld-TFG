@@ -1,6 +1,33 @@
 <div class="text-center">
-  <% if @extra.id == 1 || @extra.id == 2 || @extra.id == 3 || @extra.id == 4 %>
-    <h2><%= @extra.nombre %></h2>
-    <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
+  <h2>Información Extra</h2>
+  <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 150px;">
+</div>
+
+<table class="table col-md-10">
+  <thead>
+  <tr>
+    <th class="text-center">Nombre</th>
+    <th class="col-md-7 text-center">Descripción</th>
+    <th colspan="2" class="text-center">Acciones</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @extras.each do |extra| %>
+    <tr class="text-center">
+      <td class="align-middle"><%= extra.nombre %></td>
+      <td class="align-middle"><%= extra.descripcion %></td>
+      <td class="align-middle">
+        <%#= link_to 'Ver', extra, class: "btn btn-info text-white" %>
+        <%= link_to '', edit_extra_path(extra), class: "btn btn-info text-white bi bi-pencil" %>
+        <%= link_to '', extra, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                    data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+      </td>
+    </tr>
   <% end %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= link_to ' Nuevo Extra', new_extra_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
 </div>
