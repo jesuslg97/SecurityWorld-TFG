@@ -1,0 +1,18 @@
+<nav class="row navbar-expand col-md-2 mt-2">
+  <span class="m-0">Usted se encuentra en:</span>
+  <ol class="breadcrumbs navbar-nav col-md-12" style="list-style: none">
+    <% breadcrumbs.each do |crumb| %>
+      <li class="nav-item col-md-5">
+        <% if crumb.link? %>
+          <%= link_to crumb.name, crumb.path, class: "breadcrumb-link" %>
+        <% else %>
+          <span class="breadcrumb-page"><%= crumb.name %></span>
+        <% end %>
+
+        <% unless crumb == breadcrumbs.last %>
+          <span class="breadcrumb-separator"> > </span>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+</nav>

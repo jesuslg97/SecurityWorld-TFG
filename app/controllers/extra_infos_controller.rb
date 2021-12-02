@@ -2,6 +2,8 @@ class ExtraInfosController < ApplicationController
 
   before_action :find_extra_info, only: %i[ show edit update destroy]
 
+  before_action :set_breadcrumbs
+
   def index
     @extra_infos = ExtraInfo.all
     @extra = Extra.find(params[:id])
@@ -9,6 +11,19 @@ class ExtraInfosController < ApplicationController
 
   def show
     @extras = Extra.all
+
+    if @extra_info.id == 1
+      add_breadcrumb("Noticia 1")
+    end
+
+    if @extra_info.id == 2
+      add_breadcrumb("Noticia 2")
+    end
+
+    if @extra_info.id == 3
+      add_breadcrumb("Noticia 3")
+    end
+
   end
 
   def new
@@ -48,6 +63,15 @@ class ExtraInfosController < ApplicationController
 
   def strong_params_extra_info
     params.require(:extra_info).permit(:nombre, :descripcion, :texto, :extra_id, :image)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb("Inicio", root_path)
+
+    if @extra_info.extra_id == 1
+      add_breadcrumb("Últimas noticias", extra_path(:id => 1))
+    end
+
   end
 
 end

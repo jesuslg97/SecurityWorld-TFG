@@ -2,12 +2,27 @@ class CategoriesController < ApplicationController
 
   before_action :find_category, only: %i[ show edit update destroy]
 
+  before_action :set_breadcrumbs
+
   def index
     @categories = Category.all
   end
 
   def show
     @articles = Article.all
+
+    if @category.id == 1
+      add_breadcrumb("Empresa", category_path)
+    end
+
+    if @category.id == 2
+      add_breadcrumb("Hogar", category_path)
+    end
+
+    if @category.id == 3
+      add_breadcrumb("Móvil", category_path)
+    end
+
   end
 
   def new
@@ -47,6 +62,10 @@ class CategoriesController < ApplicationController
 
   def strong_params_category
     params.require(:category).permit(:nombre, :descripcion, :image)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb("Inicio", root_path)
   end
 
 end
