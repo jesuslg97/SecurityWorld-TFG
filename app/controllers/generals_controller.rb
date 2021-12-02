@@ -2,19 +2,36 @@ class GeneralsController < ApplicationController
 
   before_action :find_general, only: %i[ edit update destroy]
 
+  before_action :set_breadcrumbs
+
   def index
   end
 
   def show
     @article = Article.find(params[:id])
     @generals = General.all
+    add_breadcrumb("Medidas generales")
   end
 
   def new
     @general = General.new
+    add_breadcrumb("Añadir Medida")
   end
 
   def edit
+    if @general.article_id == 1
+      add_breadcrumb("Medidas generales Empresa", general_path(:id => 1))
+    end
+
+    if @general.article_id == 4
+      add_breadcrumb("Medidas generales Empresa", general_path(:id => 4))
+    end
+
+    if @general.article_id == 7
+      add_breadcrumb("Medidas generales Empresa", general_path(:id => 7))
+    end
+
+    add_breadcrumb("Editar Medida")
   end
 
   def create
@@ -47,6 +64,11 @@ class GeneralsController < ApplicationController
 
   def strong_params_general
     params.require(:general).permit(:titulo, :informacion, :article_id)
+  end
+
+  def set_breadcrumbs
+    add_breadcrumb("Inicio", root_path)
+    add_breadcrumb("Artículos", articles_path)
   end
 
 end

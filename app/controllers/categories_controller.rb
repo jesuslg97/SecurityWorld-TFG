@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
+    add_breadcrumb("Categorías")
   end
 
   def show
@@ -27,9 +28,13 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
+    add_breadcrumb("Categorías", categories_path)
+    add_breadcrumb("Añadir Categoría")
   end
 
   def edit
+    add_breadcrumb("Categorías", categories_path)
+    add_breadcrumb("Editar Categoría")
   end
 
   def create

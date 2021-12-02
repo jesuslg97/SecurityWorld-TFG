@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    add_breadcrumb("Artículos")
   end
 
   def show
@@ -30,9 +31,56 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    add_breadcrumb("Artículos", articles_path)
+    add_breadcrumb("Añadir Artículo")
   end
 
   def edit
+    if @article.id == 1
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Medidas Empresa")
+    end
+
+    if @article.id == 2
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Preguntas Empresa")
+    end
+
+    if @article.id == 3
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Ataques Empresa")
+    end
+
+    if @article.id == 4
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Medidas Hogar")
+    end
+
+    if @article.id == 5
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Preguntas Hogar")
+    end
+
+    if @article.id == 6
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Ataques Hogar")
+    end
+
+    if @article.id == 7
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Medidas Móvil")
+    end
+
+    if @article.id == 8
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Preguntas Móvil")
+    end
+
+    if @article.id == 9
+      add_breadcrumb("Artículos", articles_path)
+      add_breadcrumb("Editar Ataques Móvil")
+    end
+
   end
 
   def create
@@ -70,16 +118,18 @@ class ArticlesController < ApplicationController
   def set_breadcrumbs
     add_breadcrumb("Inicio", root_path)
 
-    if @article.category_id == 1
-      add_breadcrumb("Empresa", category_path(:id => 1))
-    end
+    if user_signed_in? == false
+      if @article.category_id == 1
+        add_breadcrumb("Empresa", category_path(:id => 1))
+      end
 
-    if @article.category_id == 2
-      add_breadcrumb("Hogar", category_path(:id => 2))
-    end
+      if @article.category_id == 2
+        add_breadcrumb("Hogar", category_path(:id => 2))
+      end
 
-    if @article.category_id == 3
-      add_breadcrumb("Móvil", category_path(:id => 3))
+      if @article.category_id == 3
+        add_breadcrumb("Móvil", category_path(:id => 3))
+      end
     end
 
   end
