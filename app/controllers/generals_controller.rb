@@ -1,6 +1,6 @@
 class GeneralsController < ApplicationController
 
-  before_action :find_general, only: %i[ edit update destroy]
+  before_action :find_general, only: %i[show edit update destroy]
 
   before_action :set_breadcrumbs
 
@@ -10,7 +10,19 @@ class GeneralsController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @generals = General.all
-    add_breadcrumb("Medidas generales")
+
+    if @article.id == 1
+      add_breadcrumb("Medidas generales Empresa")
+    end
+
+    if @article.id == 4
+      add_breadcrumb("Medidas generales Hogar")
+    end
+
+    if @article.id == 7
+      add_breadcrumb("Medidas generales Móvil")
+    end
+
   end
 
   def new
@@ -24,11 +36,11 @@ class GeneralsController < ApplicationController
     end
 
     if @general.article_id == 4
-      add_breadcrumb("Medidas generales Empresa", general_path(:id => 4))
+      add_breadcrumb("Medidas generales Hogar", general_path(:id => 4))
     end
 
     if @general.article_id == 7
-      add_breadcrumb("Medidas generales Empresa", general_path(:id => 7))
+      add_breadcrumb("Medidas generales Móvil", general_path(:id => 7))
     end
 
     add_breadcrumb("Editar Medida")

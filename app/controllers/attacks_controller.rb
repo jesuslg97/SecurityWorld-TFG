@@ -82,15 +82,15 @@ class AttacksController < ApplicationController
     @attacks = Attack.all
 
     if @article.category_id == 1
-      add_breadcrumb("Ataques Empresa")
+      add_breadcrumb("Ataques específicos Empresa")
     end
 
     if @article.category_id == 2
-      add_breadcrumb("Ataques Hogar")
+      add_breadcrumb("Ataques específicos Hogar")
     end
 
     if @article.category_id == 3
-      add_breadcrumb("Ataques Móvil")
+      add_breadcrumb("Ataques específicos Móvil")
     end
   end
 
@@ -101,15 +101,15 @@ class AttacksController < ApplicationController
 
   def edit
     if @attack.article_id == 3
-      add_breadcrumb("Ataques Empresa", show_admin_path(:id => 3))
+      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
     end
 
     if @attack.article_id == 6
-      add_breadcrumb("Ataques Hogar", show_admin_path(:id => 6))
+      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
     end
 
     if @attack.article_id == 9
-      add_breadcrumb("Ataques Móvil", show_admin_path(:id => 9))
+      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
     end
 
     add_breadcrumb("Editar Ataque")
