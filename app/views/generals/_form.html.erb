@@ -48,6 +48,14 @@
 
   <div class="d-flex justify-content-center mt-4">
     <%= form.submit "Guardar", class: "btn btn-primary", style: "margin-right: 10px" %>
-    <%= link_to 'Cancelar', articles_path, class: "btn btn-warning text-white" %>
+    <% if @general.article_id == 1 %>
+      <%= link_to 'Cancelar', general_path(:id => 1), class: "btn btn-warning text-white" %>
+    <% elsif @general.article_id == 4 %>
+      <%= link_to 'Cancelar', general_path(:id => 4), class: "btn btn-warning text-white" %>
+    <% elsif @general.article_id == 7 %>
+      <%= link_to 'Cancelar', general_path(:id => 7), class: "btn btn-warning text-white" %>
+    <% else %>
+      <%= link_to 'Cancelar', articles_path, class: "btn btn-warning text-white" %>
+    <% end %>
   </div>
 <% end %>
