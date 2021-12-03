@@ -6,6 +6,7 @@ class ExtrasController < ApplicationController
 
   def index
     @extras = Extra.all
+    add_breadcrumb("Extras")
   end
 
   def show
@@ -31,9 +32,13 @@ class ExtrasController < ApplicationController
 
   def new
     @extra = Extra.new
+    add_breadcrumb("Extras", extras_path)
+    add_breadcrumb("Añadir Extra")
   end
 
   def edit
+    add_breadcrumb("Extras", extras_path)
+    add_breadcrumb("Editar Extra")
   end
 
   def create

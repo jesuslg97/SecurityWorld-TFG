@@ -7,6 +7,22 @@ class ExtraInfosController < ApplicationController
   def index
     @extra_infos = ExtraInfo.all
     @extra = Extra.find(params[:id])
+
+    if @extra.id == 1
+      add_breadcrumb("Últimas noticias")
+    end
+
+    if @extra.id == 2
+      add_breadcrumb("Conceptos")
+    end
+
+    if @extra.id == 3
+      add_breadcrumb("Organismos")
+    end
+
+    if @extra.id == 4
+      add_breadcrumb("Leyes")
+    end
   end
 
   def show
@@ -28,9 +44,31 @@ class ExtraInfosController < ApplicationController
 
   def new
     @extra_info = ExtraInfo.new
+    add_breadcrumb("Añadir Información")
   end
 
   def edit
+
+    if @extra_info.extra_id == 1
+      add_breadcrumb("Últimas noticias", extra_infos_path(:id => 1))
+      add_breadcrumb("Editar Información")
+    end
+
+    if @extra_info.extra_id == 2
+      add_breadcrumb("Conceptos", extra_infos_path(:id => 2))
+      add_breadcrumb("Editar Información")
+    end
+
+    if @extra_info.extra_id == 3
+      add_breadcrumb("Organismos", extra_infos_path(:id => 3))
+      add_breadcrumb("Editar Información")
+    end
+
+    if @extra_info.extra_id == 4
+      add_breadcrumb("Leyes", extra_infos_path(:id => 4))
+      add_breadcrumb("Editar Información")
+    end
+
   end
 
   def create
@@ -68,8 +106,22 @@ class ExtraInfosController < ApplicationController
   def set_breadcrumbs
     add_breadcrumb("Inicio", root_path)
 
-    if @extra_info.extra_id == 1
-      add_breadcrumb("Últimas noticias", extra_path(:id => 1))
+    if user_signed_in? == false
+      if @extra_info.extra_id == 1
+        add_breadcrumb("Últimas noticias", extra_path(:id => 1))
+      end
+
+      if @extra_info.extra_id == 2
+        add_breadcrumb("Conceptos", extra_path(:id => 2))
+      end
+
+      if @extra_info.extra_id == 3
+        add_breadcrumb("Organismos", extra_path(:id => 3))
+      end
+
+      if @extra_info.extra_id == 4
+        add_breadcrumb("Leyes", extra_path(:id => 4))
+      end
     end
 
   end
