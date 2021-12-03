@@ -29,9 +29,21 @@
         <select name="general[article_id]" class="form-control">
           <option value="null">Seleccione Artículo</option>
           <% Article.all.each do |c| %>
-            <option value="<%= c.id %>" <%= @general.article_id == c.id ? "selected" : "" %>>
-              <%= c.nombre %>
-            </option>
+            <% if c.id == 1 || c.id == 4 || c.id == 7 %>
+              <option value="<%= c.id %>" <%= @general.article_id == c.id ? "selected" : "" %>>
+                <% if c.id == 1 %>
+                  <%= c.nombre %> Empresa
+                <% end %>
+
+                <% if c.id == 4 %>
+                  <%= c.nombre %> Hogar
+                <% end %>
+
+                <% if c.id == 7 %>
+                  <%= c.nombre %> Móvil
+                <% end %>
+              </option>
+            <% end %>
           <% end %>
         </select>
       </div>

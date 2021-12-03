@@ -13,15 +13,15 @@ class CategoriesController < ApplicationController
     @articles = Article.all
 
     if @category.id == 1
-      add_breadcrumb("Empresa", category_path)
+      add_breadcrumb("Empresa")
     end
 
     if @category.id == 2
-      add_breadcrumb("Hogar", category_path)
+      add_breadcrumb("Hogar")
     end
 
     if @category.id == 3
-      add_breadcrumb("Móvil", category_path)
+      add_breadcrumb("Móvil")
     end
 
   end
