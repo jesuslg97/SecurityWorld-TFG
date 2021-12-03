@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     end
 
     if @article.id == 3 || @article.id == 6 || @article.id == 9
-      add_breadcrumb("Ataques específicos", article_path)
+      add_breadcrumb("Ataques específicos")
     end
 
   end

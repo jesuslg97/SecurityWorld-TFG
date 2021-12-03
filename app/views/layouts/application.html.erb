@@ -17,7 +17,10 @@
     <div class="container-fluid">
       <%= render 'parciales/nav' %>
       <div class="row offset-md-0 col-md-12">
-        <div class="col-md-10 text-center mt-5">
+        <div class="col-md-10 text-center">
+          <div class="mb-5">
+            <%= render 'parciales/breadcrumb' %>
+          </div>
           <%= yield %>
         </div>
         <%= render 'parciales/information' %>
