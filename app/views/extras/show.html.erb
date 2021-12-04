@@ -1,15 +1,17 @@
-<div class="mb-5">
-  <% if @extra.id == 1 || @extra.id == 2 || @extra.id == 3 || @extra.id == 4 %>
+<div class="row col-md-12 mb-5">
+  <div>
     <h2><%= @extra.nombre %></h2>
     <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-    <div class="col-md-10 offset-1">
-      <p class="m-0"><%= simple_format(@extra.descripcion) %></p>
-      <span><%= image_tag @extra.image, style: "width: 400px", class: "rounded" %></span>
-    </div>
-  <% end %>
+  </div>
+
+  <div class="row offset-md-1 offset-sm-0 col-md-10">
+    <p class="m-0"><%= simple_format(@extra.descripcion) %></p>
+  </div>
+  <span><%= image_tag @extra.image, style: "max-width: 100%; width: 400px", class: "rounded" %></span>
+
 </div>
 
-<div class="row mt-4">
+<div class="row offset-md-1 col-md-10 mt-4">
 
   <% @extra_infos.each do |extra| %>
 
@@ -17,28 +19,40 @@
     <% if @extra.id == 1 %>
 
       <% if extra.id == 1 %>
-        <div class="col-md-3 text-center myInformation" style="margin-left: 40px">
-          <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
-          <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-          <span><%= image_tag extra.image, style: "width: 200px", class: "rounded" %></span>
+        <div class="offset-md-0 offset-sm-0 col-md-3 text-center myInformation mb-3">
+          <div>
+            <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
+            <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+          </div>
+          <span>
+            <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
+          </span>
           <span><%= link_to 'Leer información', extra_info_path(:id => 1) %></span>
         </div>
       <% end %>
 
       <% if extra.id == 2 %>
-        <div class="offset-1 col-md-3 text-center myInformation">
-          <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
-          <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-          <span><%= image_tag extra.image, style: "width: 200px", class: "rounded" %></span>
+        <div class="offset-md-1 offset-sm-0 col-md-3 text-center myInformation mb-3">
+          <div>
+            <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
+            <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+          </div>
+          <span>
+            <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
+          </span>
           <span><%= link_to 'Leer información', extra_info_path(:id => 2) %></span>
         </div>
       <% end %>
 
       <% if extra.id == 3 %>
-        <div class="offset-1 col-md-3 text-center myInformation">
-          <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
-          <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-          <span><%= image_tag extra.image, style: "width: 200px", class: "rounded" %></span>
+        <div class="offset-md-1 offset-sm-0 col-md-3 text-center myInformation mb-3">
+          <div>
+            <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
+            <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+          </div>
+          <span>
+            <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
+          </span>
           <span><%= link_to 'Leer información', extra_info_path(:id => 3) %></span>
         </div>
       <% end %>
