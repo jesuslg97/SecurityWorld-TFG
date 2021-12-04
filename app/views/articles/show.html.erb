@@ -46,9 +46,11 @@
     <% @attacks.each do |attack| %>
 
       <% if attack.article_id == 3 %>
-        <div class="col-md-2 text-center myInformation m-3">
-          <h4 class="mb-3"><%= attack.nombre %></h4>
-          <span><%= link_to 'Detalles', attack_path(attack) %></span>
+        <div class="col-md-2 text-center m-md-3 mb-3">
+          <div class="myInformation">
+            <h4 class="mb-3"><%= attack.nombre %></h4>
+            <span><%= link_to 'Detalles', attack_path(attack) %></span>
+          </div>
         </div>
       <% end %>
 
@@ -108,9 +110,11 @@
     <% @attacks.each do |attack| %>
 
       <% if attack.article_id == 6 %>
-        <div class="col-md-2 text-center myInformation m-3">
-          <h4 class="mb-3"><%= attack.nombre %></h4>
-          <span><%= link_to 'Detalles', attack_path(attack) %></span>
+        <div class="col-md-2 text-center m-md-3 mb-3">
+          <div class="myInformation">
+            <h4 class="mb-3"><%= attack.nombre %></h4>
+            <span><%= link_to 'Detalles', attack_path(attack) %></span>
+          </div>
         </div>
       <% end %>
 
@@ -170,9 +174,11 @@
     <% @attacks.each do |attack| %>
 
       <% if attack.article_id == 9 %>
-        <div class="col-md-2 text-center myInformation m-3">
-          <h4 class="mb-3"><%= attack.nombre %></h4>
-          <span><%= link_to 'Detalles', attack_path(attack) %></span>
+        <div class="col-md-2 text-center m-md-3 mb-3">
+          <div class="myInformation">
+            <h4 class="mb-3"><%= attack.nombre %></h4>
+            <span><%= link_to 'Detalles', attack_path(attack) %></span>
+          </div>
         </div>
       <% end %>
 
