@@ -1,19 +1,25 @@
-<header class="col-md-12 col-xs-12">
+<header class="col-md-12">
 
   <div class="row col-md-12">
-    <div class="col-4 titulo text-center">
-      <h1 class="m-0"><%= link_to "SecurityWorld", root_path, class: "text-dark",
-                                  style: "text-decoration: none" %></h1>
-      <p class="text-dark m-0">La seguridad es lo primero</p>
+
+    <div class="row col-md-11 col-sm-5">
+      <div class="col-sm-4 titulo text-center">
+        <h1 class="m-0"><%= link_to "SecurityWorld", root_path, class: "text-dark",
+                                    style: "text-decoration: none" %></h1>
+        <p class="text-dark m-0 col-sm-12">La seguridad es lo primero</p>
+      </div>
     </div>
 
-    <div class="offset-6 col-md-2 text-center mt-0">
-      <%= link_to "", new_user_registration_path, class: "bi bi-person-circle text-dark",
-                  style: "font-size: 50px" %>
+    <div class="row col-md-1 col-sm-6">
+      <div class="text-center mt-0">
+        <%= link_to "", new_user_registration_path, class: "bi bi-person-circle text-dark",
+                    style: "font-size: 55px" %>
+      </div>
     </div>
+
   </div>
 
-  <nav class="navbar-expand mt-2 col-md-10" style="background-color: #202CD1">
+  <nav class="navbar-expand col-md-10" style="background-color: #202CD1">
 
     <div class="collapse navbar-collapse">
       <ul class="col-md-12 navbar-nav mr-auto text-center">
