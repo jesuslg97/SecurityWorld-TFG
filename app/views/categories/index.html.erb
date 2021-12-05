@@ -18,7 +18,6 @@
       <td class="align-middle"><%= category.nombre %></td>
       <td class="align-middle"><%= category.descripcion %></td>
       <td class="align-middle">
-        <%#= link_to 'Ver', category, class: "btn btn-info text-white" %>
         <%= link_to '', edit_category_path(category), class: "btn btn-info text-white bi bi-pencil" %>
         <%= link_to '', category, class: "btn btn-danger text-white bi bi-trash", method: :delete,
                     data: { confirm: '¿Seguro que desea realizar esta acción?' } %>

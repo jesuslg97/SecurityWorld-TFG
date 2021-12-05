@@ -1,10 +1,9 @@
-<!-- Empresa -->
-<!-- Medidas generales -->
-<% if @article.id == 1 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
+<h3><%= @article.nombre %></h3>
+<hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
+<p><%= simple_format(@article.introduccion) %></p>
 
+<!-- Empresa -->
+<% if @article.nombre == "Medidas generales" && @article.id == 1 %>
   <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
     <% @generals.each do |general| %>
       <% if general.article_id == 1 %>
@@ -13,16 +12,9 @@
       <% end %>
     <% end %>
   </div>
-
 <% end %>
-<!-- Medidas generales -->
 
-<!-- Preguntas frecuentes -->
-<% if @article.id == 2 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Preguntas frecuentes" && @article.id == 2 %>
   <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
     <% @questions.each do |question| %>
       <% if question.article_id == 2 %>
@@ -31,20 +23,11 @@
       <% end %>
     <% end %>
   </div>
-
 <% end %>
-<!-- Preguntas frecuentes -->
 
-<!-- Ataques específicos -->
-<% if @article.id == 3 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Ataques específicos" && @article.id == 3 %>
   <div class="row col-md-12">
-
     <% @attacks.each do |attack| %>
-
       <% if attack.article_id == 3 %>
         <div class="col-md-2 text-center m-md-3 mb-3">
           <div class="myInformation">
@@ -53,22 +36,13 @@
           </div>
         </div>
       <% end %>
-
     <% end %>
-
   </div>
-
 <% end %>
-<!-- Ataques específicos -->
 <!-- Empresa -->
 
 <!-- Hogar -->
-<!-- Medidas generales -->
-<% if @article.id == 4 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Medidas generales" && @article.id == 4 %>
   <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
     <% @generals.each do |general| %>
       <% if general.article_id == 4 %>
@@ -77,16 +51,9 @@
       <% end %>
     <% end %>
   </div>
-
 <% end %>
-<!-- Medidas generales -->
 
-<!-- Preguntas frecuentes -->
-<% if @article.id == 5 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Preguntas frecuentes" && @article.id == 5 %>
   <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
     <% @questions.each do |question| %>
       <% if question.article_id == 5 %>
@@ -95,20 +62,11 @@
       <% end %>
     <% end %>
   </div>
-
 <% end %>
-<!-- Preguntas frecuentes -->
 
-<!-- Ataques específicos -->
-<% if @article.id == 6 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Ataques específicos" && @article.id == 6 %>
   <div class="row col-md-12">
-
     <% @attacks.each do |attack| %>
-
       <% if attack.article_id == 6 %>
         <div class="col-md-2 text-center m-md-3 mb-3">
           <div class="myInformation">
@@ -117,22 +75,13 @@
           </div>
         </div>
       <% end %>
-
     <% end %>
-
   </div>
-
 <% end %>
-<!-- Ataques específicos -->
 <!-- Hogar -->
 
 <!-- Movil -->
-<!-- Medidas generales -->
-<% if @article.id == 7 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Medidas generales" && @article.id == 7 %>
   <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
     <% @generals.each do |general| %>
       <% if general.article_id == 7 %>
@@ -141,16 +90,9 @@
       <% end %>
     <% end %>
   </div>
-
 <% end %>
-<!-- Medidas generales -->
 
-<!-- Preguntas frecuentes -->
-<% if @article.id == 8 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Preguntas frecuentes" && @article.id == 8 %>
   <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
     <% @questions.each do |question| %>
       <% if question.article_id == 8 %>
@@ -159,20 +101,11 @@
       <% end %>
     <% end %>
   </div>
-
 <% end %>
-<!-- Preguntas frecuentes -->
 
-<!-- Ataques específicos -->
-<% if @article.id == 9 %>
-  <h3><%= @article.nombre %></h3>
-  <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-  <h6><%= simple_format(@article.introduccion) %></h6>
-
+<% if @article.nombre == "Ataques específicos" && @article.id == 9 %>
   <div class="row col-md-12">
-
     <% @attacks.each do |attack| %>
-
       <% if attack.article_id == 9 %>
         <div class="col-md-2 text-center m-md-3 mb-3">
           <div class="myInformation">
@@ -181,10 +114,7 @@
           </div>
         </div>
       <% end %>
-
     <% end %>
-
   </div>
 <% end %>
-<!-- Ataques específicos -->
 <!-- Movil -->

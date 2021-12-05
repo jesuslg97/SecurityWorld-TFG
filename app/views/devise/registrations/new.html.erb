@@ -8,7 +8,7 @@
 
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-4 mb-3">
         <div class="form-group">
           <strong><%= f.label :nombre, "Nombre =>" %></strong>
           <%= f.text_field :nombre, autofocus: true,
@@ -16,7 +16,7 @@
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 mb-3">
         <div class="form-group">
           <strong><%= f.label :apellidos, "Apellidos =>" %></strong>
           <%= f.text_field :apellidos, autofocus: true,
@@ -35,11 +35,11 @@
     </div>
 
     <div class="row mt-4">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-3">
         <div class="form-group">
           <strong><%= f.label :password, "Contraseña" %></strong>
           <% if @minimum_password_length %>
-            <strong><em>(mín <%= @minimum_password_length %> caracteres) =></em></strong>
+            <strong><em>(mín <%= @minimum_password_length %> caracteres)</em></strong><br/>
           <% end %>
           <%= f.password_field :password,
                                autocomplete: "new-password", placeholder: "......" %>
@@ -48,7 +48,7 @@
 
       <div class="col-md-6">
         <div class="form-group">
-          <strong><%= f.label :password_confirmation, "Repetir contraseña =>" %></strong>
+          <strong><%= f.label :password_confirmation, "Repetir contraseña" %></strong><br/>
           <%= f.password_field :password_confirmation,
                                autocomplete: "new-password", placeholder: "......" %>
         </div>

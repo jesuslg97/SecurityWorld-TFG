@@ -15,9 +15,7 @@
 
   <% @extra_infos.each do |extra| %>
 
-    <!-- Últimas Noticias -->
-    <% if @extra.id == 1 %>
-
+    <% if @extra.nombre == "Últimas noticias" %>
       <% if extra.id == 1 %>
         <div class="offset-md-0 offset-sm-0 col-md-3 text-center myInformation mb-3">
           <div>
@@ -56,12 +54,9 @@
           <span><%= link_to 'Leer información', extra_info_path(extra) %></span>
         </div>
       <% end %>
-
     <% end %>
-    <!-- Últimas Noticias -->
 
-    <!-- Conceptos -->
-    <% if @extra.id == 2 %>
+    <% if @extra.nombre == "Conceptos" %>
       <% if extra.extra_id == 2 %>
         <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
@@ -69,10 +64,8 @@
         </div>
       <% end %>
     <% end %>
-    <!-- Conceptos -->
 
-    <!-- Organismos -->
-    <% if @extra.id == 3 %>
+    <% if @extra.nombre == "Organismos" %>
       <% if extra.extra_id == 3 %>
         <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
@@ -81,10 +74,8 @@
         </div>
       <% end %>
     <% end %>
-    <!-- Organismos -->
 
-    <!-- Leyes -->
-    <% if @extra.id == 4 %>
+    <% if @extra.nombre == "Leyes" %>
       <% if extra.extra_id == 4 %>
         <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
@@ -93,8 +84,6 @@
         </div>
       <% end %>
     <% end %>
-    <!-- Leyes -->
 
   <% end %>
-
 </div>

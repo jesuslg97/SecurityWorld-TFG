@@ -1,10 +1,10 @@
 <%- if controller_name != 'sessions' %>
   <% if cookies[:moon] %>
-    <span class="mt-2"><%= link_to "¿Ya tienes cuenta?", new_session_path(resource_name),
+    <span class="mt-2 mb-3"><%= link_to "¿Ya tienes cuenta?", new_session_path(resource_name),
                                    class: "text-white", style: "text-decoration: none" %>
     </span><br />
   <% else %>
-    <span class="mt-2"><%= link_to "¿Ya tienes cuenta?", new_session_path(resource_name),
+    <span class="mt-2 mb-3"><%= link_to "¿Ya tienes cuenta?", new_session_path(resource_name),
                                    class: "text-dark", style: "text-decoration: none" %>
     </span><br />
   <% end %>
@@ -24,11 +24,11 @@
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
   <% if cookies[:moon] %>
-    <span class="mt-2"><%= link_to "¿Olvidastes tu contraseña?", new_password_path(resource_name),
+    <span class="mt-2 mb-3"><%= link_to "¿Olvidastes tu contraseña?", new_password_path(resource_name),
                                    class: "text-white", style: "text-decoration: none" %>
     </span><br />
   <% else %>
-    <span class="mt-2"><%= link_to "¿Olvidastes tu contraseña?", new_password_path(resource_name),
+    <span class="mt-2 mb-3"><%= link_to "¿Olvidastes tu contraseña?", new_password_path(resource_name),
                                    class: "text-dark", style: "text-decoration: none" %>
     </span><br />
   <% end %>

@@ -144,7 +144,7 @@ class AttacksController < ApplicationController
   end
 
   def strong_params_attack
-    params.require(:attack).permit(:nombre, :informacion, :article_id)
+    params.require(:attack).permit(:nombre, :article_id)
   end
 
   def set_breadcrumbs
