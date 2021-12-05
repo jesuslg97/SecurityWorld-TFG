@@ -33,11 +33,11 @@
             <ul class="dropdown-menu dropdown-menu-dark">
               <% if cookies[:moon] %>
                 <li>
-                  <%= link_to 'Modo claro', sun_path, method: :get , class:"dropdown-item"%>
+                  <%= link_to " Claro", sun_path, class:"dropdown-item bi bi-brightness-high"%>
                 </li>
               <% else %>
                 <li>
-                  <%= link_to 'Modo oscuro', moon_path, method: :get , class:"dropdown-item"%>
+                  <%= link_to " Oscuro", moon_path, class:"dropdown-item bi bi-moon-stars"%>
                 </li>
               <% end %>
             </ul>
