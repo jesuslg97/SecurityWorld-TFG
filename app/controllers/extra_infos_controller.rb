@@ -100,7 +100,7 @@ class ExtraInfosController < ApplicationController
   end
 
   def strong_params_extra_info
-    params.require(:extra_info).permit(:nombre, :descripcion, :texto, :extra_id, :image)
+    params.require(:extra_info).permit(:nombre, :descripcion, :extra_id, :image)
   end
 
   def set_breadcrumbs
