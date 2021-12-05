@@ -1,20 +1,49 @@
-<div class="col-md-12 mt-2">
-  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <span style="margin-right: 10px">Usted se encuentra en:</span>
-      <% breadcrumbs.each do |crumb| %>
-        <li class="nav-item">
-          <% if crumb.link? %>
-            <%= link_to crumb.name, crumb.path, class: "breadcrumb-link" %>
-          <% else %>
-            <span class="breadcrumb-page"><%= crumb.name %></span>
-          <% end %>
+<div class="row col-md-12 mt-2">
+  <div class="col-md-9">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <span style="margin-right: 10px">Usted se encuentra en:</span>
+        <% breadcrumbs.each do |crumb| %>
+          <li class="nav-item">
+            <% if crumb.link? %>
+              <%= link_to crumb.name, crumb.path, class: "breadcrumb-link" %>
+            <% else %>
+              <span class="breadcrumb-page"><%= crumb.name %></span>
+            <% end %>
 
-          <% unless crumb == breadcrumbs.last %>
-            <span class="breadcrumb-separator"> > </span>
-          <% end %>
+            <% unless crumb == breadcrumbs.last %>
+              <span class="breadcrumb-separator"> > </span>
+            <% end %>
+          </li>
+        <% end %>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="col-md-3">
+      <ul style="list-style: none">
+        <li>
+          <div class="btn-group">
+            <button type="button" class="btn text-white" style="background-color: #202CD1">
+              Cambiar modo
+            </button>
+            <button type="button" class="btn text-white dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #202CD1">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <% if cookies[:moon] %>
+                <li>
+                  <%= link_to 'Modo claro', sun_path, method: :get , class:"dropdown-item"%>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to 'Modo oscuro', moon_path, method: :get , class:"dropdown-item"%>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         </li>
-      <% end %>
-    </ol>
-  </nav>
+      </ul>
+  </div>
+
 </div>

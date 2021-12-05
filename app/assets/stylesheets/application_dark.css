@@ -1,0 +1,53 @@
+.myFooter{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
+.myInformation {
+    background: black;
+    border: 4px solid #202CD1;
+    box-sizing: border-box;
+    color: white;
+}
+
+.titulo {
+    font-family: Algerian;
+    color: black;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.texto-centrado{
+    position: absolute;
+    top: 77%;
+    left: 30%;
+    transform: translate(-25%, -50%);
+}
+
+.texto-centrado2{
+    position: absolute;
+    top: 78%;
+    left: 32%;
+    transform: translate(-21%, -50%);
+}
+
+.dark-mode {
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, p, span, strong {
+    color: white;
+}

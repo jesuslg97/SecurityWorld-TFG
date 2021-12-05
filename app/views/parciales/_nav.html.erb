@@ -4,16 +4,26 @@
 
     <div class="row col-md-11 col-sm-5">
       <div class="col-sm-4 titulo text-center">
-        <h1 class="m-0"><%= link_to "SecurityWorld", root_path, class: "text-dark",
-                                    style: "text-decoration: none" %></h1>
-        <p class="text-dark m-0 col-sm-12">La seguridad es lo primero</p>
+        <% if cookies[:moon] %>
+          <h1 class="m-0"><%= link_to "SecurityWorld", root_path, class: "text-white",
+                                      style: "text-decoration: none" %></h1>
+        <% else %>
+          <h1 class="m-0"><%= link_to "SecurityWorld", root_path, class: "text-dark",
+                                      style: "text-decoration: none" %></h1>
+        <% end %>
+        <p class="m-0 col-sm-12">La seguridad es lo primero</p>
       </div>
     </div>
 
     <div class="row col-md-1 col-sm-6">
       <div class="text-center mt-0">
-        <%= link_to "", new_user_registration_path, class: "bi bi-person-circle text-dark",
-                    style: "font-size: 55px" %>
+        <% if cookies[:moon] %>
+          <%= link_to "", new_user_registration_path, class: "bi bi-person-circle text-white",
+                            style: "font-size: 55px" %>
+        <% else %>
+          <%= link_to "", new_user_registration_path, class: "bi bi-person-circle text-dark",
+                            style: "font-size: 55px" %>
+        <% end %>
       </div>
     </div>
 

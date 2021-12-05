@@ -50,4 +50,7 @@ Rails.application.routes.draw do
 
   resources :home
 
+  get '/moon', to: 'application#moon', as: 'moon'
+  get '/sun', to: 'application#sun', as: 'sun'
+
 end

@@ -3,10 +3,17 @@
   <ul class="col-sm-12 navbar-nav myInformation" style="list-style: none">
 
     <li class="nav-item">
-      <strong>
-        <%= link_to " Últimas noticias", extra_path(:id => 1),
-                    class: "nav-link text-dark bi bi-newspaper" %>
-      </strong>
+      <% if cookies[:moon] %>
+        <strong>
+          <%= link_to " Últimas noticias", extra_path(:id => 1),
+                      class: "nav-link text-white bi bi-newspaper" %>
+        </strong>
+      <% else %>
+        <strong>
+          <%= link_to " Últimas noticias", extra_path(:id => 1),
+                      class: "nav-link text-dark bi bi-newspaper" %>
+        </strong>
+      <% end %>
       <ul style="list-style: none; margin-right: 30px">
         <li>Noticia 1</li>
         <li>Noticia 2</li>
@@ -16,10 +23,17 @@
     </li>
 
     <li class="nav-item mt-2">
-      <strong>
-        <%= link_to " Conceptos sobre seguridad", extra_path(:id => 2),
-                    class: "nav-link text-dark bi bi-info-circle" %>
-      </strong>
+      <% if cookies[:moon] %>
+        <strong>
+          <%= link_to " Conceptos sobre seguridad", extra_path(:id => 2),
+                      class: "nav-link text-white bi bi-info-circle" %>
+        </strong>
+      <% else %>
+        <strong>
+          <%= link_to " Conceptos sobre seguridad", extra_path(:id => 2),
+                      class: "nav-link text-dark bi bi-info-circle" %>
+        </strong>
+      <% end %>
       <ul style="list-style: none; margin-right: 30px">
         <li>Malware</li>
         <li>Phishing</li>
@@ -29,10 +43,17 @@
     </li>
 
     <li class="nav-item mt-2">
-      <strong>
-        <%= link_to " Organismos sobre seguridad", extra_path(:id => 3),
-                    class: "nav-link text-dark bi bi-bank" %>
-      </strong>
+      <% if cookies[:moon] %>
+        <strong>
+          <%= link_to " Organismos sobre seguridad", extra_path(:id => 3),
+                      class: "nav-link text-white bi bi-bank" %>
+        </strong>
+      <% else %>
+        <strong>
+          <%= link_to " Organismos sobre seguridad", extra_path(:id => 3),
+                      class: "nav-link text-dark bi bi-bank" %>
+        </strong>
+      <% end %>
       <ul style="list-style: none; margin-right: 30px">
         <li>AEPD</li>
         <li>ENS</li>
@@ -42,10 +63,17 @@
     </li>
 
     <li class="nav-item mt-2">
-      <strong>
-        <%= link_to " Leyes sobre seguridad", extra_path(:id => 4),
-                    class: "nav-link text-dark bi bi-vector-pen" %>
-      </strong>
+      <% if cookies[:moon] %>
+        <strong>
+          <%= link_to " Leyes sobre seguridad", extra_path(:id => 4),
+                      class: "nav-link text-white bi bi-vector-pen" %>
+        </strong>
+      <% else %>
+        <strong>
+          <%= link_to " Leyes sobre seguridad", extra_path(:id => 4),
+                      class: "nav-link text-dark bi bi-vector-pen" %>
+        </strong>
+      <% end %>
       <ul style="list-style: none; margin-right: 30px">
         <li>LSSI</li>
         <li>LOPDGDD</li>
