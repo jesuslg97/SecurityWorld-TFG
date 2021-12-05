@@ -112,7 +112,7 @@ class ArticlesController < ApplicationController
   end
 
   def strong_params_article
-    params.require(:article).permit(:nombre, :descripcion, :texto, :category_id, :image)
+    params.require(:article).permit(:nombre, :descripcion, :introduccion, :category_id, :image)
   end
 
   def set_breadcrumbs
