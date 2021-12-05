@@ -27,7 +27,7 @@
           <span>
             <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_info_path(:id => 1) %></span>
+          <span><%= link_to 'Leer información', extra_info_path(extra) %></span>
         </div>
       <% end %>
 
@@ -40,7 +40,7 @@
           <span>
             <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_info_path(:id => 2) %></span>
+          <span><%= link_to 'Leer información', extra_info_path(extra) %></span>
         </div>
       <% end %>
 
@@ -53,7 +53,7 @@
           <span>
             <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_info_path(:id => 3) %></span>
+          <span><%= link_to 'Leer información', extra_info_path(extra) %></span>
         </div>
       <% end %>
 
@@ -77,48 +77,8 @@
         <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
           <p class="m-0"><%= simple_format(extra.descripcion) %></p>
-
-          <% if extra.nombre == "ENS" %>
-            <a class="nav-link" href="https://boe.es/boe/dias/2010/01/29/pdfs/BOE-A-2010-1330.pdf">
-              Información oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "INCIBE" %>
-            <a class="nav-link" href="https://www.incibe.es/que-es-incibe">
-              Página oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "AEPD" %>
-            <a class="nav-link" href="https://www.aepd.es/es">
-              Página oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "CCN" %>
-            <a class="nav-link" href="https://www.ccn-cert.cni.es/">
-              Página oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "CNPIC" %>
-            <a class="nav-link" href="http://www.cnpic.es/">
-              Página oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "DNS" %>
-            <a class="nav-link" href="https://www.boe.es/boe/dias/2015/09/29/pdfs/BOE-A-2015-10389.pdf">
-              Información oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "ENISA" %>
-            <a class="nav-link" href="https://www.enisa.europa.eu/about-enisa/about/es">
-              Página oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "CCDCOE" %>
-            <a class="nav-link" href="https://ccdcoe.org/">
-              Página oficial</a>
-          <% end %>
+          <%= link_to "Información oficial", extra.enlaces, class: "nav-link" %>
         </div>
-
       <% end %>
     <% end %>
     <!-- Organismos -->
@@ -129,20 +89,9 @@
         <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
           <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
           <p class="m-0"><%= simple_format(extra.descripcion) %></p>
-
-          <% if extra.nombre == "LOPDGDD" %>
-            <a class="nav-link" href="https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16673-consolidado.pdf">
-              Información oficial</a>
-          <% end %>
-
-          <% if extra.nombre == "LSSI" %>
-            <a class="nav-link" href="https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758">
-              Información oficial</a>
-          <% end %>
-
+          <%= link_to "Información oficial", extra.enlaces, class: "nav-link" %>
         </div>
       <% end %>
-
     <% end %>
     <!-- Leyes -->
 
