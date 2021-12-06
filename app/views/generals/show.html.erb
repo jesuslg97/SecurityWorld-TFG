@@ -32,8 +32,8 @@
           <td class="align-middle"><%= general.titulo %></td>
           <td class="align-middle">Empresa</td>
           <td class="align-middle">
-            <%= link_to '', edit_general_path(general), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', general, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+            <%= link_to '', edit_article_general_path(@article, general), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', article_general_path(@article, general), class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
           </td>
         <% end %>
@@ -53,8 +53,8 @@
           <td class="align-middle"><%= general.titulo %></td>
           <td class="align-middle">Hogar</td>
           <td class="align-middle">
-            <%= link_to '', edit_general_path(general), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', general, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+            <%= link_to '', edit_article_general_path(@article, general), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', article_general_path(@article, general), class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
           </td>
         <% end %>
@@ -74,8 +74,8 @@
           <td class="align-middle"><%= general.titulo %></td>
           <td class="align-middle">Móvil</td>
           <td class="align-middle">
-            <%= link_to '', edit_general_path(general), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', general, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+            <%= link_to '', edit_article_general_path(@article, general), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', article_general_path(@article, general), class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
           </td>
         <% end %>
@@ -88,5 +88,5 @@
 </table>
 
 <div class="text-center">
-  <%= link_to ' Nueva Medida', new_general_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+  <%= link_to ' Nueva Medida', new_article_general_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
 </div>

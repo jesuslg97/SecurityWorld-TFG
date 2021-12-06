@@ -1,4 +1,4 @@
-<%= form_with(model: @attack) do |form| %>
+<%= form_with(model: [:article, @attack]) do |form| %>
 
   <div class="row">
 
@@ -54,11 +54,11 @@
   <div class="d-flex justify-content-center mt-4">
     <%= form.submit "Guardar", class: "btn btn-primary", style: "margin-right: 10px" %>
     <% if @attack.article_id == 3 %>
-      <%= link_to 'Cancelar', show_admin_path(:id => 3), class: "btn btn-warning text-white" %>
+      <%= link_to 'Cancelar', article_show_admin_path(:id => 3), class: "btn btn-warning text-white" %>
     <% elsif @attack.article_id == 6 %>
-      <%= link_to 'Cancelar', show_admin_path(:id => 6), class: "btn btn-warning text-white" %>
+      <%= link_to 'Cancelar', article_show_admin_path(:id => 6), class: "btn btn-warning text-white" %>
     <% elsif @attack.article_id == 9 %>
-      <%= link_to 'Cancelar', show_admin_path(:id => 9), class: "btn btn-warning text-white" %>
+      <%= link_to 'Cancelar', article_show_admin_path(:id => 9), class: "btn btn-warning text-white" %>
     <% else %>
       <%= link_to 'Cancelar', articles_path, class: "btn btn-warning text-white" %>
     <% end %>

@@ -25,7 +25,7 @@
           <span>
             <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_info_path(extra) %></span>
+          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra) %></span>
         </div>
       <% end %>
 
@@ -38,7 +38,7 @@
           <span>
             <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_info_path(extra) %></span>
+          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra) %></span>
         </div>
       <% end %>
 
@@ -51,7 +51,7 @@
           <span>
             <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_info_path(extra) %></span>
+          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra) %></span>
         </div>
       <% end %>
     <% end %>

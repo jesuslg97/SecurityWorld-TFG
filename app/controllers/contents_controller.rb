@@ -12,15 +12,15 @@ class ContentsController < ApplicationController
     @contents = Content.all
 
     if @attack.article_id == 3
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
     end
 
     if @attack.article_id == 6
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
     end
 
     if @attack.article_id == 9
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
     end
 
     if @attack.id == 1 || @attack.id == 17 || @attack.id == 28
@@ -98,203 +98,203 @@ class ContentsController < ApplicationController
 
     # Malware
     if @content.attack_id == 1
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Malware", content_path(:id => 1))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Malware", article_attack_content_path(:id => 1))
     end
 
     if @content.attack_id == 17
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Malware", content_path(:id => 17))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Malware", article_attack_content_path(:id => 17))
     end
 
     if @content.attack_id == 28
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Malware", content_path(:id => 28))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Malware", article_attack_content_path(:id => 28))
     end
     # Malware
 
     # Phishing
     if @content.attack_id == 2
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Phishing", content_path(:id => 2))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Phishing", article_attack_content_path(:id => 2))
     end
 
     if @content.attack_id == 18
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Phishing", content_path(:id => 18))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Phishing", article_attack_content_path(:id => 18))
     end
 
     if @content.attack_id == 30
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Phishing", content_path(:id => 30))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Phishing", article_attack_content_path(:id => 30))
     end
     # Phishing
 
     # Ransomware
     if @content.attack_id == 3
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Ransomware", content_path(:id => 3))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Ransomware", article_attack_content_path(:id => 3))
     end
 
     if @content.attack_id == 29
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Ransomware", content_path(:id => 29))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Ransomware", article_attack_content_path(:id => 29))
     end
     # Ransomware
 
     # Gusano
     if @content.attack_id == 4
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Gusano", content_path(:id => 4))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Gusano", article_attack_content_path(:id => 4))
     end
 
     if @content.attack_id == 31
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Gusano", content_path(:id => 31))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Gusano", article_attack_content_path(:id => 31))
     end
     # Gusano
 
     # Virus
     if @content.attack_id == 5
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Virus", content_path(:id => 5))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Virus", article_attack_content_path(:id => 5))
     end
 
     if @content.attack_id == 19
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Virus", content_path(:id => 19))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Virus", article_attack_content_path(:id => 19))
     end
 
     if @content.attack_id == 32
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Virus", content_path(:id => 32))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Virus", article_attack_content_path(:id => 32))
     end
     # Virus
 
     # Troyano
     if @content.attack_id == 6
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Troyano", content_path(:id => 6))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Troyano", article_attack_content_path(:id => 6))
     end
 
     if @content.attack_id == 20
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Troyano", content_path(:id => 20))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Troyano", article_attack_content_path(:id => 20))
     end
 
     if @content.attack_id == 33
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Troyano", content_path(:id => 33))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Troyano", article_attack_content_path(:id => 33))
     end
     # Troyano
 
     # Denegación de Servicio
     if @content.attack_id == 7
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Denegación de Servicio", content_path(:id => 7))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Denegación de Servicio", article_attack_content_path(:id => 7))
     end
     # Denegación de Servicio
 
     # Rootkit
     if @content.attack_id == 8
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Rootkit", content_path(:id => 8))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Rootkit", article_attack_content_path(:id => 8))
     end
     # Rootkit
 
     # Spyware
     if @content.attack_id == 9
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Spyware", content_path(:id => 9))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Spyware", article_attack_content_path(:id => 9))
     end
 
     if @content.attack_id == 21
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Spyware", content_path(:id => 21))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Spyware", article_attack_content_path(:id => 21))
     end
 
     if @content.attack_id == 34
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Spyware", content_path(:id => 34))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Spyware", article_attack_content_path(:id => 34))
     end
     # Spyware
 
     # Adware
     if @content.attack_id == 10
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Adware", content_path(:id => 10))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Adware", article_attack_content_path(:id => 10))
     end
 
     if @content.attack_id == 22
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Adware", content_path(:id => 22))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Adware", article_attack_content_path(:id => 22))
     end
 
     if @content.attack_id == 35
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Adware", content_path(:id => 35))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Adware", article_attack_content_path(:id => 35))
     end
     # Adware
 
     # Ataques de inyección SQL
     if @content.attack_id == 11
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Ataques de inyección SQL", content_path(:id => 11))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Ataques de inyección SQL", article_attack_content_path(:id => 11))
     end
     # Ataques de inyección SQL
 
     # Cross-Site Scripting (XSS)
     if @content.attack_id == 12
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Cross-Site Scripting (XSS)", content_path(:id => 12))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Cross-Site Scripting (XSS)", article_attack_content_path(:id => 12))
     end
 
     if @content.attack_id == 24
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Cross-Site Scripting (XSS)", content_path(:id => 24))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Cross-Site Scripting (XSS)", article_attack_content_path(:id => 24))
     end
     # Cross-Site Scripting (XSS)
 
     # Man in The Middle
     if @content.attack_id == 13
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Man in The Middle", content_path(:id => 13))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Man in The Middle", article_attack_content_path(:id => 13))
     end
 
     if @content.attack_id == 25
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Man in The Middle", content_path(:id => 25))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Man in The Middle", article_attack_content_path(:id => 25))
     end
 
     if @content.attack_id == 36
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
-      add_breadcrumb("Man in The Middle", content_path(:id => 36))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Man in The Middle", article_attack_content_path(:id => 36))
     end
     # Man in The Middle
 
     # Tunelización de DNS
     if @content.attack_id == 14
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Tunelización de DNS", content_path(:id => 14))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Tunelización de DNS", article_attack_content_path(:id => 14))
     end
     # Tunelización de DNS
 
     # Spear phishing
     if @content.attack_id == 15
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Spear phishing", content_path(:id => 15))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Spear phishing", article_attack_content_path(:id => 15))
     end
 
     if @content.attack_id == 26
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
-      add_breadcrumb("Spear phishing", content_path(:id => 26))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Spear phishing", article_attack_content_path(:id => 26))
     end
     # Spear phishing
 
     # Whaling
     if @content.attack_id == 16
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
-      add_breadcrumb("Whaling", content_path(:id => 16))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Whaling", article_attack_content_path(:id => 16))
     end
     # Whaling
 

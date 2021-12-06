@@ -32,15 +32,15 @@ class QuestionsController < ApplicationController
 
   def edit
     if @question.article_id == 2
-      add_breadcrumb("Preguntas frecuentes Empresa", question_path(:id => 2))
+      add_breadcrumb("Preguntas frecuentes Empresa", article_question_path(:id => 2))
     end
 
     if @question.article_id == 5
-      add_breadcrumb("Preguntas frecuentes Hogar", question_path(:id => 5))
+      add_breadcrumb("Preguntas frecuentes Hogar", article_question_path(:id => 5))
     end
 
     if @question.article_id == 8
-      add_breadcrumb("Preguntas frecuentes Móvil", question_path(:id => 8))
+      add_breadcrumb("Preguntas frecuentes Móvil", article_question_path(:id => 8))
     end
 
     add_breadcrumb("Editar Pregunta")

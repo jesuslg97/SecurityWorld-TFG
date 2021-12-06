@@ -101,15 +101,15 @@ class AttacksController < ApplicationController
 
   def edit
     if @attack.article_id == 3
-      add_breadcrumb("Ataques específicos Empresa", show_admin_path(:id => 3))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
     end
 
     if @attack.article_id == 6
-      add_breadcrumb("Ataques específicos Hogar", show_admin_path(:id => 6))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
     end
 
     if @attack.article_id == 9
-      add_breadcrumb("Ataques específicos Móvil", show_admin_path(:id => 9))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
     end
 
     add_breadcrumb("Editar Ataque")
@@ -153,17 +153,17 @@ class AttacksController < ApplicationController
     if user_signed_in? == false
       if @attack.article_id == 3
         add_breadcrumb("Empresa", category_path(:id => 1))
-        add_breadcrumb("Ataques específicos", article_path(:id => 3))
+        add_breadcrumb("Ataques específicos", category_article_path(:id => 3))
       end
 
       if @attack.article_id == 6
         add_breadcrumb("Hogar", category_path(:id => 2))
-        add_breadcrumb("Ataques específicos", article_path(:id => 6))
+        add_breadcrumb("Ataques específicos", category_article_path(:id => 6))
       end
 
       if @attack.article_id == 9
         add_breadcrumb("Móvil", category_path(:id => 3))
-        add_breadcrumb("Ataques específicos", article_path(:id => 9))
+        add_breadcrumb("Ataques específicos", category_article_path(:id => 9))
       end
     else
       add_breadcrumb("Artículos", articles_path)

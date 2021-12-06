@@ -31,7 +31,7 @@
                 <%= image_tag article.image, style: "max-width: 150px; height: auto", class: "rounded mb-2" %>
               </span>
               <p><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -50,7 +50,7 @@
                 <%= image_tag article.image, style: "max-width: 100px; height: auto", class: "rounded mb-2" %>
               </span>
               <p><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -69,7 +69,7 @@
                 <%= image_tag article.image, style: "max-width: 180px; height: 150px", class: "rounded mb-2" %>
               </span>
               <p class="mb-4"><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -94,7 +94,7 @@
                 <%= image_tag article.image, style: "max-width: 180px", class: "rounded mb-2" %>
               </span>
               <p><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -113,7 +113,7 @@
                 <%= image_tag article.image, style: "max-width: 180px", class: "rounded mb-2" %>
               </span>
               <p><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -132,7 +132,7 @@
                 <%= image_tag article.image, style: "max-width: 170px", class: "rounded mb-2" %>
               </span>
               <p><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -157,7 +157,7 @@
                 <%= image_tag article.image, style: "max-width: 180px", class: "rounded mb-2" %>
               </span>
               <p><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -176,7 +176,7 @@
                 <%= image_tag article.image, style: "max-width: 100%; height: 100px", class: "rounded mb-2" %>
               </span>
               <p><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>
@@ -195,7 +195,7 @@
                 <%= image_tag article.image, style: "max-width: 180px; height: 160px", class: "rounded mb-2" %>
               </span>
               <p class="mb-5 mb-sm-0"><%= article.descripcion %></p>
-              <span><%= link_to 'Leer información', article_path(article) %></span>
+              <span><%= link_to 'Leer información', category_article_path(@category, article) %></span>
             </div>
           </div>
         <% end %>

@@ -25,14 +25,14 @@
   </div>
 <% end %>
 
-<% if @article.nombre == "Ataques específicos" && @article.id == 3 %>
+<% if @category.category_id == 1 && @article.id == 3 %>
   <div class="row col-md-12">
     <% @attacks.each do |attack| %>
       <% if attack.article_id == 3 %>
         <div class="col-md-2 text-center m-md-3 mb-3">
           <div class="myInformation">
             <h4 class="mb-3"><%= attack.nombre %></h4>
-            <span><%= link_to 'Detalles', attack_path(attack) %></span>
+            <span><%= link_to 'Detalles', category_article_attack_path(@category, @article, attack) %></span>
           </div>
         </div>
       <% end %>
@@ -64,14 +64,14 @@
   </div>
 <% end %>
 
-<% if @article.nombre == "Ataques específicos" && @article.id == 6 %>
+<% if @category.category_id == 2 || @article.id == 6 %>
   <div class="row col-md-12">
     <% @attacks.each do |attack| %>
       <% if attack.article_id == 6 %>
         <div class="col-md-2 text-center m-md-3 mb-3">
           <div class="myInformation">
             <h4 class="mb-3"><%= attack.nombre %></h4>
-            <span><%= link_to 'Detalles', attack_path(attack) %></span>
+            <span><%= link_to 'Detalles', category_article_attack_path(@category, @article, attack) %></span>
           </div>
         </div>
       <% end %>
@@ -103,14 +103,14 @@
   </div>
 <% end %>
 
-<% if @article.nombre == "Ataques específicos" && @article.id == 9 %>
+<% if @category.category_id == 3 || @article.id == 9 %>
   <div class="row col-md-12">
     <% @attacks.each do |attack| %>
       <% if attack.article_id == 9 %>
         <div class="col-md-2 text-center m-md-3 mb-3">
           <div class="myInformation">
             <h4 class="mb-3"><%= attack.nombre %></h4>
-            <span><%= link_to 'Detalles', attack_path(attack) %></span>
+            <span><%= link_to 'Detalles', category_article_attack_path(@category, @article, attack) %></span>
           </div>
         </div>
       <% end %>

@@ -32,15 +32,15 @@ class GeneralsController < ApplicationController
 
   def edit
     if @general.article_id == 1
-      add_breadcrumb("Medidas generales Empresa", general_path(:id => 1))
+      add_breadcrumb("Medidas generales Empresa", article_general_path(:id => 1))
     end
 
     if @general.article_id == 4
-      add_breadcrumb("Medidas generales Hogar", general_path(:id => 4))
+      add_breadcrumb("Medidas generales Hogar", article_general_path(:id => 4))
     end
 
     if @general.article_id == 7
-      add_breadcrumb("Medidas generales Móvil", general_path(:id => 7))
+      add_breadcrumb("Medidas generales Móvil", article_general_path(:id => 7))
     end
 
     add_breadcrumb("Editar Medida")

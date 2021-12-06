@@ -15,56 +15,56 @@
   <tbody>
   <% @extra_infos.each do |extra_info| %>
 
-    <% if @extra.nombre == "Últimas noticias" %>
+    <% if @extra.nombre == "Últimas noticias" || @extra.id == 1 %>
       <% if extra_info.extra_id == 1 %>
         <tr class="text-center">
           <td class="align-middle"><%= extra_info.nombre %></td>
           <td class="align-middle"><%= @extra.nombre %></td>
           <td class="align-middle">
-            <%= link_to '', edit_extra_info_path(extra_info), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', extra_info, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+            <%= link_to '', edit_extra_extra_info_path(@extra, extra_info), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', extra_extra_info_path(@extra, extra_info), class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
           </td>
         </tr>
       <% end %>
     <% end %>
 
-    <% if @extra.nombre == "Conceptos" %>
+    <% if @extra.nombre == "Conceptos" || @extra.id == 2 %>
       <% if extra_info.extra_id == 2 %>
         <tr class="text-center">
           <td class="align-middle"><%= extra_info.nombre %></td>
           <td class="align-middle"><%= @extra.nombre %></td>
           <td class="align-middle">
-            <%= link_to '', edit_extra_info_path(extra_info), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', extra_info, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+            <%= link_to '', edit_extra_extra_info_path(@extra, extra_info), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', extra_extra_info_path(@extra, extra_info), class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
           </td>
         </tr>
       <% end %>
     <% end %>
 
-    <% if @extra.nombre == "Organismos" %>
+    <% if @extra.nombre == "Organismos" || @extra.id == 3 %>
       <% if extra_info.extra_id == 3 %>
         <tr class="text-center">
           <td class="align-middle"><%= extra_info.nombre %></td>
           <td class="align-middle"><%= @extra.nombre %></td>
           <td class="align-middle">
-            <%= link_to '', edit_extra_info_path(extra_info), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', extra_info, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+            <%= link_to '', edit_extra_extra_info_path(@extra, extra_info), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', extra_extra_info_path(@extra, extra_info), class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
           </td>
         </tr>
       <% end %>
     <% end %>
 
-    <% if @extra.nombre == "Leyes" %>
+    <% if @extra.nombre == "Leyes" || @extra.id == 4 %>
       <% if extra_info.extra_id == 4 %>
         <tr class="text-center">
           <td class="align-middle"><%= extra_info.nombre %></td>
           <td class="align-middle"><%= @extra.nombre %></td>
           <td class="align-middle">
-            <%= link_to '', edit_extra_info_path(extra_info), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', extra_info, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+            <%= link_to '', edit_extra_extra_info_path(@extra, extra_info), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', extra_extra_info_path(@extra, extra_info), class: "btn btn-danger text-white bi bi-trash", method: :delete,
                         data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
           </td>
         </tr>
@@ -76,5 +76,5 @@
 </table>
 
 <div class="text-center">
-  <%= link_to ' Nueva Información', new_extra_info_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+  <%= link_to ' Nueva Información', new_extra_extra_info_path ,class:"btn btn-primary text-white bi bi-plus-circle" %>
 </div>

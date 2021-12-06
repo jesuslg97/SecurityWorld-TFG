@@ -1,4 +1,4 @@
-<%= form_with(model: @extra_info) do |form| %>
+<%= form_with(model: [:extra, @extra_info]) do |form| %>
 
   <div class="row">
 
@@ -56,13 +56,13 @@
   <div class="d-flex justify-content-center mt-4">
     <%= form.submit "Guardar", class: "btn btn-primary", style: "margin-right: 10px" %>
     <% if @extra_info.extra_id == 1 %>
-      <%= link_to 'Cancelar', extra_infos_path(:id => 1), class: "btn btn-warning text-white" %>
+      <%= link_to 'Cancelar', extra_extra_infos_path(:id => 1), class: "btn btn-warning text-white" %>
     <% elsif @extra_info.extra_id == 2 %>
-      <%= link_to 'Cancelar', extra_infos_path(:id => 2), class: "btn btn-warning text-white" %>
+      <%= link_to 'Cancelar', extra_extra_infos_path(:id => 2), class: "btn btn-warning text-white" %>
     <% elsif @extra_info.extra_id == 3 %>
-      <%= link_to 'Cancelar', extra_infos_path(:id => 3), class: "btn btn-warning text-white" %>
+      <%= link_to 'Cancelar', extra_extra_infos_path(:id => 3), class: "btn btn-warning text-white" %>
     <% elsif @extra_info.extra_id == 4 %>
-      <%= link_to 'Cancelar', extra_infos_path(:id => 4), class: "btn btn-warning text-white" %>
+      <%= link_to 'Cancelar', extra_extra_infos_path(:id => 4), class: "btn btn-warning text-white" %>
     <% else %>
       <%= link_to 'Cancelar', extras_path, class: "btn btn-warning text-white" %>
     <% end %>

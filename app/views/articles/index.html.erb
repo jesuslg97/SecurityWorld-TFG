@@ -29,15 +29,15 @@
       <td class="align-middle"><%= article.descripcion %></td>
       <td class="align-middle">
         <% if article.id == 1 || article.id == 4 || article.id == 7 %>
-          <%= link_to 'Ver Medidas', general_path(article), class: "btn btn-success text-white" %>
+          <%= link_to 'Ver Medidas', article_general_path(article, article), class: "btn btn-success text-white" %>
         <% end %>
 
         <% if article.id == 2 || article.id == 5 || article.id == 8 %>
-          <%= link_to 'Ver Preguntas', question_path(article), class: "btn btn-secondary text-white" %>
+          <%= link_to 'Ver Preguntas', article_question_path(article, article), class: "btn btn-secondary text-white" %>
         <% end %>
 
         <% if article.id == 3 || article.id == 6 || article.id == 9 %>
-          <%= link_to 'Ver Ataques', show_admin_path(article), class: "btn btn-warning text-white" %>
+          <%= link_to 'Ver Ataques', article_show_admin_path(article, article), class: "btn btn-warning text-white" %>
         <% end %>
 
         <%= link_to '', edit_article_path(article), class: "btn btn-info text-white bi bi-pencil" %>

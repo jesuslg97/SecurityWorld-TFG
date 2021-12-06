@@ -50,22 +50,22 @@ class ExtraInfosController < ApplicationController
   def edit
 
     if @extra_info.extra_id == 1
-      add_breadcrumb("Últimas noticias", extra_infos_path(:id => 1))
+      add_breadcrumb("Últimas noticias", extra_extra_infos_path(:id => 1))
       add_breadcrumb("Editar Información")
     end
 
     if @extra_info.extra_id == 2
-      add_breadcrumb("Conceptos", extra_infos_path(:id => 2))
+      add_breadcrumb("Conceptos", extra_extra_infos_path(:id => 2))
       add_breadcrumb("Editar Información")
     end
 
     if @extra_info.extra_id == 3
-      add_breadcrumb("Organismos", extra_infos_path(:id => 3))
+      add_breadcrumb("Organismos", extra_extra_infos_path(:id => 3))
       add_breadcrumb("Editar Información")
     end
 
     if @extra_info.extra_id == 4
-      add_breadcrumb("Leyes", extra_infos_path(:id => 4))
+      add_breadcrumb("Leyes", extra_extra_infos_path(:id => 4))
       add_breadcrumb("Editar Información")
     end
 
