@@ -29,9 +29,11 @@
         <select name="content[attack_id]" class="form-control">
           <option value="null">Seleccione Ataque</option>
           <% Attack.all.each do |c| %>
-            <option value="<%= c.id %>" <%= @content.attack_id == c.id ? "selected" : "" %>>
-              <%= c.nombre %>
-            </option>
+            <% if @article.id == c.article_id %>
+              <option value="<%= c.id %>" <%= @content.attack_id == c.id ? "selected" : "" %>>
+                  <%= c.nombre %>
+              </option>
+            <% end %>
           <% end %>
         </select>
       </div>

@@ -90,11 +90,13 @@ class ContentsController < ApplicationController
   end
 
   def new
+    @article = Attack.find(params[:article_id])
     @content = Content.new
     add_breadcrumb("Añadir Contenido")
   end
 
   def edit
+    @article = Attack.find(params[:article_id])
 
     # Malware
     if @content.attack_id == 1
