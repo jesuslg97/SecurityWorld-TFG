@@ -11,11 +11,12 @@ Rails.application.routes.draw do
 
   resources :categories do
     resources :articles, except: %i[index new create edit update destroy] do
-      resources :generals, :questions
-      resources :attacks do
-        resources :contents
-      end
+      resources :attacks
     end
+  end
+
+  resources :extras do
+    resources :extra_infos
   end
 
   # Admin
@@ -25,10 +26,6 @@ Rails.application.routes.draw do
     resources :attacks do
       resources :contents
     end
-  end
-
-  resources :extras do
-    resources :extra_infos
   end
 
 end

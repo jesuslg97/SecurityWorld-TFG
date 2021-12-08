@@ -1,3 +1,9 @@
+@media (min-width: 700px) {
+    #scroll {
+        display: none;
+    }
+}
+
 .myFooter{
     bottom: 0;
     left: 0;

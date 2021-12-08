@@ -1,7 +1,19 @@
 <footer class="pt-4 myFooter pb-0 pt-2 mt-2">
-  <hr style="border: 2px solid blue">
+  <div class="col-md-12 text-center">
+    <i id="scroll" class="btn bi bi-arrow-up-circle fs-1" style="color: #202CD1"></i>
+  </div>
 
-  <div class="row offset-md-0 col-md-12">
+  <hr class="m-0" style="border: 2px solid blue">
+
+  <script>
+    document.getElementById("scroll").onclick =
+    function () {
+        document.documentElement.scrollTop = 0
+        document.body.scrollTop = 0
+    }
+  </script>
+
+  <div class="row offset-md-0 col-md-12 mt-3">
 
      <div class="col-md-4 text-center mb-2">
        <div>
