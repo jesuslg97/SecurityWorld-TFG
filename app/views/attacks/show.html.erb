@@ -2,20 +2,20 @@
 <% if @attack.article_id == 3 %>
   <h2><%= @attack.nombre %></h2>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="row col-md-11" style="text-align: left; margin-left: 20px">
+  <div class="row col-md-11" style="text-align: left; margin-left: 5px">
     <% @contents.each do |content| %>
 
       <% if @attack.nombre == "Malware" %>
         <% if content.attack_id == 1 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
       <% if @attack.nombre == "Phishing" %>
         <% if content.attack_id == 2 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
@@ -36,7 +36,7 @@
       <% if @attack.nombre == "Virus" %>
         <% if content.attack_id == 5 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
@@ -50,7 +50,7 @@
       <% if @attack.nombre == "Denegación de Servicio" %>
         <% if content.attack_id == 7 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
@@ -71,28 +71,28 @@
       <% if @attack.nombre == "Adware" %>
         <% if content.attack_id == 10 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
       <% if @attack.nombre == "Ataques de inyección SQL" %>
         <% if content.attack_id == 11 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
       <% if @attack.nombre == "Cross-Site Scripting (XSS)" %>
         <% if content.attack_id == 12 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
       <% if @attack.nombre == "Man in The Middle" %>
         <% if content.attack_id == 13 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
@@ -126,7 +126,7 @@
 <% if @attack.article_id == 6 %>
   <h2><%= @attack.nombre %></h2>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="row col-md-11" style="text-align: left; margin-left: 20px">
+  <div class="row col-md-11" style="text-align: left; margin-left: 5px">
     <% @contents.each do |content| %>
 
       <% if @attack.nombre == "Malware" %>
@@ -146,7 +146,7 @@
       <% if @attack.nombre == "Virus" %>
         <% if content.attack_id == 19 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
@@ -202,7 +202,7 @@
 <% if @attack.article_id == 9 %>
   <h2><%= @attack.nombre %></h2>
   <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-dark" style="width: 100px;">
-  <div class="row col-md-11" style="text-align: left; margin-left: 20px">
+  <div class="row col-md-11" style="text-align: left; margin-left: 5px">
     <% @contents.each do |content| %>
 
       <% if @attack.nombre == "Malware" %>
@@ -215,7 +215,7 @@
       <% if @attack.nombre == "Ransomware" %>
         <% if content.attack_id == 29 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
@@ -243,7 +243,7 @@
       <% if @attack.nombre == "Troyano" %>
         <% if content.attack_id == 33 %>
           <h5 class="text-decoration-underline"><strong><%= content.titulo %></strong></h5>
-          <p class="mb-5"><%= content.informacion %></p>
+          <p class="m-0"><%= simple_format(content.informacion) %></p>
         <% end %>
       <% end %>
 
