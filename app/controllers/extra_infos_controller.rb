@@ -124,6 +124,24 @@ class ExtraInfosController < ApplicationController
       end
     end
 
+    if user_signed_in? && current_user.id != 1
+      if @extra_info.extra_id == 1
+        add_breadcrumb("Últimas noticias", extra_path(:id => 1))
+      end
+
+      if @extra_info.extra_id == 2
+        add_breadcrumb("Conceptos", extra_path(:id => 2))
+      end
+
+      if @extra_info.extra_id == 3
+        add_breadcrumb("Organismos", extra_path(:id => 3))
+      end
+
+      if @extra_info.extra_id == 4
+        add_breadcrumb("Leyes", extra_path(:id => 4))
+      end
+    end
+
   end
 
 end

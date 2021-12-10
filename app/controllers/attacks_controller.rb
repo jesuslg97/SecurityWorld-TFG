@@ -165,7 +165,24 @@ class AttacksController < ApplicationController
         add_breadcrumb("Móvil", category_path(:id => 3))
         add_breadcrumb("Ataques específicos", category_article_path(:id => 9))
       end
-    else
+    end
+
+    if user_signed_in? && current_user.id != 1
+      if @attack.article_id == 3
+        add_breadcrumb("Empresa", category_path(:id => 1))
+        add_breadcrumb("Ataques específicos", category_article_path(:id => 3))
+      end
+
+      if @attack.article_id == 6
+        add_breadcrumb("Hogar", category_path(:id => 2))
+        add_breadcrumb("Ataques específicos", category_article_path(:id => 6))
+      end
+
+      if @attack.article_id == 9
+        add_breadcrumb("Móvil", category_path(:id => 3))
+        add_breadcrumb("Ataques específicos", category_article_path(:id => 9))
+      end
+    elsif user_signed_in? && current_user.id == 1
       add_breadcrumb("Artículos", articles_path)
     end
 

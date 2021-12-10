@@ -6,17 +6,20 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.all
-    add_breadcrumb("Artículos")
+    add_breadcrumb("Mi perfil")
   end
 
   def show
   end
 
   def new
+    add_breadcrumb("Añadir comentario")
     @comment = Comment.new
   end
 
   def edit
+    add_breadcrumb("Mi perfil", comments_path)
+    add_breadcrumb("Editar comentario")
   end
 
   def create

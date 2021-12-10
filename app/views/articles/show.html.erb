@@ -20,13 +20,13 @@
       <% @comments.each do |comment| %>
         <% if comment.article_id == 1 %>
           <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% else %>
-                <strong><%= @user.nombre %> <%= @user.apellidos %></strong>
-              <% end %>
-            <% end %>
+            <%# @users.each do |user| %>
+              <%# if user.id == comment.user_id %>
+<!--                <strong><%#= user.nombre %> <%#= user.apellidos %></strong>-->
+              <%# else %>
+<!--                <strong><%#= @user.nombre %> <%#= @user.apellidos %></strong>-->
+              <%# end %>
+            <%# end %>
           </span>
           <span class="mb-1">Apartado:
             <strong class="text-decoration-underline"><%= comment.titulo %></strong>
@@ -59,13 +59,13 @@
       <% @comments.each do |comment| %>
         <% if comment.article_id == 2 %>
           <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% else %>
-                <strong><%= @user.nombre %> <%= @user.apellidos %></strong>
-              <% end %>
-            <% end %>
+            <%# @users.each do |user| %>
+              <%# if user.id == comment.user_id %>
+<!--                <strong><%#= user.nombre %> <%#= user.apellidos %></strong>-->
+              <%# else %>
+<!--                <strong><%#= @user.nombre %> <%#= @user.apellidos %></strong>-->
+              <%# end %>
+            <%# end %>
           </span>
           <span class="mb-1">Apartado:
             <strong class="text-decoration-underline"><%= comment.titulo %></strong>
@@ -102,13 +102,13 @@
       <% @comments.each do |comment| %>
         <% if comment.article_id == 3 %>
           <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% else %>
-                <strong><%= @user.nombre %> <%= @user.apellidos %></strong>
-              <% end %>
-            <% end %>
+            <%# @users.each do |user| %>
+              <%# if user.id == comment.user_id %>
+<!--                <strong><%#= user.nombre %> <%#= user.apellidos %></strong>-->
+              <%# else %>
+<!--                <strong><%#= @user.nombre %> <%#= @user.apellidos %></strong>-->
+              <%# end %>
+            <%# end %>
           </span>
           <span class="mb-1">Ataque y apartado:
             <strong class="text-decoration-underline"><%= comment.titulo %></strong>
