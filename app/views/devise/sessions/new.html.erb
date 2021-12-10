@@ -1,15 +1,15 @@
 <h2>Loguearse</h2>
-<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 150px;">
+<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
 
 <div class="row">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-group mb-4">
-      <strong><%= f.label :email, "Correo =>" %></strong>
+      <strong><%= f.label :email, "Correo" %></strong><br/>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
-    <div class="form-group text-center">
-      <strong><%= f.label :password, "Contraseña =>" %></strong>
+    <div class="form-group text-center mb-2">
+      <strong><%= f.label :password, "Contraseña" %></strong><br/>
       <%= f.password_field :password, autocomplete: "current-password" %>
     </div>
 

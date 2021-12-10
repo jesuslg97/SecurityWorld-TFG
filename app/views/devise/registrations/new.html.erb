@@ -10,7 +10,7 @@
 
       <div class="col-md-4 mb-3">
         <div class="form-group">
-          <strong><%= f.label :nombre, "Nombre =>" %></strong>
+          <strong><%= f.label :nombre, "Nombre" %></strong><br/>
           <%= f.text_field :nombre, autofocus: true,
                            autocomplete: "nombre", placeholder: "pepe" %>
         </div>
@@ -18,7 +18,7 @@
 
       <div class="col-md-4 mb-3">
         <div class="form-group">
-          <strong><%= f.label :apellidos, "Apellidos =>" %></strong>
+          <strong><%= f.label :apellidos, "Apellidos" %></strong><br/>
           <%= f.text_field :apellidos, autofocus: true,
                            autocomplete: "apellidos", placeholder: "hernandez" %>
         </div>
@@ -26,7 +26,7 @@
 
       <div class="col-md-4">
         <div class="form-group">
-          <strong><%= f.label :email, "Correo =>" %></strong>
+          <strong><%= f.label :email, "Correo" %></strong><br/>
           <%= f.email_field :email, autofocus: true,
                             autocomplete: "email", placeholder: "example@example.com" %>
         </div>
