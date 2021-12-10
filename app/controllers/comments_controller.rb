@@ -48,7 +48,7 @@ class CommentsController < ApplicationController
   end
 
   def strong_params_comment
-    params.require(:comment).permit(:titulo, :comentario, :user_id, :general_id)
+    params.require(:comment).permit(:titulo, :comentario, :user_id, :article_id)
   end
 
   def set_breadcrumbs

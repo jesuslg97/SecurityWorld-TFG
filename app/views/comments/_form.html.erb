@@ -25,11 +25,11 @@
 
     <div class="col-md-6 mb-3">
       <div class="form-group">
-        <label for="general_id"><strong>Categoría</strong></label>
-        <select name="comment[general_id]" class="form-control">
+        <label for="article_id"><strong>Categoría</strong></label>
+        <select name="comment[article_id]" class="form-control">
           <option value="null">Seleccione categoría</option>
           <% Article.all.each do |c| %>
-            <option value="<%= c.id %>" <%= @comment.general_id == c.id ? "selected" : "" %>>
+            <option value="<%= c.id %>" <%= @comment.article_id == c.id ? "selected" : "" %>>
               <%= c.nombre %>
             </option>
           <% end %>

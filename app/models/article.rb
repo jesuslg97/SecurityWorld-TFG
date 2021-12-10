@@ -4,6 +4,7 @@ class Article < ApplicationRecord
   has_many :attacks
   has_many :questions
   has_many :generals
+  has_many :comments
 
   has_one_attached :image
   validates :nombre, presence: true

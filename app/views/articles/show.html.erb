@@ -18,7 +18,7 @@
       <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
       <h3>Comentarios</h3>
       <% @comments.each do |comment| %>
-        <% if comment.general_id == 1 %>
+        <% if comment.article_id == 1 %>
           <span class="mb-1">Comentario hecho por:
             <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
           </span>
@@ -45,11 +45,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
   <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.article_id == 2 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
     <div class="text-center mb-3">
       <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
     </div>
   <% end %>
+  <!-- Comentarios -->
 <% end %>
 
 <% if @category.category_id == 1 && @article.id == 3 %>
@@ -65,6 +82,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.article_id == 3 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Ataque y apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
+  <!-- Comentarios -->
 <% end %>
 <!-- Empresa -->
 
@@ -84,7 +123,7 @@
       <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
       <h3>Comentarios</h3>
       <% @comments.each do |comment| %>
-        <% if comment.general_id == 4 %>
+        <% if comment.article_id == 4 %>
           <span class="mb-1">Comentario hecho por:
             <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
           </span>
@@ -111,11 +150,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
   <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.article_id == 5 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
     <div class="text-center mb-3">
       <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
     </div>
   <% end %>
+  <!-- Comentarios -->
 <% end %>
 
 <% if @category.category_id == 2 || @article.id == 6 %>
@@ -131,6 +187,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.article_id == 6 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Ataque y apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
+  <!-- Comentarios -->
 <% end %>
 <!-- Hogar -->
 
@@ -150,7 +228,7 @@
       <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
       <h3>Comentarios</h3>
       <% @comments.each do |comment| %>
-        <% if comment.general_id == 7 %>
+        <% if comment.article_id == 7 %>
           <span class="mb-1">Comentario hecho por:
             <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
           </span>
@@ -177,11 +255,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
   <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.article_id == 8 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
     <div class="text-center mb-3">
       <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
     </div>
   <% end %>
+  <!-- Comentarios -->
 <% end %>
 
 <% if @category.category_id == 3 || @article.id == 9 %>
@@ -197,5 +292,27 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.article_id == 9 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Ataque y apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
+  <!-- Comentarios -->
 <% end %>
 <!-- Movil -->
