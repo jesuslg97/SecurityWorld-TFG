@@ -33,7 +33,7 @@
 
     <div class="collapse navbar-collapse">
       <ul class="col-md-12 navbar-nav mr-auto text-center">
-        <% if user_signed_in?  %>
+        <% if user_signed_in? && current_user.id == 1  %>
           <li class="col-md-3 nav-item">
             <%= link_to " Categorías", categories_path, class: "nav-link text-white bi bi-card-list" %>
           </li>
@@ -63,9 +63,45 @@
               </li>
             </ul>
           </li>
+          <li class="col-md-3 nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white bi bi-file-person" role="button"
+               id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Cuenta
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li>
+                <%= link_to " Mi perfil", comments_path, class:"dropdown-item bi bi-file-person"  %>
+              </li>
+              <li>
+                <%= link_to " Cerrar sesión", destroy_user_session_path, method: :delete,
+                            class:"dropdown-item bi bi-x-circle"  %>
+              </li>
+            </ul>
+          </li>
+        <% elsif user_signed_in? && current_user.id != 1 %>
           <li class="col-md-3 nav-item">
-            <%= link_to " Cerrar sesión", destroy_user_session_path, method: :delete,
-                        class:"nav-link text-white bi bi-x-circle"  %>
+            <%= link_to " Empresa", category_path(:id => 1), class: "nav-link text-white bi bi-building" %>
+          </li>
+          <li class="col-md-3 nav-item">
+            <%= link_to " Hogar", category_path(:id => 2), class: "nav-link text-white bi bi-house-door" %>
+          </li>
+          <li class="col-md-3 nav-item">
+            <%= link_to " Móvil", category_path(:id => 3), class: "nav-link text-white bi bi-phone" %>
+          </li>
+          <li class="col-md-3 nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white bi bi-file-person" role="button"
+               id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Cuenta
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li>
+                <%= link_to " Mi perfil", comments_path, class:"dropdown-item bi bi-file-person"  %>
+              </li>
+              <li>
+                <%= link_to " Cerrar sesión", destroy_user_session_path, method: :delete,
+                            class:"dropdown-item bi bi-x-circle"  %>
+              </li>
+            </ul>
           </li>
         <% else %>
           <li class="col-md-4 nav-item">

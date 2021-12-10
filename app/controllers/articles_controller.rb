@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_action :find_article, only: %i[ show edit update destroy]
+  before_action :find_article, only: %i[show edit update destroy]
 
   before_action :set_breadcrumbs
 
@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
     @attacks = Attack.all
     @questions = Question.all
     @generals = General.all
+    @comments = Comment.all
 
     if @article.id == 1 || @article.id == 4 || @article.id == 7
       add_breadcrumb("Medidas generales")

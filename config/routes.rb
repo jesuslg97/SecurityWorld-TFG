@@ -28,4 +28,11 @@ Rails.application.routes.draw do
     end
   end
 
+  #get 'comments/index'
+  #get 'comments/show'
+  #get 'comments/new'
+  #get 'comments/edit'
+
+  resources :comments
+
 end

@@ -12,6 +12,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.general_id == 1 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
+  <!-- Comentarios -->
 <% end %>
 
 <% if @article.nombre == "Preguntas frecuentes" && @article.id == 2 %>
@@ -23,6 +45,11 @@
       <% end %>
     <% end %>
   </div>
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
 <% end %>
 
 <% if @category.category_id == 1 && @article.id == 3 %>
@@ -51,6 +78,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.general_id == 4 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
+  <!-- Comentarios -->
 <% end %>
 
 <% if @article.nombre == "Preguntas frecuentes" && @article.id == 5 %>
@@ -62,6 +111,11 @@
       <% end %>
     <% end %>
   </div>
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
 <% end %>
 
 <% if @category.category_id == 2 || @article.id == 6 %>
@@ -90,6 +144,28 @@
       <% end %>
     <% end %>
   </div>
+  <!-- Comentarios -->
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+      <h3>Comentarios</h3>
+      <% @comments.each do |comment| %>
+        <% if comment.general_id == 7 %>
+          <span class="mb-1">Comentario hecho por:
+            <strong><%= current_user.nombre %> <%= current_user.apellidos %></strong>
+          </span>
+          <span class="mb-1">Apartado:
+            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
+          </span>
+          <p class="m-0"><%= simple_format(comment.comentario) %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
+  <!-- Comentarios -->
 <% end %>
 
 <% if @article.nombre == "Preguntas frecuentes" && @article.id == 8 %>
@@ -101,6 +177,11 @@
       <% end %>
     <% end %>
   </div>
+  <% if user_signed_in? && current_user.id != 1 %>
+    <div class="text-center mb-3">
+      <%= link_to ' Añadir Comentario', new_comment_path, class:"btn btn-primary text-white bi bi-plus-circle" %>
+    </div>
+  <% end %>
 <% end %>
 
 <% if @category.category_id == 3 || @article.id == 9 %>
