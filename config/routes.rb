@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   resources :categories do
     resources :articles, except: %i[index new create edit update destroy] do
       resources :attacks
+      resources :comments
     end
   end
+
+  resources :comments
 
   resources :extras do
     resources :extra_infos
@@ -27,12 +30,5 @@ Rails.application.routes.draw do
       resources :contents
     end
   end
-
-  #get 'comments/index'
-  #get 'comments/show'
-  #get 'comments/new'
-  #get 'comments/edit'
-
-  resources :comments
 
 end
