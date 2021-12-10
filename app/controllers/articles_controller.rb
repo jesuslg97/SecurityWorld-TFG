@@ -16,6 +16,8 @@ class ArticlesController < ApplicationController
     @questions = Question.all
     @generals = General.all
     @comments = Comment.all
+    @user = User.find(params[:id])
+    @users = User.all
 
     if @article.id == 1 || @article.id == 4 || @article.id == 7
       add_breadcrumb("Medidas generales")

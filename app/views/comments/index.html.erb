@@ -1,2 +1,102 @@
-<h1>Comments#index</h1>
-<p>Find me in app/views/comments/index.html.erb</p>
+<h2 class="mb-2">Mi perfil</h2>
+<hr class="teal accent-3 mb-4 mt-0 mx-auto border-dark" style="width: 100px;">
+
+<table class="table col-md-10 mb-5">
+  <thead>
+    <tr>
+      <th class="text-center">Nombre</th>
+      <th class="text-center">Apellidos</th>
+      <th class="text-center">Correo</th>
+      <th class="text-center">Acción</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td class="align-middle"><%= current_user.nombre %></td>
+      <td class="align-middle"><%= current_user.apellidos %></td>
+      <td class="align-middle"><%= current_user.email %></td>
+      <td class="align-middle">
+        <%= link_to '', edit_user_registration_path(current_user.id), class: "btn btn-info text-white bi bi-pencil" %>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+
+<div class="mt-5">
+  <h2 class="mb-2">Mis Comentarios</h2>
+  <hr class="teal accent-3 mb-4 mt-0 mx-auto border-dark" style="width: 100px;">
+
+  <table class="table col-md-10">
+    <thead>
+      <tr>
+        <th class="text-center">Categoría</th>
+        <th class="text-center">Artículo</th>
+        <th class="text-center">Comentario</th>
+        <th colspan="2" class="text-center">Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @comments.each do |comment| %>
+      <% if current_user.id == comment.user_id %>
+        <tr>
+          <% if comment.article_id == 1 %>
+            <td class="align-middle">Empresa</td>
+            <td class="align-middle">Medidas generales</td>
+          <% end %>
+
+          <% if comment.article_id == 2 %>
+            <td class="align-middle">Empresa</td>
+            <td class="align-middle">Preguntas frecuentes</td>
+          <% end %>
+
+          <% if comment.article_id == 3 %>
+            <td class="align-middle">Empresa</td>
+            <td class="align-middle">Ataques específicos</td>
+          <% end %>
+
+          <% if comment.article_id == 4 %>
+            <td class="align-middle">Hogar</td>
+            <td class="align-middle">Medidas generales</td>
+          <% end %>
+
+          <% if comment.article_id == 5 %>
+            <td class="align-middle">Hogar</td>
+            <td class="align-middle">Preguntas frecuentes</td>
+          <% end %>
+
+          <% if comment.article_id == 6 %>
+            <td class="align-middle">Hogar</td>
+            <td class="align-middle">Ataques específicos</td>
+          <% end %>
+
+          <% if comment.article_id == 7 %>
+            <td class="align-middle">Móvil</td>
+            <td class="align-middle">Medidas generales</td>
+          <% end %>
+
+          <% if comment.article_id == 8 %>
+            <td class="align-middle">Móvil</td>
+            <td class="align-middle">Preguntas frecuentes</td>
+          <% end %>
+
+          <% if comment.article_id == 9 %>
+            <td class="align-middle">Móvil</td>
+            <td class="align-middle">Ataques específicos</td>
+          <% end %>
+
+          <td class="col-md-4 align-middle"><%= comment.comentario %></td>
+          <td class="align-middle">
+            <%= link_to '', edit_comment_url(comment), class: "btn btn-info text-white bi bi-pencil" %>
+            <%= link_to '', comment, class: "btn btn-danger text-white bi bi-trash", method: :delete,
+                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+
+  </table>
+</div>
