@@ -28,10 +28,22 @@
         <label for="article_id"><strong>Categoría</strong></label>
         <select name="comment[article_id]" class="form-control">
           <option value="null">Seleccione categoría</option>
-          <% Article.all.each do |c| %>
-            <option value="<%= c.id %>" <%= @comment.article_id == c.id ? "selected" : "" %>>
-              <%= c.nombre %>
-            </option>
+          <% if @category.article_id == 1 || @category.article_id == 2 || @category.article_id == 3 %>
+            <option value="1">Medidas generales Empresa</option>
+            <option value="2">Preguntas frecuentes Empresa</option>
+            <option value="3">Ataques específicos Empresa</option>
+          <% end %>
+
+          <% if @category.article_id == 4 || @category.article_id == 5 || @category.article_id == 6 %>
+            <option value="4">Medidas generales Hogar</option>
+            <option value="5">Preguntas frecuentes Hogar</option>
+            <option value="6">Ataques específicos Hogar</option>
+          <% end %>
+
+          <% if @category.article_id == 7 || @category.article_id == 8 || @category.article_id == 9 %>
+            <option value="7">Medidas generales Móvil</option>
+            <option value="8">Preguntas frecuentes Móvil</option>
+            <option value="9">Ataques específicos Móvil</option>
           <% end %>
         </select>
       </div>
