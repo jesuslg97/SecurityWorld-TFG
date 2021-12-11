@@ -32,7 +32,7 @@
   <nav class="navbar-expand col-md-10" style="background-color: #202CD1">
 
     <div class="collapse navbar-collapse">
-      <ul class="col-md-12 navbar-nav mr-auto text-center">
+      <ul class="col-md-12 navbar-nav m-auto text-center">
         <% if user_signed_in? && current_user.id == 1  %>
           <li class="col-md-3 nav-item">
             <%= link_to " Categorías", categories_path, class: "nav-link text-white bi bi-card-list" %>
