@@ -1,6 +1,25 @@
-<div class="col-md-2 text-center">
+<div class="col-md-2 text-center" id="info">
 
-  <ul class="col-sm-12 navbar-nav myInformation" style="list-style: none">
+  <script>
+    setInterval(
+    function () {
+        if (screen.width > 700) {
+            if (document.documentElement.scrollTop < 129) {
+                document.getElementById("info").style.top = (125 - document.documentElement.scrollTop) + "px"
+
+            } else {
+                document.getElementById("info").style.top = "0px"
+                if ((document.documentElement.scrollTop + 309) >= (document.body.scrollHeight - 500)) {
+                    document.getElementById("info").style.top = ((document.body.scrollHeight - 500) - (document.documentElement.scrollTop + 309)) + "px"
+                }
+            }
+        }
+
+    }, 100)
+  </script>
+
+  <ul class="col-sm-12 navbar-nav myInformation"
+      style="list-style: none">
 
     <li class="nav-item">
       <% if cookies[:moon] %>
@@ -18,7 +37,6 @@
         <li>Noticia 1</li>
         <li>Noticia 2</li>
         <li>...</li>
-        <li><%= link_to "Detalles", extra_path(:id => 1) %></li>
       </ul>
     </li>
 
@@ -38,7 +56,6 @@
         <li>Malware</li>
         <li>Phishing</li>
         <li>...</li>
-        <li><%= link_to "Detalles", extra_path(:id => 2) %></li>
       </ul>
     </li>
 
@@ -58,7 +75,6 @@
         <li>AEPD</li>
         <li>ENS</li>
         <li>...</li>
-        <li><%= link_to "Detalles", extra_path(:id => 3) %></li>
       </ul>
     </li>
 
@@ -78,7 +94,6 @@
         <li>LSSI</li>
         <li>LOPDGDD</li>
         <li>...</li>
-        <li><%= link_to "Detalles", extra_path(:id => 4) %></li>
       </ul>
     </li>
 

@@ -23,8 +23,6 @@
             <% @users.each do |user| %>
               <% if user.id == comment.user_id %>
                 <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <%# else %>
-                <strong><%#= @user.nombre %> <%#= @user.apellidos %></strong>
               <% end %>
             <% end %>
           </span>
@@ -62,8 +60,6 @@
             <% @users.each do |user| %>
               <% if user.id == comment.user_id %>
                 <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <%# else %>
-                <strong><%#= @user.nombre %> <%#= @user.apellidos %></strong>
               <% end %>
             <% end %>
           </span>
