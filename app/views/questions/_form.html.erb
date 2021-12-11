@@ -60,14 +60,6 @@
 
   <div class="d-flex justify-content-center mt-4">
     <%= form.submit "Guardar", class: "btn btn-primary", style: "margin-right: 10px" %>
-    <% if @question.article_id == 2 %>
-      <%= link_to 'Cancelar', article_question_path(:id => 2), class: "btn btn-warning text-white" %>
-    <% elsif @question.article_id == 5 %>
-      <%= link_to 'Cancelar', article_question_path(:id => 5), class: "btn btn-warning text-white" %>
-    <% elsif @question.article_id == 8 %>
-      <%= link_to 'Cancelar', article_question_path(:id => 8), class: "btn btn-warning text-white" %>
-    <% else %>
-      <%= link_to 'Cancelar', articles_path, class: "btn btn-warning text-white" %>
-    <% end %>
+    <%= link_to 'Cancelar', :back, class: "btn btn-warning text-white" %>
   </div>
 <% end %>
