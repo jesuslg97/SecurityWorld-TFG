@@ -1,12 +1,8 @@
 class AttacksController < ApplicationController
 
-  before_action :find_attack, only: %i[ show edit update destroy]
+  before_action :find_attack, only: %i[show edit update destroy]
 
   before_action :set_breadcrumbs
-
-  def index
-    @attacks = Attack.all
-  end
 
   def show
     @contents = Content.all

@@ -4,9 +4,6 @@ class GeneralsController < ApplicationController
 
   before_action :set_breadcrumbs
 
-  def index
-  end
-
   def show
     @article = Article.find(params[:id])
     @generals = General.all

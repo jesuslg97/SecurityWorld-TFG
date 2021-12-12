@@ -1,11 +1,8 @@
 class ContentsController < ApplicationController
 
-  before_action :find_content, only: %i[ edit update destroy]
+  before_action :find_content, only: %i[edit update destroy]
 
   before_action :set_breadcrumbs
-
-  def index
-  end
 
   def show
     @attack = Attack.find(params[:id])

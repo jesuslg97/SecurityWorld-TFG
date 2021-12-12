@@ -1,11 +1,8 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_question, only: %i[ edit update destroy]
+  before_action :find_question, only: %i[edit update destroy]
 
   before_action :set_breadcrumbs
-
-  def index
-  end
 
   def show
     @article = Article.find(params[:id])

@@ -6,6 +6,5 @@ class ExtraInfo < ApplicationRecord
   validates :nombre, presence: true
   validates :descripcion, presence: true, length: { maximum: 3000 }
   validates :extra_id, presence: true
-  #validates :image
 
 end

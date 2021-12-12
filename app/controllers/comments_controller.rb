@@ -9,9 +9,6 @@ class CommentsController < ApplicationController
     add_breadcrumb("Mi perfil")
   end
 
-  def show
-  end
-
   def new
     @category = Comment.find(params[:article_id])
     add_breadcrumb("Añadir comentario")

@@ -10,7 +10,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
     @category = Article.find(params[:category_id])
     @attacks = Attack.all
     @questions = Question.all

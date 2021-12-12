@@ -11,6 +11,5 @@ class Article < ApplicationRecord
   validates :descripcion, presence: true, length: { maximum: 1000 }
   validates :introduccion, presence: true, length: { maximum: 1000 }
   validates :category_id, presence: true
-  #validates :image
 
 end

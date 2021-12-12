@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  before_action :find_home, only: %i[ edit update ]
+  before_action :find_home, only: %i[edit update]
 
   def index
     @homes = Home.all

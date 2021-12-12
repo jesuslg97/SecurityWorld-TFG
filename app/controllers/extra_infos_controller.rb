@@ -1,6 +1,6 @@
 class ExtraInfosController < ApplicationController
 
-  before_action :find_extra_info, only: %i[ show edit update destroy]
+  before_action :find_extra_info, only: %i[show edit update destroy]
 
   before_action :set_breadcrumbs
 
