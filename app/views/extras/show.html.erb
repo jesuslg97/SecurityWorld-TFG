@@ -13,76 +13,47 @@
 
 <div class="row offset-md-0 col-md-12 mt-4">
 
-  <% @extra_infos.each do |extra| %>
+  <% @extra_infos.each do |extra_info| %>
 
     <% if @extra.nombre == "Últimas noticias" %>
-      <% if extra.id == 1 %>
+      <% if extra_info.id == 1 %>
         <div class="offset-md-0 offset-sm-0 col-md-3 text-center myInformation mb-3">
           <div>
-            <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
+            <h5 class="mb-1"><strong><%= extra_info.nombre %></strong></h5>
             <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
           </div>
           <span>
-            <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
+            <%= image_tag extra_info.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra) %></span>
+          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra_info) %></span>
         </div>
       <% end %>
 
-      <% if extra.id == 2 %>
+      <% if extra_info.id == 2 || extra_info.id == 3 %>
         <div class="offset-md-1 offset-sm-0 col-md-3 text-center myInformation mb-3">
           <div>
-            <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
+            <h5 class="mb-1"><strong><%= extra_info.nombre %></strong></h5>
             <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
           </div>
           <span>
-            <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
+            <%= image_tag extra_info.image, style: "max-width: 100%", class: "rounded" %>
           </span>
-          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra) %></span>
+          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra_info) %></span>
         </div>
       <% end %>
 
-      <% if extra.id == 3 %>
-        <div class="offset-md-1 offset-sm-0 col-md-3 text-center myInformation mb-3">
-          <div>
-            <h5 class="mb-1"><strong><%= extra.nombre %></strong></h5>
-            <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
-          </div>
-          <span>
-            <%= image_tag extra.image, style: "max-width: 100%", class: "rounded" %>
-          </span>
-          <span><%= link_to 'Leer información', extra_extra_info_path(@extra, extra) %></span>
-        </div>
-      <% end %>
-    <% end %>
-
-    <% if @extra.nombre == "Conceptos" %>
-      <% if extra.extra_id == 2 %>
+    <% else %>
+      <!-- Conceptos Organismos Leyes -->
+      <% if extra_info.extra_id == @extra.id %>
         <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
-          <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
-          <p class="m-0"><%= simple_format(extra.descripcion) %></p>
+          <h5 class="text-decoration-underline"><strong><%= extra_info.nombre %></strong></h5>
+          <p class="m-0"><%= simple_format(extra_info.descripcion) %></p>
+          <% if extra_info.nombre != "OCC" && extra_info.nombre != "MCCD" && @extra.nombre != "Conceptos" %>
+            <%= link_to "Información oficial", extra_info.enlaces, class: "nav-link" %>
+          <% end %>
         </div>
       <% end %>
-    <% end %>
-
-    <% if @extra.nombre == "Organismos" %>
-      <% if extra.extra_id == 3 %>
-        <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
-          <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
-          <p class="m-0"><%= simple_format(extra.descripcion) %></p>
-          <%= link_to "Información oficial", extra.enlaces, class: "nav-link" %>
-        </div>
-      <% end %>
-    <% end %>
-
-    <% if @extra.nombre == "Leyes" %>
-      <% if extra.extra_id == 4 %>
-        <div class="row col-md-11 mb-2" style="text-align: left; margin-left: 5px">
-          <h5 class="text-decoration-underline"><strong><%= extra.nombre %></strong></h5>
-          <p class="m-0"><%= simple_format(extra.descripcion) %></p>
-          <%= link_to "Información oficial", extra.enlaces, class: "nav-link" %>
-        </div>
-      <% end %>
+      <!-- Conceptos Organismos Leyes -->
     <% end %>
 
   <% end %>
