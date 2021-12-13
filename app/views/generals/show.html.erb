@@ -21,16 +21,19 @@
   </thead>
 
   <tbody>
-
-  <!-- Medidas Empresa -->
-  <% if @article.id == 1 %>
-
     <% @generals.each do |general| %>
-
       <tr class="text-center">
-        <% if general.article_id == 1 %>
+        <% if general.article_id == @article.id %>
           <td class="align-middle"><%= general.titulo %></td>
-          <td class="align-middle">Empresa</td>
+          <% if @article.id == 1 %>
+            <td class="align-middle">Empresa</td>
+          <% end %>
+          <% if @article.id == 4 %>
+            <td class="align-middle">Hogar</td>
+          <% end %>
+          <% if @article.id == 7 %>
+            <td class="align-middle">Móvil</td>
+          <% end %>
           <td class="align-middle">
             <%= link_to '', edit_article_general_path(@article, general), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', article_general_path(@article, general), class: "btn btn-danger text-white bi bi-trash", method: :delete,
@@ -39,51 +42,6 @@
         <% end %>
       </tr>
     <% end %>
-
-  <% end %>
-  <!-- Medidas Empresa -->
-
-  <!-- Medidas Hogar -->
-  <% if @article.id == 4 %>
-
-    <% @generals.each do |general| %>
-
-      <tr class="text-center">
-        <% if general.article_id == 4 %>
-          <td class="align-middle"><%= general.titulo %></td>
-          <td class="align-middle">Hogar</td>
-          <td class="align-middle">
-            <%= link_to '', edit_article_general_path(@article, general), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', article_general_path(@article, general), class: "btn btn-danger text-white bi bi-trash", method: :delete,
-                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
-          </td>
-        <% end %>
-      </tr>
-    <% end %>
-
-  <% end %>
-  <!-- Medidas Hogar -->
-
-  <!-- Medidas Movil -->
-  <% if @article.id == 7 %>
-
-    <% @generals.each do |general| %>
-
-      <tr class="text-center">
-        <% if general.article_id == 7 %>
-          <td class="align-middle"><%= general.titulo %></td>
-          <td class="align-middle">Móvil</td>
-          <td class="align-middle">
-            <%= link_to '', edit_article_general_path(@article, general), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', article_general_path(@article, general), class: "btn btn-danger text-white bi bi-trash", method: :delete,
-                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
-          </td>
-        <% end %>
-      </tr>
-    <% end %>
-
-  <% end %>
-  <!-- Medidas Movil -->
   </tbody>
 </table>
 

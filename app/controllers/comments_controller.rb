@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.all
+    @articles = Article.all
     add_breadcrumb("Mi perfil")
   end
 

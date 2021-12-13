@@ -21,16 +21,19 @@
   </thead>
 
   <tbody>
-
-  <!-- Ataques Empresa -->
-  <% if @article.id == 3 %>
-
     <% @attacks.each do |attack| %>
-
       <tr class="text-center">
-        <% if attack.article_id == 3 %>
+        <% if attack.article_id == @article.id %>
           <td class="align-middle"><%= attack.nombre %></td>
-          <td class="align-middle">Empresa</td>
+          <% if @article.id == 3 %>
+            <td class="align-middle">Empresa</td>
+          <% end %>
+          <% if @article.id == 6 %>
+            <td class="align-middle">Hogar</td>
+          <% end %>
+          <% if @article.id == 9 %>
+            <td class="align-middle">Móvil</td>
+          <% end %>
           <td class="align-middle">
             <%= link_to 'Ver Contenido', article_attack_content_path(@article, attack, attack), class: "btn btn-success text-white" %>
             <%= link_to '', edit_article_attack_path(@article, attack), class: "btn btn-info text-white bi bi-pencil" %>
@@ -40,53 +43,6 @@
         <% end %>
       </tr>
     <% end %>
-
-  <% end %>
-  <!-- Ataques Empresa -->
-
-  <!-- Ataques Hogar -->
-  <% if @article.id == 6 %>
-
-    <% @attacks.each do |attack| %>
-
-      <tr class="text-center">
-        <% if attack.article_id == 6 %>
-          <td class="align-middle"><%= attack.nombre %></td>
-          <td class="align-middle">Hogar</td>
-          <td class="align-middle">
-            <%= link_to 'Ver Contenido', article_attack_content_path(@article, attack, attack), class: "btn btn-success text-white" %>
-            <%= link_to '', edit_article_attack_path(@article, attack), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', article_attack_path(@article, attack), class: "btn btn-danger text-white bi bi-trash", method: :delete,
-                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
-          </td>
-        <% end %>
-      </tr>
-    <% end %>
-
-  <% end %>
-  <!-- Ataques Hogar -->
-
-  <!-- Ataques Movil -->
-  <% if @article.id == 9 %>
-
-    <% @attacks.each do |attack| %>
-
-      <tr class="text-center">
-        <% if attack.article_id == 9 %>
-          <td class="align-middle"><%= attack.nombre %></td>
-          <td class="align-middle">Móvil</td>
-          <td class="align-middle">
-            <%= link_to 'Ver Contenido', article_attack_content_path(@article, attack, attack), class: "btn btn-success text-white" %>
-            <%= link_to '', edit_article_attack_path(@article, attack), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', article_attack_path(@article, attack), class: "btn btn-danger text-white bi bi-trash", method: :delete,
-                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
-          </td>
-        <% end %>
-      </tr>
-    <% end %>
-
-  <% end %>
-  <!-- Ataques Movil -->
 
   </tbody>
 </table>

@@ -21,16 +21,19 @@
   </thead>
 
   <tbody>
-
-  <!-- Preguntas Empresa -->
-  <% if @article.id == 2 %>
-
     <% @questions.each do |question| %>
-
       <tr class="text-center">
-        <% if question.article_id == 2 %>
+        <% if question.article_id == @article.id %>
           <td class="align-middle"><%= question.pregunta %></td>
-          <td class="align-middle">Empresa</td>
+          <% if @article.id == 2 %>
+            <td class="align-middle">Empresa</td>
+          <% end %>
+          <% if @article.id == 5 %>
+            <td class="align-middle">Hogar</td>
+          <% end %>
+          <% if @article.id == 8 %>
+            <td class="align-middle">Móvil</td>
+          <% end %>
           <td class="align-middle">
             <%= link_to '', edit_article_question_path(@article, question), class: "btn btn-info text-white bi bi-pencil" %>
             <%= link_to '', article_question_path(@article, question), class: "btn btn-danger text-white bi bi-trash", method: :delete,
@@ -39,51 +42,6 @@
         <% end %>
       </tr>
     <% end %>
-
-  <% end %>
-  <!-- Preguntas Empresa -->
-
-  <!-- Preguntas Hogar -->
-  <% if @article.id == 5 %>
-
-    <% @questions.each do |question| %>
-
-      <tr class="text-center">
-        <% if question.article_id == 5 %>
-          <td class="align-middle"><%= question.pregunta %></td>
-          <td class="align-middle">Hogar</td>
-          <td class="align-middle">
-            <%= link_to '', edit_article_question_path(@article, question), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', article_question_path(@article, question), class: "btn btn-danger text-white bi bi-trash", method: :delete,
-                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
-          </td>
-        <% end %>
-      </tr>
-    <% end %>
-
-  <% end %>
-  <!-- Preguntas Hogar -->
-
-  <!-- Preguntas Movil -->
-  <% if @article.id == 8 %>
-
-    <% @questions.each do |question| %>
-
-      <tr class="text-center">
-        <% if question.article_id == 8 %>
-          <td class="align-middle"><%= question.pregunta %></td>
-          <td class="align-middle">Móvil</td>
-          <td class="align-middle">
-            <%= link_to '', edit_article_question_path(@article, question), class: "btn btn-info text-white bi bi-pencil" %>
-            <%= link_to '', article_question_path(@article, question), class: "btn btn-danger text-white bi bi-trash", method: :delete,
-                        data: { confirm: '¿Seguro que desea realizar esta acción?' } %>
-          </td>
-        <% end %>
-      </tr>
-    <% end %>
-
-  <% end %>
-  <!-- Preguntas Movil -->
   </tbody>
 </table>
 
