@@ -2,353 +2,73 @@
 <hr class="teal accent-3 mb-2 mt-0 d-inline-block mx-auto border-white" style="width: 100px;">
 <p><%= simple_format(@article.introduccion) %></p>
 
-<!-- Empresa -->
-<% if @article.nombre == "Medidas generales" && @article.id == 1 %>
-  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-    <% @generals.each do |general| %>
-      <% if general.article_id == 1 %>
-        <h5 class="text-decoration-underline"><strong><%= general.titulo %></strong></h5>
-        <p class="m-0"><%= simple_format(general.informacion) %></p>
-      <% end %>
+<div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
+  <!-- Medidas generales -->
+  <% @generals.each do |general| %>
+    <% if general.article_id == @article.id %>
+      <h5 class="text-decoration-underline"><strong><%= general.titulo %></strong></h5>
+      <p class="m-0"><%= simple_format(general.informacion) %></p>
     <% end %>
-  </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 1 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
-          <span class="mb-1">Apartado:
-            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
-          </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
   <% end %>
-  <!-- Comentarios -->
-<% end %>
+  <!-- Medidas generales -->
 
-<% if @article.nombre == "Preguntas frecuentes" && @article.id == 2 %>
-  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-    <% @questions.each do |question| %>
-      <% if question.article_id == 2 %>
-        <h5 class="text-decoration-underline"><strong><%= question.pregunta %></strong></h5>
-        <p class="m-0"><%= simple_format(question.respuesta) %></p>
-      <% end %>
+  <!-- Preguntas frecuentes -->
+  <% @questions.each do |question| %>
+    <% if question.article_id == @article.id %>
+      <h5 class="text-decoration-underline"><strong><%= question.pregunta %></strong></h5>
+      <p class="m-0"><%= simple_format(question.respuesta) %></p>
     <% end %>
-  </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 2 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
-          <span class="mb-1">Apartado:
-            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
-          </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
   <% end %>
-  <!-- Comentarios -->
-<% end %>
+  <!-- Preguntas frecuentes -->
+</div>
 
-<% if @category.category_id == 1 && @article.id == 3 %>
-  <div class="row col-md-12">
-    <% @attacks.each do |attack| %>
-      <% if attack.article_id == 3 %>
-        <div class="col-md-2 text-center m-md-3 mb-3">
-          <div class="myInformation">
-            <h4 class="mb-3"><%= attack.nombre %></h4>
-            <span><%= link_to 'Detalles', category_article_attack_path(@category, @article, attack) %></span>
-          </div>
+<div class="row col-md-12">
+  <!-- Ataques específicos -->
+  <% @attacks.each do |attack| %>
+    <% if attack.article_id == @article.id %>
+      <div class="col-md-2 text-center m-md-3 mb-3">
+        <div class="myInformation">
+          <h4 class="mb-3"><%= attack.nombre %></h4>
+          <span><%= link_to 'Detalles', category_article_attack_path(@category, @article, attack) %></span>
         </div>
-      <% end %>
+      </div>
     <% end %>
-  </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 3 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
+  <% end %>
+  <!-- Ataques específicos -->
+</div>
+
+<!-- Comentarios -->
+<% if user_signed_in? && current_user.id != 1 %>
+  <div class="row col-md-11 mt-4" style="text-align: left; margin-left: 5px">
+    <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
+    <h3>Comentarios</h3>
+    <% @comments.each do |comment| %>
+      <% if comment.article_id == @article.id %>
+        <span class="mb-1">Comentario hecho por:
+          <% @users.each do |user| %>
+            <% if user.id == comment.user_id %>
+              <strong><%= user.nombre %> <%= user.apellidos %></strong>
             <% end %>
-          </span>
+          <% end %>
+        </span>
+
+        <% if @article.id == 3 || @article.id == 6 || @article.id == 9 %>
           <span class="mb-1">Ataque y apartado:
             <strong class="text-decoration-underline"><%= comment.titulo %></strong>
           </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
-  <% end %>
-  <!-- Comentarios -->
-<% end %>
-<!-- Empresa -->
-
-<!-- Hogar -->
-<% if @article.nombre == "Medidas generales" && @article.id == 4 %>
-  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-    <% @generals.each do |general| %>
-      <% if general.article_id == 4 %>
-        <h5 class="text-decoration-underline"><strong><%= general.titulo %></strong></h5>
-        <p class="m-0"><%= simple_format(general.informacion) %></p>
-      <% end %>
-    <% end %>
-  </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 4 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
+        <% else %>
           <span class="mb-1">Apartado:
             <strong class="text-decoration-underline"><%= comment.titulo %></strong>
           </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
         <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
-  <% end %>
-  <!-- Comentarios -->
-<% end %>
 
-<% if @article.nombre == "Preguntas frecuentes" && @article.id == 5 %>
-  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-    <% @questions.each do |question| %>
-      <% if question.article_id == 5 %>
-        <h5 class="text-decoration-underline"><strong><%= question.pregunta %></strong></h5>
-        <p class="m-0"><%= simple_format(question.respuesta) %></p>
+        <p class="m-0"><%= simple_format(comment.comentario) %></p>
       <% end %>
     <% end %>
   </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 5 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
-          <span class="mb-1">Apartado:
-            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
-          </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
-  <% end %>
-  <!-- Comentarios -->
-<% end %>
-
-<% if @category.category_id == 2 || @article.id == 6 %>
-  <div class="row col-md-12">
-    <% @attacks.each do |attack| %>
-      <% if attack.article_id == 6 %>
-        <div class="col-md-2 text-center m-md-3 mb-3">
-          <div class="myInformation">
-            <h4 class="mb-3"><%= attack.nombre %></h4>
-            <span><%= link_to 'Detalles', category_article_attack_path(@category, @article, attack) %></span>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+  <div class="text-center mb-3">
+    <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article),
+                class:"btn btn-primary text-white bi bi-plus-circle" %>
   </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 6 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
-          <span class="mb-1">Ataque y apartado:
-            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
-          </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
-  <% end %>
-  <!-- Comentarios -->
 <% end %>
-<!-- Hogar -->
-
-<!-- Movil -->
-<% if @article.nombre == "Medidas generales" && @article.id == 7 %>
-  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-    <% @generals.each do |general| %>
-      <% if general.article_id == 7 %>
-        <h5 class="text-decoration-underline"><strong><%= general.titulo %></strong></h5>
-        <p class="m-0"><%= simple_format(general.informacion) %></p>
-      <% end %>
-    <% end %>
-  </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 7 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
-          <span class="mb-1">Apartado:
-            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
-          </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
-  <% end %>
-  <!-- Comentarios -->
-<% end %>
-
-<% if @article.nombre == "Preguntas frecuentes" && @article.id == 8 %>
-  <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-    <% @questions.each do |question| %>
-      <% if question.article_id == 8 %>
-        <h5 class="text-decoration-underline"><strong><%= question.pregunta %></strong></h5>
-        <p class="m-0"><%= simple_format(question.respuesta) %></p>
-      <% end %>
-    <% end %>
-  </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 8 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
-          <span class="mb-1">Apartado:
-            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
-          </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
-  <% end %>
-  <!-- Comentarios -->
-<% end %>
-
-<% if @category.category_id == 3 || @article.id == 9 %>
-  <div class="row col-md-12">
-    <% @attacks.each do |attack| %>
-      <% if attack.article_id == 9 %>
-        <div class="col-md-2 text-center m-md-3 mb-3">
-          <div class="myInformation">
-            <h4 class="mb-3"><%= attack.nombre %></h4>
-            <span><%= link_to 'Detalles', category_article_attack_path(@category, @article, attack) %></span>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-  <!-- Comentarios -->
-  <% if user_signed_in? && current_user.id != 1 %>
-    <div class="row col-md-11 mt-5" style="text-align: left; margin-left: 5px">
-      <hr class="teal accent-3 d-inline-block mx-auto" style="border-top: 3px dashed blue; width: 700px">
-      <h3>Comentarios</h3>
-      <% @comments.each do |comment| %>
-        <% if comment.article_id == 9 %>
-          <span class="mb-1">Comentario hecho por:
-            <% @users.each do |user| %>
-              <% if user.id == comment.user_id %>
-                <strong><%= user.nombre %> <%= user.apellidos %></strong>
-              <% end %>
-            <% end %>
-          </span>
-          <span class="mb-1">Ataque y apartado:
-            <strong class="text-decoration-underline"><%= comment.titulo %></strong>
-          </span>
-          <p class="m-0"><%= simple_format(comment.comentario) %></p>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="text-center mb-3">
-      <%= link_to ' Añadir Comentario', new_category_article_comment_path(@category, @article), class:"btn btn-primary text-white bi bi-plus-circle" %>
-    </div>
-  <% end %>
-  <!-- Comentarios -->
-<% end %>
-<!-- Movil -->
+<!-- Comentarios -->

@@ -28,22 +28,20 @@
         <label for="article_id"><strong>Categoría</strong></label>
         <select name="comment[article_id]" class="form-control">
           <option value="null">Seleccione categoría</option>
-          <% if @category.article_id == 1 || @category.article_id == 2 || @category.article_id == 3 %>
-            <option value="1">Medidas generales Empresa</option>
-            <option value="2">Preguntas frecuentes Empresa</option>
-            <option value="3">Ataques específicos Empresa</option>
-          <% end %>
+          <% Article.all.each do |c| %>
+            <option value="<%= c.id %>" <%= @comment.article_id == c.id ? "selected" : "" %>>
+              <% if c.id == 1 || c.id == 2 || c.id == 3 %>
+                <%= c.nombre %> Empresa
+              <% end %>
 
-          <% if @category.article_id == 4 || @category.article_id == 5 || @category.article_id == 6 %>
-            <option value="4">Medidas generales Hogar</option>
-            <option value="5">Preguntas frecuentes Hogar</option>
-            <option value="6">Ataques específicos Hogar</option>
-          <% end %>
+              <% if c.id == 4 || c.id == 5 || c.id == 6 %>
+                <%= c.nombre %> Hogar
+              <% end %>
 
-          <% if @category.article_id == 7 || @category.article_id == 8 || @category.article_id == 9 %>
-            <option value="7">Medidas generales Móvil</option>
-            <option value="8">Preguntas frecuentes Móvil</option>
-            <option value="9">Ataques específicos Móvil</option>
+              <% if c.id == 7 || c.id == 8 || c.id == 9 %>
+                <%= c.nombre %> Móvil
+              <% end %>
+            </option>
           <% end %>
         </select>
       </div>
