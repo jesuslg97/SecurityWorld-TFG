@@ -616,6 +616,157 @@ attack32.save
 attack33.save
 attack34.save
 
+# SEEDS CONTENTS
+content1 = Content.new(:attack_id => '1', :titulo => 'Mantener los sistemas actualizados',
+                       :informacion => 'Una de las claves para evitar la entrada de malware es mantener los sistemas actualizados. Es cierto que muchos usuarios tienen esto en cuenta y actualizan frecuentemente su ordenador o móvil. El problema es que en otras muchas ocasiones son otros dispositivos los que pueden no ser actualizados correctamente.<br/>
+Hablamos principalmente de los dispositivos IoT. Cada vez tenemos más equipos conectados a la red en nuestros hogares y esto también hace que el campo de ataque sea mayor. Los ciberdelincuentes van a tener más opciones para robar información o comprometer nuestros sistemas.')
+
+content2 = Content.new(:attack_id => '2', :titulo => 'Control del correo electrónico',
+                       :informacion => 'Si recibe un correo electrónico que le pide información personal o financiera, no responda. Si el mensaje lo invita a acceder a un sitio web a través de un enlace incluido en su contenido, no lo haga. Debe saber que las organizaciones que trabajan seriamente ya están al tanto de este tipo de fraude y por consiguiente, no solicitan información por este medio. Tampoco contactan telefónicamente, ni a través de mensajes SMS o de fax.<br/>
+Al mismo tiempo, si le preocupa el estado de la cuenta que posee en la organización que dice haber enviado el correo o que lo ha contactado, comuníquese directamente con ella, recurriendo al número telefónico conocido y provisto por la entidad a través de medios confiables.')
+
+content3 = Content.new(:attack_id => '3', :titulo => 'Actualización del sistema y aplicaciones',
+                       :informacion => 'Mantener el sistema operativo actualizado con los últimos parches de seguridad y todas las aplicaciones que tengamos instaladas es el mejor punto de partida. El mencionado WanaCryptor aprovechó una vulnerabilidad en sistemas Windows.')
+
+content4 = Content.new(:attack_id => '4', :titulo => 'Comportamiento seguro',
+                       :informacion => 'Los archivos adjuntos y enlaces solo deben abrirse si provienen de una fuente confiable conocida por el usuario. Los correos electrónicos de remitentes desconocidos no deben abrirse, ya que muchos gusanos informáticos se propagan a través del correo electrónico. Las empresas deben realizar cursos de formación de sensibilización con sus empleados para que sean conscientes de los peligros y riesgos en Internet.')
+
+content5 = Content.new(:attack_id => '5', :titulo => 'Instala un software antivirus/malware',
+                       :informacion => 'Este consejo puede ser evidente, y lo mencionamos anteriormente. Sin embargo, muchos ordenadores -especialmente los domésticos- no tienen protección anti-virus/malware. Esta protección es un primer paso indispensable para mantener su PC libre de virus.')
+
+content6 = Content.new(:attack_id => '6', :titulo => 'Instalación de software antivirus',
+                       :informacion => 'Los programas antivirus protegen los dispositivos de los programas maliciosos que suponen una amenaza para el sistema. Escanea el ordenador para encontrar y eliminar el troyano y proporciona actualizaciones automáticas para garantizar la protección contra los virus más recientes.')
+
+content7 = Content.new(:attack_id => '7', :titulo => 'Detectar el ataque antes de que ocurra',
+                       :informacion => 'Existen herramientas para tener un monitoreo continuo y poder analizar nuestro sitio web. De esta forma podremos detectar posibles ataques DDoS antes de que realmente se lleve a cabo y sea un problema. También podemos hacer uso de firewall y sistemas de detección de posibles intrusos.<br/>
+Por ejemplo podemos ver los patrones de los últimos meses y ver si de repente hay una actividad inusual que pueda indicar que se está llevando a cabo un intento de ataque DDoS. La idea es que cuanto antes podamos detectar un ataque de este tipo, mejor.')
+
+content8 = Content.new(:attack_id => '8', :titulo => 'Descargar de fuentes oficiales',
+                       :informacion => 'Algo básico no solo para evitar los rootkits, sino cualquier otro tipo de amenaza es descargar únicamente desde fuentes oficiales. Es esencial que cuando bajemos software o cualquier archivo de la red lo hagamos desde sitios legítimos y fiables.
+Si descargamos desde fuentes de terceros podemos estar agregando software que ha sido modificado de forma maliciosa para comprometer nuestro sistema. Esto puede ser un problema que hay que evitar a toda costa.')
+
+content9 = Content.new(:attack_id => '9', :titulo => 'Utilizar una herramienta antispyware',
+                       :informacion => 'Estas herramientas realizan un análisis del ordenador para localizar cualquier tipo de spyware. Una vez se concluye el análisis, se procede a su eliminación. Estos programas suelen ser los más efectivos para solucionar el problema, pudiéndose optar entre su opción gratuita o de pago.')
+
+content10 = Content.new(:attack_id => '10', :titulo => 'Descarga siempre desde las webs oficiales',
+                       :informacion => 'El primer consejo es siempre el de descargarte las aplicaciones siempre desde las páginas o repositorios oficiales. Cuando buscas en Google una aplicación concreta, además de su web oficial también te van a aparecer casi siempre enlaces a páginas especializadas en descargas desde donde también vas a poder bajártela.<br/>
+Estas páginas suelen aparecer muy buen posicionadas en Google para que sea casi de lo primero que veas, pero no siempre son el método más seguro. Algunas de estas webs incluyen adware en sus instaladores, por lo que son una de las principales fuentes desde donde puedes acabar instalando sin quererlo aplicaciones no deseadas o incluso que dañan tu ordenador.')
+
+content11 = Content.new(:attack_id => '11', :titulo => 'Actualización y parches',
+                       :informacion => 'Las vulnerabilidades en las aplicaciones y bases de datos que los ciberatacantes pueden explotar utilizando la inyección SQL se descubren regularmente, por lo que es vital aplicar parches y actualizaciones tan pronto como sea posible. Una solución de administración de parches podría valer la pena la inversión.')
+
+content12 = Content.new(:attack_id => '12', :titulo => 'Instalar un buen antivirus',
+                       :informacion => 'Un primer paso esencial es instalar un buen antivirus. Son muchas las herramientas de seguridad que podemos agregar a nuestros equipos y de esta forma lograr que estén lo más protegidos posible. Muy importante aplicarlo en todo tipo de sistema operativo, ya que no hay ninguno que sea 100% seguro y no pueda verse comprometido por este tipo de ataque o cualquier otro similar.<br/>
+Hay que tener en cuenta que un antivirus podría ayudar a evitar la entrada de malware que llegase a través de un ataque de Cross Site Scripting. Hay opciones tanto gratuitas como de pago, pero recomendamos en todo momento instalar un buen programa de seguridad. También podemos contar con otras herramientas como un firewall.')
+
+content13 = Content.new(:attack_id => '13', :titulo => 'Evitar las redes públicas y abiertas',
+                       :informacion => 'Como hemos visto, una de las técnicas más utilizadas para llevar a cabo ataques Man in the Middle es a través de redes configuradas de forma maliciosa. Por tanto hay que intentar evitar las redes públicas y aquellas que tengan un cifrado débil o que estén abiertas. De esta forma tendremos más garantías de que nuestras conexiones están aseguradas.<br/>
+Debemos asegurarnos de que las redes a las que accedemos son reales, seguras y que no van a ser un problema para nuestra seguridad. Así podremos proteger la información a la hora de navegar. Hablamos por ejemplo de un Wi-Fi que nos encontremos en un aeropuerto o centro comercial. No sabemos realmente quién puede estar detrás y de qué manera podría interceptar la conexión y afectarnos.')
+
+content14 = Content.new(:attack_id => '14', :titulo => 'Sistemas actualizados',
+                       :informacion => 'Algo muy importante para evitar este tipo de ataque y cualquier otro similar es tener los sistemas correctamente actualizados. Son muchas las vulnerabilidades que pueden surgir y que son aprovechadas por los piratas informáticos para llevar a cabo sus ataques. Necesitamos tener los equipos con todos los parches y correctamente actualizados. Así evitaremos que los piratas informáticos se aprovechen de esos errores.')
+
+content15 = Content.new(:attack_id => '15', :titulo => 'Esté atento a la información personal que comparte en Internet',
+                       :informacion => 'Eche un vistazo a sus perfiles de redes sociales. ¿Qué tipo de información personal es accesible para posibles atacantes? Si no desea que un posible estafador vea algo, no lo comparta o, como mínimo, asegúrese de que su configuración de privacidad esté configurada para limitar lo que otros puedan ver.')
+
+content16 = Content.new(:attack_id => '16', :titulo => 'Información de los empleados sobre los ejecutivos',
+                       :informacion => 'Los detalles que se pueden encontrar fácilmente en línea a través de sitios como las redes sociales, desde cumpleaños y lugares de origen hasta pasatiempos o deportes favoritos, pueden ayudar a que los correos electrónicos de whaling parezcan más legítimos.')
+
+content17 = Content.new(:attack_id => '17', :titulo => 'Cifrar cuentas o sistemas',
+                       :informacion => 'Esta recomendación puede evitar la entrada de malware cuando tenemos una contraseña fuerte; contenga letras, números y símbolos especiales. También, hay que tener en cuenta este consejo en sistemas o redes Wifi.')
+
+content18 = Content.new(:attack_id => '18', :titulo => 'Identificar claramente los correos electrónicos sospechosos',
+                       :informacion => 'Existen algunos aspectos que inequívocamente, identifican este tipo de ataques a través de correo electrónico:
+Utilizan nombres y adoptan la imagen de empresas reales
+Llevan como remitente el nombre de la empresa o el de un empleado real de la empresa
+Incluyen webs que visualmente son iguales a las de empresas reales
+Como gancho utilizan regalos o la perdida de la propia cuenta existente')
+
+content19 = Content.new(:attack_id => '19', :titulo => 'Seguridad del Navegador: ¡Utilice actualizaciones!',
+                       :informacion => 'Los navegadores obsoletos son el objetivo número uno para los ataques de hackers maliciosos. También puede utilizar diferentes navegadores para diferentes servicios. Esto tiene la ventaja de que todos los plug-ins, extensiones y cookies pueden ser desactivados en un navegador, ya que son particularmente vulnerables.<br/>
+Como resultado, ya no podrá realizar operaciones bancarias o compras en línea ahí, pero estará más seguro en sitios web supuestamente inseguros. Además, deberías borrar regularmente tus pistas en Internet, como por ejemplo el caché. Esto los hace más difíciles de detectar para los atacantes cibernéticos.')
+
+content20 = Content.new(:attack_id => '20', :titulo => 'Instalar un cortafuegos',
+                       :informacion => 'Un cortafuegos protege de ciberataques al impedir todo acceso no autorizado a una red informática privada o desde ella. Además de los programas antivirus, un cortafuegos proporciona una barrera adicional a los troyanos, reduciendo la probabilidad de infección.')
+
+content21 = Content.new(:attack_id => '21', :titulo => 'Sentido común',
+                       :informacion => 'Hemos visto que muchos tipos de Spyware pueden llegar al descargar software malicioso de sitios de terceros. Es importante tener esto presente y siempre que vayamos a descargar cualquier programa lo hagamos desde sitios y tiendas oficiales. No importa el tipo de dispositivo que estemos utilizando.')
+
+content22 = Content.new(:attack_id => '22', :titulo => 'Descarga desde las tiendas de aplicaciones oficiales',
+                       :informacion => 'Descarga solo aplicaciones de fuentes de confianza. Esto garantiza que las aplicaciones sean legítimas y no software infectado con adware.')
+
+content23 = Content.new(:attack_id => '23', :titulo => 'No visitar sitios que puedan ser inseguros',
+                       :informacion => 'Por supuesto también debemos evitar visitar sitios que puedan ser inseguros. Por ejemplo aquellos que accedamos a través de links de terceros y que nos muestre algo sospechoso, una página que no nos dé confianza. Puede tratarse de un sitio lleno de vulner')
+
+content24 = Content.new(:attack_id => '24', :titulo => 'Cifrado y uso de red VPN',
+                       :informacion => 'El uso de cifrado en todos los dispositivos que contienen información valiosa y el uso de redes privadas virtuales (VPN) cuando se conecta a redes públicas agrega una capa adicional de protección contra los ataques MiTM. Las VPN crean un canal seguro y encriptado para los datos que se transmiten a través de Internet desde un dispositivo o una red.')
+
+content25 = Content.new(:attack_id => '25', :titulo => 'Formación especializada',
+                       :informacion => 'Finalmente, para mitigar un ataque de spear phishing, es fundamental concienciar de su importancia a las personas del hogar. Para ello, una formación especializada sobre ciberseguridad se vuelve imprescindible.
+Y es que un clic puede desencadenar graves consecuencias para toda la familia. Con el robo de datos, los hackers revelan información sensible (datos bancarios, contenidos…), lo que puede conllevar grandes pérdidas.')
+
+content26 = Content.new(:attack_id => '26', :titulo => 'Utilizar un Wi-Fi seguro',
+                       :informacion => 'Las mejores aliadas para la seguridad del dispositivo son las redes privadas protegidas con contraseña.')
+
+content27 = Content.new(:attack_id => '27', :titulo => 'No compartas información personal',
+                       :informacion => 'Piensa bien antes de compartir datos personales por correo electrónico o SMS, especialmente si has recibido un mensaje no solicitado donde te los pidan. El banco nunca te va a pedir el número de cuenta por SMS, así que, si recibes un mensaje semejante, lo más seguro es que se trate de un ataque de phishing.')
+
+content28 = Content.new(:attack_id => '28', :titulo => 'Establece un código de acceso',
+                        :informacion => 'Crea una contraseña en tu dispositivo móvil para que, si se pierde o es robada, sea más difícil acceder a tu información. Los datos se toman con mayor frecuencia de los teléfonos móviles cuando se pierden o son robados y no están protegidos por una contraseña.')
+
+content29 = Content.new(:attack_id => '29', :titulo => 'Instala un software antivirus/malware',
+                        :informacion => 'Este consejo puede ser evidente, y lo mencionamos anteriormente. Sin embargo, muchos ordenadores -especialmente los domésticos- no tienen protección anti-virus/malware. Esta protección es un primer paso indispensable para mantener su PC libre de virus.')
+
+content30 = Content.new(:attack_id => '30', :titulo => 'Borre su caché y descargas',
+                        :informacion => 'Ciertos tipos de malware de Android, como el adware, pueden ocultarse en el navegador. Si ve muchos anuncios emergentes o le redirigen a sitios web distintos del que planeaba visitar, es momento de limpiar Chrome para eliminar el malware presente.')
+
+content31 = Content.new(:attack_id => '31', :titulo => 'Links en WhatsApp o por SMS',
+                        :informacion => 'A veces recibimos mensajes ya sean por una aplicación como WhatsApp o directamente por SMS avisando de que tenemos un premio, un mensaje, una oferta o que nuestro dispositivo está en peligro. Los motivos son variados pero lo que al final buscan es que pinchemos sobre el link que tiene adjunto. Este link suele tener malas intenciones. Evita entrar en links de este tipo a toda costa suelen instalar un virus, troyano u otro tipo de malware.')
+
+content32 = Content.new(:attack_id => '32', :titulo => 'Realizar análisis de seguridad frecuentes',
+                        :informacion => 'Aparte de contar con un antivirus actualizado, se tendrán que hacer análisis frecuentes para lograr una mayor seguridad.')
+
+content33 = Content.new(:attack_id => '33', :titulo => 'Nunca descargar archivos sin comprobar la fuente',
+                        :informacion => 'No se deben descargar documentos provenientes de destinatarios desconocidos ni obtener aplicaciones fuera de la app store.')
+
+content34 = Content.new(:attack_id => '34', :titulo => 'Sitios cifrados',
+                        :informacion => 'Aquí es vital el sentido común y observar muy bien las páginas que visitamos. Cuando se trate de iniciar sesión o introducir datos personales deberemos entrar directamente introduciendo la dirección en el navegador y nunca a través de posibles links de terceros. De esta forma evitaremos acabar en una página modificada de forma maliciosa.')
+
+content1.save
+content2.save
+content3.save
+content4.save
+content5.save
+content6.save
+content7.save
+content8.save
+content9.save
+content10.save
+content11.save
+content12.save
+content13.save
+content14.save
+content15.save
+content16.save
+content17.save
+content18.save
+content19.save
+content20.save
+content21.save
+content22.save
+content23.save
+content24.save
+content25.save
+content26.save
+content27.save
+content28.save
+content29.save
+content30.save
+content31.save
+content32.save
+content33.save
+content34.save
+
 # SEEDS COMMENTS
 comment1 = Comment.new(:user_id => '2', :article_id => '1',
                        :titulo => 'Copia de seguridad',
