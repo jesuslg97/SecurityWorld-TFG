@@ -11,19 +11,7 @@ class CategoriesController < ApplicationController
 
   def show
     @articles = Article.all
-
-    if @category.id == 1
-      add_breadcrumb("Empresa")
-    end
-
-    if @category.id == 2
-      add_breadcrumb("Hogar")
-    end
-
-    if @category.id == 3
-      add_breadcrumb("Móvil")
-    end
-
+    add_breadcrumb(@category.nombre)
   end
 
   def new

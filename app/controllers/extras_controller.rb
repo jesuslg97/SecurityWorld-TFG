@@ -11,23 +11,7 @@ class ExtrasController < ApplicationController
 
   def show
     @extra_infos = ExtraInfo.all
-
-    if @extra.id == 1
-      add_breadcrumb("Últimas noticias")
-    end
-
-    if @extra.id == 2
-      add_breadcrumb("Conceptos")
-    end
-
-    if @extra.id == 3
-      add_breadcrumb("Organismos")
-    end
-
-    if @extra.id == 4
-      add_breadcrumb("Leyes")
-    end
-
+    add_breadcrumb(@extra.nombre)
   end
 
   def new
