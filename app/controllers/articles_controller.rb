@@ -41,40 +41,16 @@ class ArticlesController < ApplicationController
   def edit
     add_breadcrumb("Artículos", articles_path)
 
-    if @article.id == 1
-      add_breadcrumb("Editar Medidas Empresa")
+    if @article.category_id == 1
+      add_breadcrumb("Editar " + @article.nombre + " Empresa")
     end
 
-    if @article.id == 2
-      add_breadcrumb("Editar Preguntas Empresa")
+    if @article.category_id == 2
+      add_breadcrumb("Editar " + @article.nombre + " Hogar")
     end
 
-    if @article.id == 3
-      add_breadcrumb("Editar Ataques Empresa")
-    end
-
-    if @article.id == 4
-      add_breadcrumb("Editar Medidas Hogar")
-    end
-
-    if @article.id == 5
-      add_breadcrumb("Editar Preguntas Hogar")
-    end
-
-    if @article.id == 6
-      add_breadcrumb("Editar Ataques Hogar")
-    end
-
-    if @article.id == 7
-      add_breadcrumb("Editar Medidas Móvil")
-    end
-
-    if @article.id == 8
-      add_breadcrumb("Editar Preguntas Móvil")
-    end
-
-    if @article.id == 9
-      add_breadcrumb("Editar Ataques Móvil")
+    if @article.category_id == 3
+      add_breadcrumb("Editar " + @article.nombre + " Móvil")
     end
 
   end

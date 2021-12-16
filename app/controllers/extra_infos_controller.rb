@@ -79,13 +79,7 @@ class ExtraInfosController < ApplicationController
     add_breadcrumb("Inicio", root_path)
     @extra = Extra.find(params[:extra_id])
 
-    if user_signed_in? == false
-      if @extra_info.extra_id == @extra.id
-        add_breadcrumb(@extra.nombre, extra_path(:id => @extra_info.extra_id))
-      end
-    end
-
-    if user_signed_in? && current_user.id != 1
+    if user_signed_in? && current_user.id != 1 || user_signed_in? == false
       if @extra_info.extra_id == @extra.id
         add_breadcrumb(@extra.nombre, extra_path(:id => @extra_info.extra_id))
       end

@@ -78,15 +78,15 @@ class AttacksController < ApplicationController
     @attacks = Attack.all
 
     if @article.category_id == 1
-      add_breadcrumb("Ataques específicos Empresa")
+      add_breadcrumb(@article.nombre + " Empresa")
     end
 
     if @article.category_id == 2
-      add_breadcrumb("Ataques específicos Hogar")
+      add_breadcrumb(@article.nombre + " Hogar")
     end
 
     if @article.category_id == 3
-      add_breadcrumb("Ataques específicos Móvil")
+      add_breadcrumb(@article.nombre + " Móvil")
     end
   end
 
@@ -97,15 +97,15 @@ class AttacksController < ApplicationController
 
   def edit
     if @attack.article_id == 3
-      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(:id => 3))
+      add_breadcrumb("Ataques específicos Empresa", article_show_admin_path(id: 3))
     end
 
     if @attack.article_id == 6
-      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(:id => 6))
+      add_breadcrumb("Ataques específicos Hogar", article_show_admin_path(id: 6))
     end
 
     if @attack.article_id == 9
-      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(:id => 9))
+      add_breadcrumb("Ataques específicos Móvil", article_show_admin_path(id: 9))
     end
 
     add_breadcrumb("Editar Ataque")
@@ -146,38 +146,21 @@ class AttacksController < ApplicationController
   def set_breadcrumbs
     add_breadcrumb("Inicio", root_path)
 
-    if user_signed_in? == false
+    if user_signed_in? && current_user.id != 1 || user_signed_in? == false
       if @attack.article_id == 3
-        add_breadcrumb("Empresa", category_path(:id => 1))
-        add_breadcrumb("Ataques específicos", category_article_path(:id => 3))
+        add_breadcrumb("Empresa", category_path(id: 1))
       end
 
       if @attack.article_id == 6
-        add_breadcrumb("Hogar", category_path(:id => 2))
-        add_breadcrumb("Ataques específicos", category_article_path(:id => 6))
+        add_breadcrumb("Hogar", category_path(id: 2))
       end
 
       if @attack.article_id == 9
-        add_breadcrumb("Móvil", category_path(:id => 3))
-        add_breadcrumb("Ataques específicos", category_article_path(:id => 9))
-      end
-    end
-
-    if user_signed_in? && current_user.id != 1
-      if @attack.article_id == 3
-        add_breadcrumb("Empresa", category_path(:id => 1))
-        add_breadcrumb("Ataques específicos", category_article_path(:id => 3))
+        add_breadcrumb("Móvil", category_path(id: 3))
       end
 
-      if @attack.article_id == 6
-        add_breadcrumb("Hogar", category_path(:id => 2))
-        add_breadcrumb("Ataques específicos", category_article_path(:id => 6))
-      end
+      add_breadcrumb("Ataques específicos", category_article_path(id: @attack.article_id))
 
-      if @attack.article_id == 9
-        add_breadcrumb("Móvil", category_path(:id => 3))
-        add_breadcrumb("Ataques específicos", category_article_path(:id => 9))
-      end
     elsif user_signed_in? && current_user.id == 1
       add_breadcrumb("Artículos", articles_path)
     end
