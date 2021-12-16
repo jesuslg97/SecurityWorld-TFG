@@ -36,7 +36,7 @@ class ExtraInfosController < ApplicationController
     @extra = Extra.find(params[:extra_id])
 
     if @extra_info.extra_id == @extra.id
-      add_breadcrumb(@extra.nombre, extra_extra_infos_path(:id => @extra_info.extra_id))
+      add_breadcrumb(@extra.nombre, extra_extra_infos_path(id: @extra_info.extra_id))
     end
 
     add_breadcrumb("Editar Información")
@@ -77,11 +77,22 @@ class ExtraInfosController < ApplicationController
 
   def set_breadcrumbs
     add_breadcrumb("Inicio", root_path)
-    @extra = Extra.find(params[:extra_id])
 
     if user_signed_in? && current_user.id != 1 || user_signed_in? == false
-      if @extra_info.extra_id == @extra.id
-        add_breadcrumb(@extra.nombre, extra_path(:id => @extra_info.extra_id))
+      if @extra_info.extra_id == 1
+        add_breadcrumb("Últimas noticias", extra_path(id: 1))
+      end
+
+      if @extra_info.extra_id == 2
+        add_breadcrumb("Conceptos", extra_path(id: 2))
+      end
+
+      if @extra_info.extra_id == 3
+        add_breadcrumb("Organismos", extra_path(id: 3))
+      end
+
+      if @extra_info.extra_id == 4
+        add_breadcrumb("Leyes", extra_path(id: 4))
       end
     end
 
