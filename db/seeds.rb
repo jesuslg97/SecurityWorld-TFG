@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # SEEDS HOME
-home1 = Home.new(:imagen => '1')
+home1 = Home.new(:id => '1')
 
-home2 = Home.new(:imagen => '2')
+home2 = Home.new(:id => '2')
 
-home3 = Home.new(:imagen => '3')
+home3 = Home.new(:id => '3')
 
 home1.save
 home2.save
