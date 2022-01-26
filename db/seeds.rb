@@ -6,18 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# SEEDS USERS
-user1 = User.new(:nombre => 'jesus', :apellidos => 'lopez gonzalez',
-            :email => 'admin@gmail.com', :encrypted_password => '123456')
-user2 = User.new(:nombre => 'user1', :apellidos => 'usuario1',
-            :email => 'user1@gmail.com', :encrypted_password => '123456')
-user3 = User.new(:nombre => 'user2', :apellidos => 'usuario2',
-            :email => 'user2@gmail.com', :encrypted_password => '123456')
-
-user1.save
-user2.save
-user3.save
-
 # SEEDS CATEGORIES
 category1 = Category.new(:nombre => 'Empresa',
                          :descripcion => '¡Bienvenid@s!, en esta sección podrá encontrar todo lo relacionado con los <strong>ataques que sufren las empresas</strong> de forma común. A continuación, podrán ver más información y con detalles, todo lo que tiene que ver con ataques de ciberseguridad en las empresa. ¡Espero que les sea de su agrado!')
