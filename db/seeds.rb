@@ -7,12 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # SEEDS USERS
-User.create(:nombre => 'jesus', :apellidos => 'lopez gonzalez',
+user1 = User.new(:nombre => 'jesus', :apellidos => 'lopez gonzalez',
             :email => 'admin@gmail.com', :encrypted_password => '123456')
-User.create(:nombre => 'user1', :apellidos => 'usuario1',
+user2 = User.new(:nombre => 'user1', :apellidos => 'usuario1',
             :email => 'user1@gmail.com', :encrypted_password => '123456')
-User.create(:nombre => 'user2', :apellidos => 'usuario2',
+user3 = User.new(:nombre => 'user2', :apellidos => 'usuario2',
             :email => 'user2@gmail.com', :encrypted_password => '123456')
+
+user1.save
+user2.save
+user3.save
 
 # SEEDS CATEGORIES
 category1 = Category.new(:nombre => 'Empresa',
