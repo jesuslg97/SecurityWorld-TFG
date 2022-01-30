@@ -28,6 +28,8 @@ gem 'breadcrumbs_on_rails'
 
 gem 'pg', '~> 1.2.3'
 
+gem 'aws-sdk-s3', require: false
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
